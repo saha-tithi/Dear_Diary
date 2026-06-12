@@ -1,0 +1,13 @@
+<h1>My Journal Entries</h1>
+<a href="{% url 'create_entry' %}">
+    Create New Entry
+</a>
+
+<hr>
+{% for entry in entries %}
+    <h3>{{ entry.title }}</h3>
+    <p>{{ entry.content }}</p>
+    <hr>
+{% empty %}
+    <p>No entries yet.</p>
+{% endfor %}
