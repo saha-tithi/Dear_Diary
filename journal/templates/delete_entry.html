@@ -1,0 +1,19 @@
+<h2>Delete Entry</h2>
+
+<p>
+    Are you sure you want to delete
+    "{{ entry.title }}"?
+</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">
+        Yes, Delete
+    </button>
+</form>
+
+<br>
+
+<a href="{% url 'entry_list' %}">
+    Cancel
+</a>

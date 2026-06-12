@@ -7,6 +7,8 @@
 {% for entry in entries %}
     <h3>{{ entry.title }}</h3>
     <p>{{ entry.content }}</p>
+    <a href="{% url 'edit_entry' entry.id %}">Edit</a>
+     <a href="{% url 'delete_entry' entry.id %}">Delete</a>
     <hr>
 {% empty %}
     <p>No entries yet.</p>
