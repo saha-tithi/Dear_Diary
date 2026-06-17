@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dear Diary</title>
+</head>
+<body>
+
+    <h1>Dear Diary 📖</h1>
+
+    {% if user.is_authenticated %}
+
+        <p>Welcome, {{ user.username }}</p>
+
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+
+        <hr>
+
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
