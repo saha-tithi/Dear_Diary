@@ -2,29 +2,41 @@
 
 {% block content %}
 
-<h2>My Entries</h2>
+<div class="header-section">
+    <h2>My Journal Entries</h2>
 
-<a href="{% url 'create_entry' %}">
-    Create New Entry
-</a>
-
-<hr>
+    <a href="{% url 'create_entry' %}" class="btn">
+        + New Entry
+    </a>
+</div>
 
 {% for entry in entries %}
 
-<h3>{{ entry.title }}</h3>
+<div class="entry-card">
 
-<p>{{ entry.content }}</p>
+    <h3>{{ entry.title }}</h3>
 
-<a href="{% url 'edit_entry' entry.id %}">
-    Edit
-</a>
+    <p>{{ entry.content|truncatewords:25 }}</p>
 
-<a href="{% url 'delete_entry' entry.id %}">
-    Delete
-</a>
+    <small class="entry-date">
+    {{ entry.created_at|date:"M d, Y" }}
+    </small>
 
-<hr>
+    <div class="actions">
+        <a href="{% url 'edit_entry' entry.id %}" class="btn-small">
+            Edit
+        </a>
+
+        <a href="{% url 'delete_entry' entry.id %}" class="btn-small danger">
+            Delete
+        </a>
+    </div>
+
+</div>
+
+{% empty %}
+
+<p>No journal entries yet.</p>
 
 {% endfor %}
 
