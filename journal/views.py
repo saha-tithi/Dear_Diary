@@ -5,13 +5,22 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import logout
 from django.contrib.auth import login as auth_login
 from .forms import JournalEntryForm
+from django.db.models import Q
 
 
  
 @login_required
 def entry_list(request):
-    entries=journalEntry.objects.filter(user=request.user)
-    return render(request,'entry_list.html',{'entries': entries})
+    query = request.GET.get('q')
+    selected_date = request.GET.get('date')
+    entries = journalEntry.objects.filter( user=request.user )
+    if query: 
+        entries = entries.filter( title__icontains=query )
+    if selected_date: 
+        entries = entries.filter( created_at__date=selected_date )
+    return render( request, 'entry_list.html', { 'entries': entries, 'query': query,'selected_date': selected_date } )
+
+    
 
 def create_entry(request):
     if request.method == "POST":

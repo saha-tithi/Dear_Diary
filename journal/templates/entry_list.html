@@ -9,6 +9,46 @@
         + New Entry
     </a>
 </div>
+<form method="GET">
+
+
+<form method="GET">
+
+
+<form method="GET">
+
+
+<input
+    type="text"
+    name="q"
+    placeholder="🔍 Search title..."
+    value="{{ query|default:'' }}">
+
+<input
+    type="date"
+    name="date"
+    value="{{ selected_date|default:'' }}">
+
+<button type="submit">
+    Search
+</button>
+
+
+</form>
+
+<br>
+
+
+
+</form>
+
+<br>
+
+
+
+</form>
+
+<br>
 
 {% for entry in entries %}
 
