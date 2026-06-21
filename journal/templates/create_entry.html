@@ -2,22 +2,46 @@
 
 {% block content %}
 
-<h2>Create New Entry</h2>
+<div class="entry-card">
+
+```
+<h2>📖 New Day</h2>
 
 <form method="POST">
     {% csrf_token %}
 
-    {{ form.as_p }}
+    <p>
+        <label>Title</label>
+        {{ form.title }}
+    </p>
+
+    <p>
+        <label>Journal Entry</label>
+        {{ form.content }}
+    </p>
+
+    <p>
+        <label>🌸 Gratitude</label>
+        {{ form.gratitude }}
+    </p>
+
+    <p>
+        <label>🎯 Tomorrow's Goal</label>
+        {{ form.tomorrow_goal }}
+    </p>
+
+    <p>
+        <label>📝 Notes</label>
+        {{ form.notes }}
+    </p>
 
     <button type="submit">
         Save Entry
     </button>
+
 </form>
+```
 
-<br>
-
-<a href="{% url 'entry_list' %}">
-    Back to Entries
-</a>
+</div>
 
 {% endblock %}

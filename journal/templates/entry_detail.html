@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="entry-card">
+
+```
+<h2>{{ entry.title }}</h2>
+
+<p class="entry-date">
+    Created: {{ entry.created_at|date:"M d, Y" }}
+</p>
+
+<p class="entry-date">
+    Updated: {{ entry.updated_at|date:"M d, Y H:i" }}
+</p>
+
+<hr>
+
+<h3>📖 Journal Entry</h3>
+
+<p>
+    {{ entry.content|linebreaks }}
+</p>
+
+{% if entry.gratitude %}
+    <hr>
+
+    <h3>🌸 Gratitude</h3>
+
+    <p>
+        {{ entry.gratitude|linebreaks }}
+    </p>
+{% endif %}
+
+{% if entry.tomorrow_goal %}
+    <hr>
+
+    <h3>🎯 Tomorrow's Goal</h3>
+
+    <p>
+        {{ entry.tomorrow_goal|linebreaks }}
+    </p>
+{% endif %}
+
+{% if entry.notes %}
+    <hr>
+
+    <h3>📝 Notes</h3>
+
+    <p>
+        {{ entry.notes|linebreaks }}
+    </p>
+{% endif %}
+
+<div class="actions">
+
+    <a href="{% url 'edit_entry' entry.id %}"
+       class="btn-small">
+       Edit
+    </a>
+
+    <a href="{% url 'delete_entry' entry.id %}"
+       class="btn-small danger">
+       Delete
+    </a>
+
+</div>
+```
+
+</div>
+
+{% endblock %}

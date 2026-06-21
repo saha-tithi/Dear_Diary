@@ -99,14 +99,28 @@ form p{
 input,
 textarea,
 select{
-    width:100%;
+   width:100%;
     padding:12px;
-    border:none;
+    border:1px solid #ddd;
     border-radius:10px;
     background:#f7fafc;
     font-size:16px;
+    box-sizing:border-box;
 }
 
 textarea{
     min-height:250px;
+}
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+#id_content{
+    min-height:400px;
+}
+h2{
+    margin-top:0;
+    margin-bottom:20px;
 }

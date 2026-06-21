@@ -25,15 +25,20 @@ def create_entry(request):
         form = JournalEntryForm()
 
     return render(request, 'create_entry.html', {'form': form})
+
 @login_required
-def edit_entry(request,id):
-    entry=get_object_or_404(journalEntry,id=id,user=request.user)
-    if request.method=="POST":
-        entry.title=request.POST.get('title')
-        entry.content=request.POST.get('content')
+def edit_entry(request, id):
+    entry = get_object_or_404(journalEntry,id=id,user=request.user)
+    if request.method == "POST":
+        entry.title = request.POST.get('title')
+        entry.content = request.POST.get('content')
+        entry.gratitude = request.POST.get('gratitude')
+        entry.tomorrow_goal = request.POST.get('tomorrow_goal')
+        entry.notes = request.POST.get('notes')
         entry.save()
         return redirect('entry_list')
     return render(request,'edit_entry.html',{'entry': entry})
+
 
 @login_required
 def delete_entry(request, id):
@@ -74,6 +79,10 @@ def log_out(request):
     if request.method=="POST":
         logout(request)
     return redirect('login')
+
+def entry_detail(request,id):
+    entry=get_object_or_404(journalEntry,id=id,user=request.user)
+    return render(request,'entry_detail.html',{'entry':entry})
 
             
     

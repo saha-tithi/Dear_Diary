@@ -13,6 +13,10 @@ class journalEntry(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     title=models.CharField(max_length=200)
     content=models.TextField()
+    gratitude=models.TextField(blank=True)
+    tomorrow_goal = models.TextField(blank=True)
+    notes = models.TextField(blank=True)
+
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
     # mood=models.CharField(max_length=10,choices=MOOD_CHOICES,default='neutral')

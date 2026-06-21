@@ -2,26 +2,46 @@
 
 {% block content %}
 
-<h2>Edit Entry</h2>
+<div class="entry-card">
+
+```
+<h2>✏️ Edit Entry</h2>
 
 <form method="POST">
     {% csrf_token %}
 
-    <label>Title</label>
-    <input type="text" name="title" value="{{ entry.title }}">
+    <p>
+        <label>Title</label>
+        <input type="text" name="title" value="{{ entry.title }}">
+    </p>
 
-    <br><br>
+    <p>
+        <label>Journal Entry</label>
+        <textarea name="content">{{ entry.content }}</textarea>
+    </p>
 
-    <label>Content</label>
+    <p>
+        <label>🌸 Gratitude</label>
+        <textarea name="gratitude">{{ entry.gratitude }}</textarea>
+    </p>
 
-    <textarea name="content">{{ entry.content }}</textarea>
+    <p>
+        <label>🎯 Tomorrow's Goal</label>
+        <textarea name="tomorrow_goal">{{ entry.tomorrow_goal }}</textarea>
+    </p>
 
-    <br><br>
+    <p>
+        <label>📝 Notes</label>
+        <textarea name="notes">{{ entry.notes }}</textarea>
+    </p>
 
     <button type="submit">
         Update Entry
     </button>
 
 </form>
+```
+
+</div>
 
 {% endblock %}
