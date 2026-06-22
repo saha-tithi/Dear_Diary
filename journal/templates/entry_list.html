@@ -54,11 +54,24 @@
 
 <div class="entry-card">
 
-    <h3>
-    <a href="{% url 'entry_detail' entry.id %}">
-        {{ entry.title }}
-    </a>
-</h3>
+    <div class="entry-header">
+
+
+<h3>{{ entry.title }}</h3>
+
+<a href="{% url 'toggle_favorite' entry.id %}"
+   class="favorite-btn">
+
+    {% if entry.is_favorite %}
+        ❤️
+    {% else %}
+        🤍
+    {% endif %}
+
+</a>
+
+</div>
+
 
     <p>{{ entry.content|truncatewords:10 }}</p>
 

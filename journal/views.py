@@ -93,7 +93,9 @@ def entry_detail(request,id):
     entry=get_object_or_404(journalEntry,id=id,user=request.user)
     return render(request,'entry_detail.html',{'entry':entry})
 
-            
-    
-
-            
+@login_required
+def toggle_favorite(request,id):
+    entry=get_object_or_404(journalEntry,id=id,user=request.user)
+    entry.is_favorite= not entry.is_favorite
+    entry.save()
+    return redirect('entry_list')

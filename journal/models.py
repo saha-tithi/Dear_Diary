@@ -16,6 +16,7 @@ class journalEntry(models.Model):
     gratitude=models.TextField(blank=True)
     tomorrow_goal = models.TextField(blank=True)
     notes = models.TextField(blank=True)
+    is_favorite=models.BooleanField(default=False)
 
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
@@ -23,6 +24,8 @@ class journalEntry(models.Model):
         
     def __str__(self):
             return self.title
+    class Meta:
+        ordering = ['-created_at']
 
    
     
