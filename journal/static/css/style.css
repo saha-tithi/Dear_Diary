@@ -125,19 +125,21 @@ h2{
     margin-bottom:20px;
 }
 
-
 .entry-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    width:100%;
 }
 
 .entry-header h3{
     margin:0;
+    flex:1;
 }
 
 .favorite-btn{
-    text-decoration:none;
+    margin-left:auto;
     font-size:30px;
-    line-height:1;
+    flex-shrink:0;
+    text-decoration:none;
 }
