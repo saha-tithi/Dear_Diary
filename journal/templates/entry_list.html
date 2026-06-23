@@ -5,9 +5,7 @@
 <div class="header-section">
     <h2>My Journal Entries</h2>
 
-    <a href="{% url 'create_entry' %}" class="btn">
-        + New Entry
-    </a>
+   
 </div>
 
 <!-- ✅ SINGLE CLEAN FORM -->
@@ -34,14 +32,16 @@
 <div class="filter-links">
 
     <a href="{% url 'entry_list' %}"
-       class="btn-small">
-        All Entries
+       class="{% if not show_favorites %}active-filter{% endif %}">
+       All Entries
     </a>
-
     <a href="?favorites=1"
-       class="btn-small">
-        ❤️ Favorites
+       class="{% if show_favorites %}active-filter{% endif %}">
+       ❤️ Favorites
     </a>
+     <span class="entry-count">
+        {{ entries|length }} Entries • {{ today|date:"M d" }}
+    </span>
 
 </div>
 
@@ -97,5 +97,8 @@
 <p>No journal entries yet.</p>
 
 {% endfor %}
+<a href="{% url 'create_entry' %}" class="floating-btn">
+    +
+</a>
 
 {% endblock %}

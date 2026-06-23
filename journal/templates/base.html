@@ -26,6 +26,14 @@
     <a href="#">
         🎨 Themes
     </a>
+    <hr>
+
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="logout-btn">
+            🚪 Logout
+        </button>
+    </form>
 
 </div>
 
@@ -41,10 +49,7 @@
             <div class="user-info">
                 Welcome, {{ user.username }}
 
-                <form action="{% url 'logout' %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit">Logout</button>
-                </form>
+                
             </div>
         {% endif %}
     </header>
