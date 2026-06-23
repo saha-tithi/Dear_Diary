@@ -7,12 +7,36 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+<div id="sidebar" class="sidebar">
+
+    <h2>📖 Dear Diary</h2>
+
+    <a href="{% url 'entry_list' %}">
+        🏠 Home
+    </a>
+
+    <a href="{% url 'entry_list' %}?favorites=1">
+        ❤️ Favorites
+    </a>
+
+    <a href="#">
+        📅 Calendar
+    </a>
+
+    <a href="#">
+        🎨 Themes
+    </a>
+
+</div>
 
 <div class="container">
 
-    <header>
-        <h1>📖 Dear Diary</h1>
+   <header class="top-header">
 
+    <div class="logo-section">
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <h1>📖 Dear Diary</h1>
+    </div>
         {% if user.is_authenticated %}
             <div class="user-info">
                 Welcome, {{ user.username }}
@@ -31,4 +55,15 @@
 </div>
 
 </body>
+<script>
+    function toggleMenu(){
+        const sidebar=document.getElementById("sidebar");
+        if(sidebar.style.left=="0px"){
+            sidebar.style.left="-250px";
+        }
+        else{
+            sidebar.style.left="0px";
+        }
+    }
+</script>
 </html>

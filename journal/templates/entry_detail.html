@@ -4,7 +4,7 @@
 
 <div class="entry-card">
 
-```
+
 <h2>{{ entry.title }}</h2>
 
 <p class="entry-date">
@@ -18,40 +18,47 @@
 
 <hr>
 
-<h3>📖 Journal Entry</h3>
+<div class="journal-section">
 
-<p>
-    {{ entry.content|linebreaks }}
-</p>
+    <h3>📖 Today's Reflection</h3>
+
+    <div class="section-content">
+        {{ entry.content|linebreaks }}
+    </div>
+
+</div>
 
 {% if entry.gratitude %}
-    <hr>
+   <div class="journal-section">
 
     <h3>🌸 Gratitude</h3>
 
-    <p>
+    <div class="section-content">
         {{ entry.gratitude|linebreaks }}
-    </p>
+    </div>
+
+</div>
+
 {% endif %}
 
 {% if entry.tomorrow_goal %}
-    <hr>
-
     <h3>🎯 Tomorrow's Goal</h3>
 
-    <p>
+    <div class="section-content">
         {{ entry.tomorrow_goal|linebreaks }}
-    </p>
+    </div>
 {% endif %}
 
 {% if entry.notes %}
-    <hr>
+   <div class="journal-section">
 
     <h3>📝 Notes</h3>
 
-    <p>
+    <div class="section-content">
         {{ entry.notes|linebreaks }}
-    </p>
+    </div>
+
+</div>
 {% endif %}
 
 <div class="actions">
@@ -67,7 +74,6 @@
     </a>
 
 </div>
-```
 
 </div>
 

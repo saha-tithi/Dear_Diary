@@ -8,17 +8,21 @@ from .forms import JournalEntryForm
 from django.db.models import Q
 
 
+
  
 @login_required
 def entry_list(request):
     query = request.GET.get('q')
     selected_date = request.GET.get('date')
+    favorites=request.GET.get('favorites')
     entries = journalEntry.objects.filter( user=request.user )
     if query: 
         entries = entries.filter( title__icontains=query )
     if selected_date: 
         entries = entries.filter( created_at__date=selected_date )
-    return render( request, 'entry_list.html', { 'entries': entries, 'query': query,'selected_date': selected_date } )
+    if favorites:
+        entries=entries.filter(is_favorite=True)
+    return render( request, 'entry_list.html', { 'entries': entries, 'query': query,'selected_date': selected_date,'favorites':favorites} )
 
     
 
@@ -69,8 +73,6 @@ def signup(request):
         form=UserCreationForm()
     return render(request,'signup.html',{'form': form})
 
-from django.contrib.auth import login as auth_login
-from django.contrib.auth.forms import AuthenticationForm
 
 def login(request):
     if request.method == "POST":

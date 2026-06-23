@@ -11,7 +11,7 @@
 </div>
 
 <!-- ✅ SINGLE CLEAN FORM -->
-<form method="GET">
+<form method="GET" class="search-form">
 
     <input
         type="text"
@@ -31,6 +31,20 @@
     </button>
 
 </form>
+<div class="filter-links">
+
+    <a href="{% url 'entry_list' %}"
+       class="btn-small">
+        All Entries
+    </a>
+
+    <a href="?favorites=1"
+       class="btn-small">
+        ❤️ Favorites
+    </a>
+
+</div>
+
 
 <br>
 
