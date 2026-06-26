@@ -1,24 +1,60 @@
-{% extends 'base.html' %}
+{% extends 'auth_base.html' %}
 
 {% block content %}
 
-<h2>Sign Up</h2>
+<div class="auth-card">
 
-<form method="POST">
-    {% csrf_token %}
+    <div class="auth-icon">
+        🌸
+    </div>
 
-    {{ form.as_p }}
+    <h2>Create Your Diary</h2>
 
-    <button type="submit">
-        Sign Up
-    </button>
-</form>
+    <p class="auth-subtitle">
+        Every beautiful story begins with the first page.
+    </p>
 
-<p>
-    Already have an account?
-    <a href="{% url 'login' %}">
-        Login
-    </a>
-</p>
+    {% if form.errors %}
+        <div class="error-box">
+            Please correct the errors below.
+        </div>
+    {% endif %}
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label>Username</label>
+            {{ form.username }}
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            {{ form.password1 }}
+        </div>
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            {{ form.password2 }}
+        </div>
+
+        <button class="auth-btn" type="submit">
+            🌷 Create Account
+        </button>
+
+    </form>
+
+    <p class="auth-link">
+
+        Already have an account?
+
+        <a href="{% url 'login' %}">
+            Login →
+        </a>
+
+    </p>
+
+</div>
 
 {% endblock %}

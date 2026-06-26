@@ -110,8 +110,29 @@ select{
 }
 
 textarea{
-    min-height:250px;
-    width: 100%;
+
+    width:100%;
+
+    padding:24px;
+
+    font-size:17px;
+
+    color:#444;
+
+    border:1px solid #ddd;
+
+    border-radius:18px;
+
+    resize:vertical;
+
+    background:#fffdf8;
+
+    background-image:url("../images/line_paper.png");
+
+    background-repeat:repeat-y;
+
+    background-size:100% auto;
+
 }
 label{
     display:block;
@@ -290,4 +311,336 @@ h2{
     font-size:14px;
     display:flex;
     align-items:center;
+}
+
+
+/* ---------- Authentication Pages ---------- */
+
+.auth-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.auth-card{
+    width:100%;
+    max-width:450px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    text-align:center;
+
+    box-sizing:border-box;
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* Decorative pastel circles */
+
+.auth-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    background:#d9fff4;
+
+    border-radius:50%;
+
+    top:-70px;
+    right:-70px;
+
+    opacity:.5;
+
+}
+
+.auth-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:#fde4ef;
+
+    border-radius:50%;
+
+    bottom:-40px;
+    left:-40px;
+
+    opacity:.5;
+
+}
+
+.auth-icon{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+    animation:floatIcon 3s ease-in-out infinite;
+
+}
+
+.auth-card h2{
+
+    margin-bottom:10px;
+
+}
+
+.auth-subtitle{
+
+    color:#777;
+
+    margin-bottom:35px;
+
+}
+
+.form-group{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.form-group input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #ececec;
+
+    border-radius:12px;
+
+    transition:.25s;
+
+    background:white;
+
+}
+
+.form-group input:focus{
+
+    outline:none;
+
+    border-color:#98e4d6;
+
+    box-shadow:0 0 0 4px rgba(152,228,214,.25);
+
+}
+
+.auth-btn{
+
+    width:100%;
+
+    margin-top:25px;
+
+    background:#98e4d6;
+
+    color:#333;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.auth-btn:hover{
+
+    background:#87dacb;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+}
+
+.auth-link{
+
+    margin-top:25px;
+
+    color:#666;
+
+}
+
+.auth-link a{
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.error-box{
+
+    background:#ffe6e6;
+
+    color:#b00020;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+@keyframes floatIcon{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+/* ---------------- Journal Writing Page ---------------- */
+
+.journal-page{
+
+    max-width:850px;
+
+    margin:auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.page-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.page-icon{
+
+    font-size:55px;
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.page-subtitle{
+
+    color:#777;
+
+    margin-top:8px;
+
+    font-style:italic;
+
+}
+
+.journal-block{
+
+    margin-bottom:28px;
+
+}
+
+.journal-block label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.save-btn{
+
+    display:block;
+
+    margin:35px auto 0;
+
+    background:#98e4d6;
+
+    color:#222;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:#88daca;
+
+}
+
+#id_content{
+     min-height:450px;
+
+    line-height:32px;
+}
+#id_gratitude,
+#id_tomorrow_goal,
+#id_notes{
+
+    min-height:170px;
+
+    line-height:32px;
+
 }

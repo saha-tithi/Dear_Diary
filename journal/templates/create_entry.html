@@ -2,45 +2,71 @@
 
 {% block content %}
 
-<div class="entry-card">
+<div class="entry-card journal-page">
 
-```
-<h2>📖 New Day</h2>
+    <div class="page-header">
 
-<form method="POST">
-    {% csrf_token %}
+        <span class="page-icon">📖</span>
 
-    <p>
-        <label>Title</label>
-        {{ form.title }}
-    </p>
+        <h2>New Day</h2>
 
-    <p>
-        <label>Journal Entry</label>
-        {{ form.content }}
-    </p>
+        <p class="page-subtitle">
+            Every page holds a memory worth keeping.
+        </p>
 
-    <p>
-        <label>🌸 Gratitude</label>
-        {{ form.gratitude }}
-    </p>
+    </div>
 
-    <p>
-        <label>🎯 Tomorrow's Goal</label>
-        {{ form.tomorrow_goal }}
-    </p>
+    <form method="POST">
 
-    <p>
-        <label>📝 Notes</label>
-        {{ form.notes }}
-    </p>
+        {% csrf_token %}
 
-    <button type="submit">
-        Save Entry
-    </button>
+        <div class="journal-block">
 
-</form>
-```
+            <label>📝 Title</label>
+
+            {{ form.title }}
+
+        </div>
+
+        <div class="journal-block">
+
+            <label>📖 Today's Story</label>
+
+            {{ form.content }}
+
+        </div>
+
+        <div class="journal-block">
+
+            <label>🌸 Gratitude</label>
+
+            {{ form.gratitude }}
+
+        </div>
+
+        <div class="journal-block">
+
+            <label>🎯 Tomorrow's Goal</label>
+
+            {{ form.tomorrow_goal }}
+
+        </div>
+
+        <div class="journal-block">
+
+            <label>🌿 Notes</label>
+
+            {{ form.notes }}
+
+        </div>
+
+        <button class="save-btn" type="submit">
+
+            Save Entry
+
+        </button>
+
+    </form>
 
 </div>
 
