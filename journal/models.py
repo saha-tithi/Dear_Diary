@@ -2,12 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class journalEntry(models.Model):
-    ''' MOOD_CHOICES = [
+    MOOD_CHOICES = [
         ('happy', '😊 Happy'),
+        ("calm", "😌 Calm"),
         ('neutral', '😐 Neutral'),
-        ('sad', '😞 Sad'),
+        ('sad', '😢 Sad'),
         ('angry','😤angry'),
-    ]'''
+        ("excited", "🤩 Excited"),
+        ("tired", "😴 Tired"),
+        ]
 
 
     user=models.ForeignKey(User,on_delete=models.CASCADE)
@@ -20,7 +23,7 @@ class journalEntry(models.Model):
 
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
-    # mood=models.CharField(max_length=10,choices=MOOD_CHOICES,default='neutral')
+    mood=models.CharField(max_length=20,choices=MOOD_CHOICES,default='neutral')
         
     def __str__(self):
             return self.title

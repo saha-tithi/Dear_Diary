@@ -77,8 +77,26 @@
     <p>{{ entry.content|truncatewords:10 }}</p>
 
     <small class="entry-date">
-        {{ entry.created_at|date:"M d, Y" }}
-    </small>
+    {{ entry.created_at|date:"M d, Y" }}
+   </small>
+
+   <div class="mood-badge">
+    {% if entry.mood == "happy" %}
+        😊 Happy
+    {% elif entry.mood == "calm" %}
+        😌 Calm
+    {% elif entry.mood == "neutral" %}
+        😐 Neutral
+    {% elif entry.mood == "sad" %}
+        😢 Sad
+    {% elif entry.mood == "angry" %}
+        😠 Angry
+    {% elif entry.mood == "excited" %}
+        🤩 Excited
+    {% elif entry.mood == "tired" %}
+        😴 Tired
+    {% endif %}
+ </div>
 
     <div class="actions">
         <a href="{% url 'edit_entry' entry.id %}" class="btn-small">

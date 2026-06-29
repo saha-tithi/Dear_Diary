@@ -763,3 +763,93 @@ h2{
     background:#e99f9f;
 
 }
+.mood-picker{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin:15px 0 35px;
+
+}
+
+.mood-picker{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin:20px 0 35px;
+
+}
+
+.mood-picker input{
+
+    display:none;
+
+}
+
+.mood-picker label{
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    border:2px solid #ececec;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.mood-picker label:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    background:#f8fffd;
+
+    border-color:#98e4d6;
+
+}
+
+.mood-picker input:checked + label{
+
+    background:#fff4d6;
+    border-color:#e6d3a3;
+    box-shadow:0 8px 20px rgba(230,211,163,.45);
+    transform:scale(1.15);
+
+    
+
+}
+.mood-badge{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:6px 14px;
+
+    background:#fff8e8;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    color:#555;
+
+    border:1px solid #f1e4c3;
+
+}

@@ -26,6 +26,40 @@
     </div>
 
     <div class="journal-block">
+        <label>How are you feeling today?</label>
+        <div class="mood-picker">
+
+           <input type="radio" id="happy" name="mood" value="happy"
+           {% if entry.mood == "happy" %}checked{% endif %}>
+           <label for="happy">😊</label>
+
+           <input type="radio" id="calm" name="mood" value="calm"
+           {% if entry.mood == "calm" %}checked{% endif %}>
+           <label for="calm">😌</label>
+
+           <input type="radio" id="neutral" name="mood" value="neutral"
+           {% if entry.mood == "neutral" %}checked{% endif %}>
+           <label for="neutral">😐</label>
+
+           <input type="radio" id="sad" name="mood" value="sad"
+           {% if entry.mood == "sad" %}checked{% endif %}>
+           <label for="sad">😢</label>
+
+           <input type="radio" id="angry" name="mood" value="angry"
+           {% if entry.mood == "angry" %}checked{% endif %}>
+           <label for="angry">😠</label>
+
+           <input type="radio" id="excited" name="mood" value="excited"
+           {% if entry.mood == "excited" %}checked{% endif %}>
+           <label for="excited">🤩</label>
+
+           <input type="radio" id="tired" name="mood" value="tired"
+           {% if entry.mood == "tired" %}checked{% endif %}>
+           <label for="tired">😴</label>
+        </div>
+    </div>
+
+    <div class="journal-block">
         <label>📖 Today's Story</label>
         <textarea id="id_content" name="content">{{ entry.content }}</textarea>
     </div>

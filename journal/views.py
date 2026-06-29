@@ -50,6 +50,7 @@ def edit_entry(request, id):
         entry.gratitude = request.POST.get('gratitude')
         entry.tomorrow_goal = request.POST.get('tomorrow_goal')
         entry.notes = request.POST.get('notes')
+        entry.mood = request.POST.get('mood') 
         entry.save()
         return redirect('entry_list')
     return render(request,'edit_entry.html',{'entry': entry})
