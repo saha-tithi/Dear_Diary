@@ -588,7 +588,7 @@ h2{
 
     display:block;
 
-    margin-bottom:10px;
+    margin-bottom:0px;
 
     font-size:17px;
 
@@ -606,7 +606,7 @@ h2{
 
     color:#222;
 
-    padding:14px 35px;
+    padding:16px 42px;
 
     border:none;
 
@@ -615,6 +615,7 @@ h2{
     font-size:16px;
 
     font-weight:bold;
+    letter-spacing:.5px;
 
     cursor:pointer;
 
@@ -631,16 +632,134 @@ h2{
 }
 
 #id_content{
-     min-height:450px;
-
-    line-height:32px;
+    min-height:450px;
+    padding:18px 24px;
+    line-height:31px;
+    background-position:0 18px;
 }
+
 #id_gratitude,
 #id_tomorrow_goal,
 #id_notes{
-
     min-height:170px;
+    padding:px 24px;
+    line-height:31px;
+    background-position:0 18px;
+}
+#id_title{
+    width:100%;
+    font-size:18px;
+    padding:16px 20px;
+    background:#fffdfa;
+    border:2px solid #ece6dc;
+    border-radius:14px;
+}
+/* ---------- Delete Page ---------- */
 
-    line-height:32px;
+.delete-card{
+
+    max-width:550px;
+
+    margin:70px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.delete-icon{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+.delete-text{
+
+    color:#666;
+
+    margin:20px 0 30px;
+
+    line-height:1.7;
+
+}
+
+.delete-preview{
+
+    background:#faf7f2;
+
+    border:1px solid #ece6dc;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    margin-bottom:35px;
+
+    font-size:18px;
+
+}
+
+.delete-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.cancel-btn{
+
+    text-decoration:none;
+
+    background:#98e4d6;
+
+    color:#2f4f4f;
+
+    padding:13px 24px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+.cancel-btn:hover{
+
+    background:#84d7c7;
+
+}
+
+.delete-btn{
+
+    background:#f2b6b6;
+
+    color:#6b2222;
+
+    padding:13px 24px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.delete-btn:hover{
+
+    background:#e99f9f;
 
 }

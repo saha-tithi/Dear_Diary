@@ -2,45 +2,54 @@
 
 {% block content %}
 
-<div class="entry-card">
+<div class="entry-card journal-page">
 
-```
-<h2>✏️ Edit Entry</h2>
+<div class="page-header">
+
+    <span class="page-icon">✏️</span>
+
+    <h2>Edit Memory</h2>
+
+    <p class="page-subtitle">
+        Revisit your thoughts and update your story.
+    </p>
+
+</div>
 
 <form method="POST">
+
     {% csrf_token %}
 
-    <p>
+    <div class="journal-block">
         <label>Title</label>
-        <input type="text" name="title" value="{{ entry.title }}">
-    </p>
+        <input type="text" id="id_title" name="title" value="{{ entry.title }}">
+    </div>
 
-    <p>
-        <label>Journal Entry</label>
-        <textarea name="content">{{ entry.content }}</textarea>
-    </p>
+    <div class="journal-block">
+        <label>📖 Today's Story</label>
+        <textarea id="id_content" name="content">{{ entry.content }}</textarea>
+    </div>
 
-    <p>
+    <div class="journal-block">
         <label>🌸 Gratitude</label>
-        <textarea name="gratitude">{{ entry.gratitude }}</textarea>
-    </p>
+        <textarea id="id_gratitude" name="gratitude">{{ entry.gratitude }}</textarea>
+    </div>
 
-    <p>
+    <div class="journal-block">
         <label>🎯 Tomorrow's Goal</label>
-        <textarea name="tomorrow_goal">{{ entry.tomorrow_goal }}</textarea>
-    </p>
+        <textarea id="id_tomorrow_goal" name="tomorrow_goal">{{ entry.tomorrow_goal }}</textarea>
+    </div>
 
-    <p>
+    <div class="journal-block">
         <label>📝 Notes</label>
-        <textarea name="notes">{{ entry.notes }}</textarea>
-    </p>
+        <textarea id="id_notes" name="notes">{{ entry.notes }}</textarea>
+    </div>
 
-    <button type="submit">
-        Update Entry
+    <button type="submit" class="save-btn">
+        Save Changes
     </button>
 
 </form>
-```
 
 </div>
 
