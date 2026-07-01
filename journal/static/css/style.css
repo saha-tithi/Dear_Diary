@@ -66,7 +66,16 @@ button:hover{
 }
 
 .actions{
-    margin-top:15px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:28px;
+    
 }
 
 .btn{
@@ -80,9 +89,13 @@ button:hover{
 .btn-small{
     text-decoration:none;
     background:#eafaf7;
-    padding:8px 12px;
-    border-radius:8px;
     margin-right:8px;
+    display:inline-block;
+    padding:10px 24px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.25s;
+
 }
 
 .danger{
@@ -248,11 +261,16 @@ h2{
     white-space:nowrap;
 }
 .journal-section{
-    margin-top:20px;
-    padding:20px;
-    background:#fafafa;
-    border-radius:12px;
-    border-left:4px solid #98e4d6;
+     padding:22px 26px;
+
+    margin-bottom:22px;
+
+    border-left:6px solid #8fd3c1;
+
+    border-radius:18px;
+
+    background:white;
+    
 }
 
 .journal-section h3{
@@ -851,5 +869,49 @@ h2{
     color:#555;
 
     border:1px solid #f1e4c3;
+
+}
+
+.song-help{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#888;
+
+    font-size:13px;
+
+    font-style:italic;
+
+}
+
+#memory_song{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:16px;
+
+    background:#fffdf8;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+    transition:.25s;
+
+}
+
+#memory_song:focus{
+
+    outline:none;
+
+    border-color:#98e4d6;
+
+    box-shadow:0 0 12px rgba(152,228,214,.25);
 
 }

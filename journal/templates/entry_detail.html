@@ -61,6 +61,27 @@
 </div>
 {% endif %}
 
+{% if spotify_embed_url %}
+
+<div class="journal-section">
+
+    <h3>🎵 Memory Song</h3>
+
+    <iframe
+        style="border-radius:16px"
+        src="{{ spotify_embed_url }}"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+
+</div>
+
+{% endif %}
+
 <div class="actions">
 
     <a href="{% url 'edit_entry' entry.id %}"

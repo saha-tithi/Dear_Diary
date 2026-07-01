@@ -50,6 +50,7 @@ def edit_entry(request, id):
         entry.gratitude = request.POST.get('gratitude')
         entry.tomorrow_goal = request.POST.get('tomorrow_goal')
         entry.notes = request.POST.get('notes')
+        entry.memory_song = request.POST.get('memory_song')
         entry.mood = request.POST.get('mood') 
         entry.save()
         return redirect('entry_list')
@@ -94,10 +95,35 @@ def log_out(request):
         logout(request)
     return redirect('login')
 
-def entry_detail(request,id):
-    entry=get_object_or_404(journalEntry,id=id,user=request.user)
-    return render(request,'entry_detail.html',{'entry':entry})
+@login_required
+def entry_detail(request, id):
 
+    entry = get_object_or_404(
+        journalEntry,
+        id=id,
+        user=request.user
+    )
+
+    spotify_embed_url = None
+
+    if entry.memory_song:
+
+        spotify_embed_url = entry.memory_song.replace(
+            "open.spotify.com/track/",
+            "open.spotify.com/embed/track/"
+        )
+
+        # Remove any query parameters like ?si=...
+        spotify_embed_url = spotify_embed_url.split("?")[0]
+
+    return render(
+        request,
+        "entry_detail.html",
+        {
+            "entry": entry,
+            "spotify_embed_url": spotify_embed_url
+        }
+    )
 @login_required
 def toggle_favorite(request,id):
     entry=get_object_or_404(journalEntry,id=id,user=request.user)

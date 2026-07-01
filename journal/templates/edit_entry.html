@@ -78,7 +78,28 @@
         <label>📝 Notes</label>
         <textarea id="id_notes" name="notes">{{ entry.notes }}</textarea>
     </div>
+    <div class="journal-block">
+        <label for="memory_song">
+        🎵 Memory Song
+        </label>
+        <input
+        type="url"
+        id="memory_song"
+        name="memory_song"
+        value="{{ entry.memory_song }}"
+        placeholder="Paste Spotify song link...">
 
+        <small class="song-help">
+        Example:
+        https://open.spotify.com/track/...
+        </small>
+
+    </div>
+
+
+
+    
+    
     <button type="submit" class="save-btn">
         Save Changes
     </button>
