@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-v9(ai-0h+k_)0qw&dkh!+v!s=kfe2bv5e!c288il9%!0r$_9b$
 DEBUG = True
 
 ALLOWED_HOSTS = []
+WEATHER_API_KEY = "1cde7e947edd9f43157f27996ec2544b"
 
 
 # Application definition

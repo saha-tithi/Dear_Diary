@@ -9,6 +9,10 @@
         <span class="page-icon">📖</span>
 
         <h2>New Day</h2>
+        <div id="weather-box" style="margin-top: 10px; font-size: 18px;font-style: italic;">
+        Loading weather...
+        </div>
+        
 
         <p class="page-subtitle">
             Every page holds a memory worth keeping.
@@ -19,6 +23,8 @@
     <form method="POST">
 
         {% csrf_token %}
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
 
         <div class="journal-block">
 
@@ -27,7 +33,7 @@
             {{ form.title }}
 
         </div>
-    
+        
         <div class="journal-block">
             <label>How are you feeling today?</label>
 
@@ -112,5 +118,55 @@
     </form>
 
 </div>
+
+<script>
+window.onload = function () {
+    navigator.geolocation.getCurrentPosition(sendLocation, showError);
+};
+
+function sendLocation(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    fetch("/get-weather/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": getCookie("csrftoken")
+        },
+        body: JSON.stringify({
+            latitude: lat,
+            longitude: lon
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("weather-box").innerText =
+    data.weather;
+       
+    });
+}
+
+function showError(error) {
+    document.getElementById("weather-box").innerText =
+        "⚠️ Unable to fetch weather";
+  
+}
+
+// CSRF helper
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+        const cookies = document.cookie.split(";");
+        for (let c of cookies) {
+            c = c.trim();
+            if (c.startsWith(name + "=")) {
+                cookieValue = decodeURIComponent(c.substring(name.length + 1));
+            }
+        }
+    }
+    return cookieValue;
+}
+</script>
 
 {% endblock %}

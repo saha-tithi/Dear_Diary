@@ -7,6 +7,11 @@ from django.contrib.auth import login as auth_login
 from .forms import JournalEntryForm
 from django.db.models import Q
 from datetime import date
+import json
+import requests
+from django.http import JsonResponse
+from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
 
 
 
@@ -28,6 +33,12 @@ def entry_list(request):
 
     
 
+
+
+
+
+
+@login_required
 def create_entry(request):
     if request.method == "POST":
         form = JournalEntryForm(request.POST)
@@ -66,8 +77,21 @@ def delete_entry(request, id):
         entry.delete()
         return redirect('entry_list')
     return render(request,'delete_entry.html',{'entry': entry})
-
 def signup(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+        else:
+            print(form.errors)  # 🔥 ADD THIS
+
+    else:
+        form = UserCreationForm()
+
+    return render(request, 'signup.html', {'form': form})
+'''def signup(request):
     if request.method=="POST":
         form=UserCreationForm(request.POST)
         if form.is_valid():
@@ -75,7 +99,7 @@ def signup(request):
             return redirect('login')
     else:
         form=UserCreationForm()
-    return render(request,'signup.html',{'form': form})
+    return render(request,'signup.html',{'form': form})'''
 
 
 def login(request):
@@ -130,3 +154,76 @@ def toggle_favorite(request,id):
     entry.is_favorite= not entry.is_favorite
     entry.save()
     return redirect('entry_list')
+
+@login_required
+def get_weather(request):
+    if request.method == "POST":
+
+       
+        data = json.loads(request.body)
+        lat = data.get("latitude")
+        lon = data.get("longitude")
+
+       
+        url = (
+            f"https://api.openweathermap.org/data/2.5/weather"
+            f"?lat={lat}&lon={lon}&appid={settings.WEATHER_API_KEY}"
+        )
+        res = requests.get(url)
+        weather_data = res.json()
+
+        weather = weather_data["weather"][0]["main"]
+        
+        
+        weather_labels = {
+            "Clear": "Sunny",
+            "Clouds": "Cloudy",
+            "Rain": "Rainy",
+            "Drizzle": "Drizzling",
+            "Thunderstorm": "Stormy",
+            "Snow": "Snowy",
+            "Mist": "Misty",
+            "Fog": "Foggy",
+            "Haze": "Hazy",
+            "Smoke": "Smoky",
+            "Dust": "Dusty",
+            "Sand": "Sandy",
+            "Ash": "Ashy",
+            "Squall": "Windy",
+            "Tornado": "Tornado",
+        }
+
+        
+        weather_icons = {
+            "Clear": "☀️",
+            "Clouds": "☁️",
+            "Rain": "🌧️",
+            "Drizzle": "🌦️",
+            "Thunderstorm": "⛈️",
+            "Snow": "❄️",
+            "Mist": "🌫️",
+            "Fog": "🌫️",
+            "Haze": "🌫️",
+            "Smoke": "🌫️",
+            "Dust": "🌪️",
+            "Sand": "🌪️",
+            "Ash": "🌋",
+            "Squall": "💨",
+            "Tornado": "🌪️",
+        }
+
+        
+        
+        label = weather_labels.get(weather, weather)
+        emoji = weather_icons.get(weather, "🌤️")
+
+        weather_display = f"{label}{emoji}"   # 👉 Sunny☀️
+       
+       
+        
+        
+        return JsonResponse({
+            "weather": weather_display
+        })
+
+
