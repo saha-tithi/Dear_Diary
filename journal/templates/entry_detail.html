@@ -5,16 +5,18 @@
 <div class="entry-card">
 
 
+<div class="entry-meta">
+
+    <span class="mood-display">
+        {{ entry.mood_emoji }} {{ entry.mood|title }}
+    </span>
+
+    
+</div>
+
 <h2>{{ entry.title }}</h2>
 
 
-<p class="entry-date">
-    Created: {{ entry.created_at|date:"M d, Y" }}
-</p>
-
-<p class="entry-date">
-    Updated: {{ entry.updated_at|date:"M d, Y H:i" }}
-</p>
 
 
 <hr>

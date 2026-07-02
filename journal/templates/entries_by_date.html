@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="day-memory-header">
+
+    <div class="calendar-icon">
+        📅
+    </div>
+
+    <h1>{{ selected_date|date:"F d, Y" }}</h1>
+
+    <p>{{ entries|length }} Memory{{ entries|length|pluralize }}</p>
+
+    <a href="{% url 'calendar' %}" class="back-link">
+        ← Back to Calendar
+    </a>
+
+</div>
+
+{% for entry in entries %}
+
+<div class="memory-card">
+
+    <div class="memory-top">
+
+        <span class="memory-mood">
+
+            {{ entry.mood_emoji }}
+            {{ entry.mood|title }}
+
+        </span>
+
+       
+
+    </div>
+
+    <h2 class="memory-title">
+
+        {{ entry.title }}
+
+    </h2>
+
+    <p class="memory-preview">
+
+        {{ entry.content|truncatewords:28 }}
+
+    </p>
+
+    <a href="{% url 'entry_detail' entry.id %}" class="memory-btn">
+
+        Read Memory →
+
+    </a>
+
+</div>
+
+{% endfor %}
+{% endblock %}

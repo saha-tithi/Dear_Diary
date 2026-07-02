@@ -229,8 +229,8 @@ def get_weather(request):
         })
 
 
-from django.contrib.auth.decorators import login_required
-from .models import journalEntry
+
+
 
 @login_required
 def calendar_view(request):
@@ -248,35 +248,74 @@ def calendar_view(request):
         created_at__month=month
     )
 
-    entry_days = []
+    entry_days = {}
 
     for entry in entries:
-        entry_days.append(entry.created_at.day)
+
+        day = entry.created_at.day
+
+        if day not in entry_days:
+            entry_days[day] = []
+
+        entry_days[day].append(entry)
+
+    # Previous month
     if month == 1:
-      prev_month = 12
-      prev_year = year - 1
+        prev_month = 12
+        prev_year = year - 1
     else:
-      prev_month = month - 1
-      prev_year = year
+        prev_month = month - 1
+        prev_year = year
 
+    # Next month
     if month == 12:
-      next_month = 1
-      next_year = year + 1
+        next_month = 1
+        next_year = year + 1
     else:
-      next_month = month + 1
-      next_year = year
-
+        next_month = month + 1
+        next_year = year
+    calendar_icon = "🔔"
     context = {
+
         "calendar": cal,
+
         "month": calendar.month_name[month],
+        "month_number": month,
         "year": year,
+
         "entry_days": entry_days,
+        "calendar_icon": calendar_icon,
+
+        "today_day": today.day,
+        "today_month": today.month,
+        "today_year": today.year,
+
         "prev_month": prev_month,
         "prev_year": prev_year,
 
         "next_month": next_month,
         "next_year": next_year,
-        
+
     }
 
     return render(request, "calendar.html", context)
+
+
+@login_required
+def entries_by_date(request, year, month, day):
+
+    entries = journalEntry.objects.filter(
+        user=request.user,
+        created_at__year=year,
+        created_at__month=month,
+        created_at__day=day
+    )
+
+    return render(
+        request,
+        "entries_by_date.html",
+        {
+            "entries": entries,
+            "selected_date": date(year, month, day),
+        },
+    )
