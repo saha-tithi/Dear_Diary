@@ -12,6 +12,8 @@ import requests
 from django.http import JsonResponse
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+import calendar
+from datetime import datetime
 
 
 
@@ -227,3 +229,54 @@ def get_weather(request):
         })
 
 
+from django.contrib.auth.decorators import login_required
+from .models import journalEntry
+
+@login_required
+def calendar_view(request):
+
+    today = datetime.today()
+
+    month = int(request.GET.get("month", today.month))
+    year = int(request.GET.get("year", today.year))
+
+    cal = calendar.monthcalendar(year, month)
+
+    entries = journalEntry.objects.filter(
+        user=request.user,
+        created_at__year=year,
+        created_at__month=month
+    )
+
+    entry_days = []
+
+    for entry in entries:
+        entry_days.append(entry.created_at.day)
+    if month == 1:
+      prev_month = 12
+      prev_year = year - 1
+    else:
+      prev_month = month - 1
+      prev_year = year
+
+    if month == 12:
+      next_month = 1
+      next_year = year + 1
+    else:
+      next_month = month + 1
+      next_year = year
+
+    context = {
+        "calendar": cal,
+        "month": calendar.month_name[month],
+        "year": year,
+        "entry_days": entry_days,
+        "prev_month": prev_month,
+        "prev_year": prev_year,
+
+        "next_month": next_month,
+        "next_year": next_year,
+        
+    }
+
+    return render(request, "calendar.html", context)

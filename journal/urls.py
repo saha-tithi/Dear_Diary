@@ -11,5 +11,6 @@ urlpatterns=[path('', views.entry_list,name='entry_list'),
              path('login/', views.login,name='login'),
              path('logout/', views.log_out,name='logout'),
              path("get-weather/", views.get_weather, name="get_weather"),
+             path( 'calendar/', views.calendar_view,name='calendar'),
              
               ]

@@ -919,3 +919,125 @@ h2{
     box-shadow:0 0 12px rgba(152,228,214,.25);
 
 }
+
+.calendar-container{
+
+    margin-top:30px;
+
+}
+
+.calendar-title{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-size:30px;
+
+}
+
+.calendar-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+}
+
+.day-name{
+
+    text-align:center;
+
+    font-weight:700;
+
+    color:#777;
+
+    padding:12px;
+
+}
+
+.day{
+
+    height:75px;
+
+    border-radius:16px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    transition:.25s;
+
+}
+
+.day:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.empty{
+
+    visibility:hidden;
+
+}
+
+.has-entry{
+
+    background:#FCE8E6;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+.calendar-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.month-btn{
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    color:#555;
+
+    background:#fff;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    transition:.25s;
+
+}
+
+.month-btn:hover{
+
+    transform:translateY(-2px);
+
+}
