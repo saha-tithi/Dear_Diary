@@ -19,9 +19,7 @@
        class="month-btn">
         →
     </a>
-    <a href="{% url 'entry_list' %}" class="calendar-close">
-    ✖
-</a>
+    
 
 </div>
 
@@ -47,7 +45,7 @@
                 {% if day in entry_days %}
 
 <a href="{% url 'entries_by_date' year month_number day %}"
-   class="day has-entry">
+   class="day has-entry {% if day == today_day and month_number == today_month and year == today_year %}today{% endif %}">
 
     <span class="memory-icon">
         {{ calendar_icon }}
@@ -57,7 +55,7 @@
 
 {% else %}
 
-<div class="day">
+<div class="day {% if day == today_day and month_number == today_month and year == today_year %}today{% endif %}">
 
     {{ day }}
 
