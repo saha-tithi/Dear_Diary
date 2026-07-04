@@ -1,0 +1,480 @@
+/* ---------------- Journal Writing Page ---------------- */
+
+/*cretae entry page*/
+
+.page-header{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+.page-icon{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:90px;
+
+    height:90px;
+
+    margin-bottom:18px;
+
+    font-size:46px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #F6FCFB,
+        #FFF7EC
+    );
+
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+}
+
+.page-header h2{
+
+    font-family:'Playfair Display', serif;
+
+    font-size:60px;
+
+    color:#2F4858;
+
+    margin:10px 0;
+
+}
+
+.page-subtitle{
+
+    color:#7A7A7A;
+
+    font-size:20px;
+
+    font-style:italic;
+
+}
+.weather-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:#F5FBFA;
+
+    color:#55706D;
+
+    font-size:17px;
+
+    font-style:italic;
+
+    border:1px solid #E3F3EF;
+
+}
+.journal-page{
+
+    max-width:920px;
+
+    margin:30px auto;
+
+    padding:55px;
+
+    background:#FFFDF9;
+
+    border:1px solid #F0E6DA;
+
+    border-radius:30px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.06),
+        0 5px 15px rgba(0,0,0,.03);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+.journal-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:8px;
+
+    background:linear-gradient(
+        90deg,
+        #98E4D6,
+        #D8C8F8,
+        #FFD8C2
+    );
+
+}
+.journal-block{
+
+    background:#FFFEFC;
+
+    border:1px solid #F3E8DA;
+
+    border-radius:24px;
+
+    padding:26px 28px;
+
+    margin-bottom:28px;
+    box-sizing: border-box;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,.035);
+    transition: 3s;
+
+}
+.journal-block{
+
+    transition:.3s;
+
+}
+
+.journal-block:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.05);
+
+}
+.journal-block label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    color:#2F4858;
+
+    font-family:'Playfair Display', serif;
+
+}
+#id_title{
+
+    width:100%;
+
+    padding:20px 0;
+
+    font-size:34px;
+
+    font-family:'Playfair Display', serif;
+
+    font-weight:600;
+
+    color:#2F4858;
+
+    background:transparent;
+
+    border:none;
+
+    border-bottom:2px solid #E7DCCF;
+
+    border-radius:0;
+
+    transition:.3s;
+
+    box-shadow:none;
+
+}
+
+#id_title::placeholder{
+
+    color:#B7AFA6;
+
+    font-style:italic;
+
+}
+
+#id_title:focus{
+
+    outline:none;
+
+    border-bottom:2px solid #98E4D6;
+
+}
+#id_title{
+
+    width:100%;
+
+    padding:20px 0;
+
+    font-size:34px;
+
+    font-family:'Playfair Display', serif;
+
+    font-weight:600;
+
+    color:#2F4858;
+
+    background:transparent;
+
+    border:none;
+
+    border-bottom:2px solid #E7DCCF;
+
+    border-radius:0;
+
+    transition:.3s;
+
+    box-shadow:none;
+
+}
+
+#id_title::placeholder{
+
+    color:#B7AFA6;
+
+    font-style:italic;
+
+}
+
+#id_title:focus{
+
+    outline:none;
+
+    border-bottom:2px solid #98E4D6;
+
+}
+.save-btn{
+
+    display:block;
+
+    margin:45px auto 0;
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #98E4D6,
+        #83D8C8
+    );
+
+    color:#2F4858;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 28px rgba(152,228,214,.35);
+
+    transition:.3s;
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(152,228,214,.45);
+
+}
+
+.save-btn:active{
+
+    transform:translateY(-1px);
+
+}
+textarea{
+
+    width:100%;
+
+    min-height:220px;
+
+    padding:28px;
+
+    border:1px solid #F0E6DA;
+
+    border-radius:22px;
+
+    background:#FFFDF8;
+
+    background-image:url("../images/line_paper.png");
+
+    background-repeat:repeat-y;
+
+    background-position:0 18px;
+
+    background-size:100% auto;
+
+    font-size:17px;
+
+    line-height:32px;
+
+    color:#4F4F4F;
+
+    resize:vertical;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+textarea:focus{
+
+    outline:none;
+
+    border-color:#98E4D6;
+
+    box-shadow:0 0 0 5px rgba(152,228,214,.15);
+
+}
+/*mood*/
+.mood-picker{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0 35px;
+
+}
+
+.mood-picker input{
+
+    display:none;
+
+}
+
+.mood-picker label{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    border:2px solid #ECE8E1;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+}
+
+.mood-picker label:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#98E4D6;
+
+    box-shadow:0 8px 18px rgba(152,228,214,.18);
+
+}
+
+.mood-picker input:checked + label{
+
+    background:#FFF4D6;
+
+    border-color:#E6D3A3;
+
+    transform:scale(1.12);
+
+    box-shadow:0 10px 22px rgba(230,211,163,.35);
+
+
+}
+/*song*/
+#memory_song{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    display:block;
+
+    margin-top:12px;
+
+    padding:16px 20px;
+
+    border:2px solid #ECE6DC;
+
+    border-radius:18px;
+
+    background:#fffdfa;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+#memory_song:focus{
+
+    outline:none;
+
+    border-color:#98E4D6;
+
+    box-shadow:0 0 0 5px rgba(152,228,214,.18);
+
+}
+
+.song-help{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#8A8A8A;
+
+    font-size:13px;
+
+    font-style:italic;
+
+}
+
+
+
