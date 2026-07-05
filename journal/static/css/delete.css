@@ -1,0 +1,129 @@
+/* ---------- Delete Page ---------- */
+
+.delete-card{
+
+    max-width:550px;
+
+    margin:70px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+.delete-card h2{
+    font-family:'Playfair Display', serif;
+    font-size:58px;
+    color:#2F4858;
+}
+
+.delete-icon{
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    background:#FFF7F4;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:52px;
+
+    margin:0 auto 30px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.delete-text{
+
+    color:#666;
+
+    margin:20px 0 30px;
+
+    line-height:1.7;
+
+}
+
+.delete-preview{
+
+    background:#faf7f2;
+
+    border:1px solid #ece6dc;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    margin-bottom:35px;
+
+    font-size:18px;
+
+}
+
+.delete-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.cancel-btn{
+
+    text-decoration:none;
+
+    background:#98e4d6;
+
+    color:#2f4f4f;
+
+    padding:13px 24px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+.cancel-btn:hover{
+
+    background:#84d7c7;
+
+}
+
+.delete-btn{
+
+    background:#f2b6b6;
+
+    color:#6b2222;
+
+    padding:13px 24px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.delete-btn:hover{
+
+    background:#e99f9f;
+
+}
+
