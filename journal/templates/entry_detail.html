@@ -1,25 +1,37 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/entry_detail.css' %}">
+{% endblock %}
+
 
 {% block content %}
 
 <div class="entry-card">
 
 
-<div class="entry-meta">
+<div class="detail-header">
 
-    <span class="mood-display">
-        {{ entry.mood_emoji }} {{ entry.mood|title }}
-    </span>
+    <div class="title-row">
 
-    
+        <h2>{{ entry.title }}</h2>
+
+        <span class="mood-display">
+            {{ entry.mood_emoji }} {{ entry.mood|title }}
+        </span>
+
+    </div>
+
+    <p class="detail-date">
+        {{ entry.created_at|date:"F d, Y" }}
+    </p>
+
 </div>
 
-<h2>{{ entry.title }}</h2>
 
 
 
-
-<hr>
 
 <div class="journal-section">
 
@@ -66,20 +78,24 @@
 
 {% if spotify_embed_url %}
 
-<div class="journal-section">
+<div class="journal-section song">
 
     <h3>🎵 Memory Song</h3>
 
-    <iframe
-        style="border-radius:16px"
-        src="{{ spotify_embed_url }}"
-        width="60%"
-        height="80"
-        frameborder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-    </iframe>
+    <div class="music-card">
+
+        <iframe
+            style="border-radius:14px"
+            src="{{ spotify_embed_url }}"
+            width="80%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+
+    </div>
 
 </div>
 

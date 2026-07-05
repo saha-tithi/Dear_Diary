@@ -108,13 +108,42 @@
 
     text-decoration:none;
 
-    transition:.25s;
+    transition:.25s ease;
+
+    cursor:pointer;
+
+    position:relative;
 
 }
-
 .title-link:hover{
 
     color:#5E8B7E;
+
+}
+
+.title-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:2px;
+
+    background:#98E4D6;
+
+    transition:.3s ease;
+
+}
+
+.title-link:hover::after{
+
+    width:100%;
 
 }
 .entry-date{
@@ -157,53 +186,7 @@
     color:#555;
 
 }
-.btn-small{
 
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-width:110px;
-
-    padding:12px 22px;
-
-    border-radius:16px;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.25s;
-
-    box-shadow:0 4px 12px rgba(0, 0, 0,.05);
-
-}
-
-
-.btn-small:not(.danger){
-
-    background:#EAF8F6;
-
-    color:#2F4858;
-
-}
-.danger{
-
-    background:#FFE0E0;
-
-    color:#9A3A3A;
-
-}
-
-.btn-small:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 10px 18px rgba(0,0,0,.08);
-
-}
 /*favourite button*/
 
 .favorite-btn{
@@ -244,33 +227,61 @@
     margin-bottom:20px;
 }
 
-.search-form input[type="text"]{
-    flex:2;
+.search-form input[type="text"],
+.search-form input[type="date"]{
+
+    background:#FFFCF8;
+
+    border:1px solid #E8E0D8;
+
+    border-radius:16px;
+
+    padding:14px 18px;
+
+    font-size:16px;
+
+    transition:.25s;
+
 }
 
-.search-form input[type="date"]{
-    flex:1;
+.search-form input::placeholder{
+
+    color:#9B938B;
+
+}
+
+.search-form input:focus{
+
+    outline:none;
+
+    border-color:#98E4D6;
+
+    box-shadow:0 0 0 4px rgba(152,228,214,.12);
+
 }
 
 .search-form button{
-    width:auto;
-    white-space:nowrap;
+
+    border-radius:16px;
+
+    padding:14px 22px;
+
+    font-weight:600;
+
+    background:#6C63FF;
+
+    transition:.25s;
+
+}
+
+.search-form button:hover{
+
+    transform:translateY(-2px);
+
 }
 
 
 
-.actions{
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:18px;
-
-    margin-top:28px;
-    
-}
 .filter-links{
     display:flex;
     gap: 15px;

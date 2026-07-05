@@ -1,0 +1,188 @@
+
+/*entry detail*/
+.title-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.title-row h2{
+
+    margin:0;
+
+    font-family:'Playfair Display', serif;
+
+    font-size:52px;
+
+    color:#2F4858;
+
+}
+
+.mood-display{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:#FFF8EC;
+
+    border:1px solid #F2DFC0;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#555;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+}
+.detail-header{
+
+    margin-bottom:40px;
+
+}
+
+.detail-date{
+
+    margin-top:10px;
+
+    color:#8B8B8B;
+
+    font-style:italic;
+
+    font-size:17px;
+
+}
+.journal-section{
+
+    position:relative;
+
+    background:#fffdfa;
+
+    padding:30px 34px;
+
+    margin-bottom:28px;
+
+    border-radius:24px;
+
+    border:1px solid #ECE5DD;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.05),
+        0 2px 8px rgba(0,0,0,.03);
+
+    overflow:hidden;
+
+}
+
+.journal-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:7px;
+
+    height:100%;
+
+    background:linear-gradient(
+        to bottom,
+        #98E4D6,
+        #CFC7F8,
+        #F7D9C4
+    );
+
+}
+
+.journal-section h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:0 0 22px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#2F4858;
+
+}
+
+.section-content{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#555;
+
+}
+.entry-card{
+
+    animation:fadeIn .45s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+.music-card{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    background:linear-gradient(
+        135deg,
+        #F7FBFF,
+        #EEF8FF
+    );
+
+    border:1px solid #D9ECFF;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
