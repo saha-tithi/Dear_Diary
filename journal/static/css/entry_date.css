@@ -1,0 +1,123 @@
+
+
+.day-memory-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.day-memory-header h1{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    color:#2F4858;
+    margin-bottom:10px;
+}
+.day-memory-header p{
+    color:#7d8794;
+    font-size:20px;
+    margin-bottom:18px;
+}
+.back-link{
+    color:#7ba5b4;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-link:hover{
+    color:#2F4858;
+}
+
+
+.day-memory-header::after{
+    content:"";
+    display:block;
+    width:120px;
+    height:3px;
+    margin:28px auto 0;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        #9de7db,
+        #cfc5ff,
+        #ffd7e6
+    );
+}
+
+.memory-card{
+    background:#ffffff;
+    border-radius:30px;
+    padding:32px;
+    margin-bottom:30px;
+
+    border:1px solid rgba(180,210,220,.35);
+
+    box-shadow:
+        0 14px 35px rgba(0,0,0,.06);
+
+    transition:.35s;
+}
+
+.memory-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+.memory-mood{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:#FFF5E7;
+    color:#7D5A2A;
+
+    padding:9px 18px;
+
+    border-radius:999px;
+
+    font-weight:600;
+}
+
+.memory-title{
+    font-family:'Playfair Display', serif;
+    font-size:38px;
+    color:#2F4858;
+
+    margin:18px 0 16px;
+}
+.memory-preview{
+    line-height:1.9;
+    color:#626F7D;
+    font-size:18px;
+    margin-bottom:28px;
+}
+
+.memory-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#9DE7DB,#C8C6FF);
+
+    color:#2F4858;
+
+    padding:12px 24px;
+
+    border-radius:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.memory-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(157,231,219,.35);
+}
+
+

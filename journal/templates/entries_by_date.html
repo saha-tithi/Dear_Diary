@@ -1,17 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/date_entries.css' %}">
+<link rel="stylesheet" href="{% static 'css/entry_date.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <div class="day-memory-header">
 
-    <div class="calendar-icon">
-        📅
-    </div>
+  
 
     <h1>{{ selected_date|date:"F d, Y" }}</h1>
 
