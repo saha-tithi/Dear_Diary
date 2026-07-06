@@ -1,0 +1,281 @@
+/*calendar page*/
+
+.calendar-container{
+    margin-top:40px;
+    padding:40px;
+    border-radius:36px;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,230,240,.45),
+        transparent 30%),
+
+        radial-gradient(circle at bottom right,
+        rgba(190,240,255,.35),
+        transparent 35%),
+
+        rgba(255,255,255,.82);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.calendar-container::before{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:
+    radial-gradient(circle,
+    rgba(173,240,230,.35),
+    transparent 70%);
+
+    top:-80px;
+    right:-80px;
+
+    pointer-events:none;
+}
+
+.calendar-container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,220,235,.35),
+    transparent 70%);
+
+    bottom:-50px;
+    left:-50px;
+
+    pointer-events:none;
+}
+
+.calendar-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.calendar-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:56px;
+
+    color:#2F4858;
+
+    letter-spacing:1px;
+}
+.month-btn{
+
+    width:62px;
+    height:62px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    color:#2F4858;
+
+    text-decoration:none;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.month-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:
+    linear-gradient(135deg,#A8E6CF,#C7CEEA);
+
+    color:white;
+}
+.day-name{
+
+    text-align:center;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    color:#6B7280;
+
+    padding-bottom:14px;
+
+    letter-spacing:.5px;
+
+}
+.calendar-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:18px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+.day{
+
+    height:95px;
+
+    border-radius:24px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:32px;
+
+    color:#2F4858;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+    cursor:default;
+
+}
+
+.has-entry{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(145deg, #fff7f8, #fff1ea);
+    border: 2px dashed #ffc8d5;
+    border-radius: 22px;
+
+    text-decoration: none;
+    overflow: hidden;
+
+    transition: all .3s ease;
+    box-shadow: 0 10px 20px rgba(255, 183, 197, 0.18);
+}
+
+
+.has-entry::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,255,255,.8), transparent 45%);
+    pointer-events: none;
+}
+
+
+.has-entry::after{
+    content: "✦";
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 11px;
+    color: #ffb4c6;
+    opacity: .8;
+}
+
+
+.has-entry:hover{
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 16px 28px rgba(255,183,197,.28);
+    border-color: #ffb3c8;
+}
+.memory-icon{
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    box-shadow: 0 5px 12px rgba(255,185,200,.22);
+
+    transition: .3s;
+}
+
+.has-entry:hover .memory-icon{
+    transform: scale(1.08) rotate(-8deg);
+}
+
+
+.today{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #98E4D6,
+    #CFC7F8
+    ) !important;
+
+    color:white;
+
+    font-weight:700;
+     box-shadow:
+        0 0 20px rgba(150,220,255,.35),
+        0 10px 25px rgba(170,180,255,.25);
+
+}
+.today .memory-icon{
+
+    background:white;
+
+    color:#2F4858;
+
+}
+.empty{
+
+    visibility:hidden;
+
+}

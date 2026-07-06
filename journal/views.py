@@ -274,7 +274,7 @@ def calendar_view(request):
     else:
         next_month = month + 1
         next_year = year
-    calendar_icon = "🔔"
+    calendar_icon = "📖"
     context = {
 
         "calendar": cal,

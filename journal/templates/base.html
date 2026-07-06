@@ -18,15 +18,15 @@
 
     <h2>📖 Dear Diary</h2>
 
-    <a href="{% url 'entry_list' %}">
+    <a href="{% url 'entry_list' %}" class="active">
         🏠 Home
     </a>
 
-    <a href="{% url 'entry_list' %}?favorites=1">
+    <a href="{% url 'entry_list' %}?favorites=1" class="active">
         ❤️ Favorites
     </a>
 
-    <a href="{% url 'calendar' %}">
+    <a href="{% url 'calendar' %}" class="active">
         📅 Calendar
     </a>
 
@@ -35,7 +35,7 @@
     </a>
     <hr>
 
-    <form action="{% url 'logout' %}" method="post">
+    <form action="{% url 'logout' %}" method="post" class="active">
         {% csrf_token %}
         <button type="submit" class="logout-btn">
             🚪 Logout
@@ -54,7 +54,8 @@
     </div>
         {% if user.is_authenticated %}
             <div class="user-info">
-                Welcome, {{ user.username }}
+                 Welcome, {{ user.username }}
+                💜
 
                 
             </div>
