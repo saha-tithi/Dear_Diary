@@ -75,6 +75,27 @@
 
 </div>
 {% endif %}
+{% if entry.image %}
+
+<div class="journal-section">
+
+    <h3>📷 Memory Photo</h3>
+
+    <div class="detail-photo-container">
+        <div class="detail-photo-frame">
+            <img
+            src="{{ entry.image.url }}"
+            alt="Memory Photo"
+            class="detail-memory-photo">
+
+        </div>
+
+        
+    </div>
+
+</div>
+
+{% endif %}
 
 {% if spotify_embed_url %}
 

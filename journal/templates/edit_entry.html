@@ -21,7 +21,7 @@
 
 </div>
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 
     {% csrf_token %}
 
@@ -79,10 +79,30 @@
         <textarea id="id_tomorrow_goal" name="tomorrow_goal">{{ entry.tomorrow_goal }}</textarea>
     </div>
 
-    <div class="journal-block">
-        <label>📝 Notes</label>
-        <textarea id="id_notes" name="notes">{{ entry.notes }}</textarea>
+   <div class="journal-block journal-photo-card">
+
+    <label>📷 Memory Photo</label>
+
+    <div class="photo-frame">
+        <img
+            src="{% if entry.image %}{{ entry.image.url }}{% endif %}"
+            id="imagePreview"
+            class="memory-photo"
+            {% if not entry.image %}style="display:none;"{% endif %}>
     </div>
+
+    <label for="id_image" class="upload-btn">
+        Change Photo
+    </label>
+
+    <input
+        type="file"
+        id="id_image"
+        name="image"
+        accept="image/*"
+        hidden>
+
+</div>
     <div class="journal-block">
         <label for="memory_song">
         🎵 Memory Song
@@ -112,5 +132,31 @@
 </form>
 
 </div>
+
+<script>
+
+const input = document.getElementById("id_image");
+const preview = document.getElementById("imagePreview");
+
+input.addEventListener("change", function () {
+
+    if (this.files.length) {
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+
+            preview.src = e.target.result;
+            preview.style.display = "block";
+
+        }
+
+        reader.readAsDataURL(this.files[0]);
+
+    }
+
+});
+
+</script>
 
 {% endblock %}

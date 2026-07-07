@@ -186,3 +186,32 @@
     box-shadow:0 8px 20px rgba(0,0,0,.05);
 
 }
+
+
+.detail-photo-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:18px;
+
+}
+
+.detail-memory-photo{
+
+    width:320px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    display:block;
+
+    margin:auto;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
+
+}

@@ -43,7 +43,7 @@ def entry_list(request):
 @login_required
 def create_entry(request):
     if request.method == "POST":
-        form = JournalEntryForm(request.POST)
+        form = JournalEntryForm(request.POST,request.FILES)
         if form.is_valid():
             entry = form.save(commit=False)
             entry.user = request.user
@@ -65,6 +65,8 @@ def edit_entry(request, id):
         entry.notes = request.POST.get('notes')
         entry.memory_song = request.POST.get('memory_song')
         entry.mood = request.POST.get('mood') 
+        if request.FILES.get("image"):
+         entry.image = request.FILES["image"]
         entry.save()
         return redirect('entry_list')
     return render(request,'edit_entry.html',{'entry': entry})

@@ -35,6 +35,7 @@ class journalEntry(models.Model):
     updated_at=models.DateTimeField(auto_now=True)
     mood=models.CharField(max_length=20,choices=MOOD_CHOICES,default='neutral')
     memory_song = models.URLField(blank=True,null=True)
+    image = models.ImageField(upload_to="journal_images/",blank=True,null=True)
     weather = models.CharField(max_length=30,blank=True)
     @property
     def mood_emoji(self):
