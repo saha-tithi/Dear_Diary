@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect,get_object_or_404
-from .models  import journalEntry
+from .models  import journalEntry, MOOD_EMOJIS
 from django .contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import logout
@@ -14,7 +14,8 @@ from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 import calendar
 from datetime import datetime
-
+from django.db.models import Count
+from django.utils import timezone
 
 
  
@@ -321,3 +322,72 @@ def entries_by_date(request, year, month, day):
             "selected_date": date(year, month, day),
         },
     )
+
+@login_required
+def statistics(request):
+
+    entries = journalEntry.objects.filter(user=request.user)
+
+    total_entries = entries.count()
+
+    favorites = entries.filter(is_favorite=True).count()
+
+    current_month = timezone.now().month
+    current_year = timezone.now().year
+
+    this_month = entries.filter(
+        created_at__month=current_month,
+        created_at__year=current_year
+    ).count()
+
+    mood_stats = (
+        entries
+        .values("mood")
+        .annotate(total=Count("mood"))
+        .order_by("-total")
+    )
+
+    most_used_mood = mood_stats[0] if mood_stats else None
+    if most_used_mood:
+        most_used_mood["emoji"] = MOOD_EMOJIS.get(
+        most_used_mood["mood"],
+        "😐")
+    recent_entries = entries.order_by("-created_at")[:7]
+    recent_entries = list(reversed(recent_entries))
+
+    mood_values = {
+    "angry": 1,
+    "sad": 2,
+    "tired": 3,
+    "neutral": 4,
+    "calm": 5,
+    "excited": 6,
+    "happy": 7,}
+
+    chart_labels = []
+    chart_data = []
+    chart_emojis = []
+
+    for entry in recent_entries:
+
+       chart_labels.append(entry.created_at.strftime("%d"))
+
+       chart_data.append(mood_values.get(entry.mood, 4))
+       chart_emojis.append(entry.mood_emoji)
+    
+
+    context = {
+
+        "total_entries": total_entries,
+        "favorites": favorites,
+        "this_month": this_month,
+        "most_used_mood": most_used_mood,
+       
+        "chart_labels": chart_labels,
+        "chart_data": chart_data,
+        "chart_emojis": chart_emojis,
+        
+
+    }
+
+    return render( request,"statistics.html",context)

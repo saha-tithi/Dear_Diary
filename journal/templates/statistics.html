@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/statistics.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="stats-container">
+
+    <div class="stats-header">
+
+        <h1>Your Journey</h1>
+
+        <p>
+            A quick look at your diary memories.
+        </p>
+
+    </div>
+
+    <!-- Mood Journey -->
+<div class="stats-card mood-card">
+
+    <div class="mood-header">
+
+        <div>
+
+            <h2>😊 Mood Journey</h2>
+
+            <p>Your emotional journey through the last 7 memories.</p>
+
+        </div>
+
+    </div>
+
+  <div class="mood-chart-container">
+
+   <canvas id="moodChart"></canvas>
+   
+</div>
+
+</div>
+
+    <!-- Summary Cards -->
+
+    <div class="stats-grid">
+
+        <div class="mini-card">
+            <span>📖</span>
+            <h3>{{ total_entries }}</h3>
+            <p>Memories</p>
+        </div>
+
+        <div class="mini-card">
+            <span>❤️</span>
+            <h3>{{ favorites }}</h3>
+            <p>Favorites</p>
+        </div>
+
+        <div class="mini-card">
+            <span>🌸</span>
+            <h3>{{ this_month }}</h3>
+            <p>This Month</p>
+        </div>
+
+        <div class="mini-card">
+
+    {% if most_used_mood %}
+
+        <span class="stat-emoji">
+            {{ most_used_mood.emoji }}
+        </span>
+
+        <h3>{{ most_used_mood.mood|title }}</h3>
+
+    {% else %}
+
+        <span class="stat-emoji">😐</span>
+
+        <h3>—</h3>
+
+    {% endif %}
+
+    <p>Most Used Mood</p>
+
+</div>
+    </div>
+
+    <!-- Reflection -->
+
+    <div class="stats-card reflection-card">
+
+        <h2>✨ Reflection</h2>
+
+        <p>
+
+            {% if total_entries == 0 %}
+                Start writing memories today 🌸
+            {% else %}
+                You've written {{ total_entries }} beautiful memories so far.
+            {% endif %}
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{{ chart_labels|json_script:"chart-labels" }}
+{{ chart_data|json_script:"chart-data" }}
+{{ chart_emojis|json_script:"chart-emojis" }}
+
+<script>
+const labels = JSON.parse(document.getElementById("chart-labels").textContent);
+const data = JSON.parse(document.getElementById("chart-data").textContent);
+const emojis = JSON.parse(document.getElementById("chart-emojis").textContent);
+
+const ctx = document.getElementById("moodChart");
+
+const emojiPlugin = {
+    id: "emojiPlugin",
+
+    afterDatasetsDraw(chart) {
+
+        const { ctx } = chart;
+        const points = chart.getDatasetMeta(0).data;
+
+        ctx.save();
+
+        ctx.font = "22px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        points.forEach((point, index) => {
+
+            ctx.fillText(
+                emojis[index],
+                point.x,
+                point.y 
+            );
+
+        });
+
+        ctx.restore();
+    }
+};
+
+new Chart(ctx, {
+
+    type: "line",
+
+    plugins: [emojiPlugin],
+
+    data: {
+
+        labels: labels,
+
+        datasets: [{
+
+            data: data,
+
+            borderColor: "#F8A97D",
+
+            borderWidth: 5,
+
+            tension: 0.45,
+
+            fill: true,
+
+            backgroundColor: "rgba(248,169,125,0.12)",
+
+            pointRadius: 0,
+
+            pointHoverRadius: 0
+
+        }]
+    },
+    options: {
+
+    responsive: true,
+
+    maintainAspectRatio: false,
+
+    animation: {
+
+    x: {
+
+        type: "number",
+
+        easing: "easeOutQuart",
+
+        duration: 1600,
+
+        from: 0
+
+    },
+
+    y: {
+
+        type: "number",
+
+        easing: "easeOutQuart",
+
+        duration: 1600
+
+    }
+
+},
+    plugins: {
+
+        legend: {
+            display: false
+        }
+
+    },
+
+    scales: {
+
+        x: {
+
+            grid: {
+                display: false
+            },
+
+            border: {
+                display: false
+            },
+
+            ticks: {
+
+                color: "#888",
+
+                font: {
+                    size: 14
+                }
+
+            }
+
+        },
+
+        y: {
+
+            min: 1,
+
+            max: 7,
+
+            ticks: {
+                display: false
+            },
+
+            grid: {
+                display: false
+            },
+
+            border: {
+                display: false
+            }
+
+        }
+
+    }
+
+}
+   
+
+});
+</script>
+{% endblock %}
