@@ -14,4 +14,5 @@ urlpatterns=[path('', views.entry_list,name='entry_list'),
              path( 'calendar/', views.calendar_view,name='calendar'),
              path("calendar/<int:year>/<int:month>/<int:day>/",views.entries_by_date,name="entries_by_date"),
              path("statistics/",views.statistics, name="statistics"),
+             path("theme/<str:theme>/",views.change_theme,name="change_theme"),
               ]

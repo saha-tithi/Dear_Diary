@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="{% static 'css/themes/default.css' %}"> 
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet"href="{% static 'css/themes/' %}{{ current_theme }}.css">
 {% block extra_css %}
 {% endblock %}
 </head>
-<body>
+<body class="=theme-{{current_theme}}">
 <div id="sidebar" class="sidebar">
 
     <h2>📖 Dear Diary</h2>
@@ -30,10 +32,34 @@
         📅 Calendar
     </a>
 
-    <a href="#">
-        🎨 Themes
+    <a href="#" id="theme-toggle" class="active">
+    🎨 Themes
+</a>
+
+<div id="theme-menu" style="display:none; margin-left:20px;">
+
+    <a href="{% url 'change_theme' 'default' %}">
+        🌸 Blossom
     </a>
-    <a href="{% url 'statistics' %}">
+
+    <a href="{% url 'change_theme' 'galaxy' %}">
+        🌙 Moonlit Galaxy
+    </a>
+
+    <a href="{% url 'change_theme' 'forest' %}">
+        🌿 Forest Whisper
+    </a>
+
+    <a href="{% url 'change_theme' 'autumn' %}">
+        📚 Autumn Library
+    </a>
+
+    <a href="{% url 'change_theme' 'ocean' %}">
+        🌊 Ocean Breeze
+    </a>
+
+</div>
+    <a href="{% url 'statistics' %}" class="active">
     📊 Statistics
 </a>
     <hr>
@@ -69,6 +95,24 @@
     {% endblock %}
 
 </div>
+
+<script>
+
+const themeBtn = document.getElementById("theme-toggle");
+const themeMenu = document.getElementById("theme-menu");
+
+themeBtn.onclick = function(e){
+
+    e.preventDefault();
+
+    if(themeMenu.style.display=="block")
+        themeMenu.style.display="none";
+    else
+        themeMenu.style.display="block";
+
+}
+
+</script>
 
 </body>
 <script>

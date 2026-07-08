@@ -1,31 +1,36 @@
-/*calendar page*/
+/* ---------------- Calendar ---------------- */
 
 .calendar-container{
+
     margin-top:40px;
+
     padding:40px;
+
     border-radius:36px;
 
     background:
         radial-gradient(circle at top left,
-        rgba(255,230,240,.45),
+        var(--calendar-bg1),
         transparent 30%),
 
         radial-gradient(circle at bottom right,
-        rgba(190,240,255,.35),
+        var(--calendar-bg2),
         transparent 35%),
 
-        rgba(255,255,255,.82);
+        var(--calendar-bg);
 
     backdrop-filter:blur(12px);
 
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.08);
+    box-shadow:0 15px 40px var(--shadow);
 
     position:relative;
+
     overflow:hidden;
+
 }
 
 .calendar-container::before{
+
     content:"";
 
     position:absolute;
@@ -35,13 +40,14 @@
 
     background:
     radial-gradient(circle,
-    rgba(173,240,230,.35),
+    var(--calendar-glow1),
     transparent 70%);
 
     top:-80px;
     right:-80px;
 
     pointer-events:none;
+
 }
 
 .calendar-container::after{
@@ -55,14 +61,17 @@
 
     background:
     radial-gradient(circle,
-    rgba(255,220,235,.35),
+    var(--calendar-glow2),
     transparent 70%);
 
     bottom:-50px;
     left:-50px;
 
     pointer-events:none;
+
 }
+
+/* Header */
 
 .calendar-header{
 
@@ -77,6 +86,7 @@
     position:relative;
 
     z-index:2;
+
 }
 
 .calendar-title{
@@ -85,10 +95,12 @@
 
     font-size:56px;
 
-    color:#2F4858;
+    color:var(--heading);
 
     letter-spacing:1px;
+
 }
+
 .month-btn{
 
     width:62px;
@@ -96,7 +108,7 @@
 
     border-radius:50%;
 
-    background:white;
+    background:var(--card);
 
     display:flex;
 
@@ -106,25 +118,32 @@
 
     font-size:28px;
 
-    color:#2F4858;
+    color:var(--heading);
 
     text-decoration:none;
 
-    box-shadow:
-    0 8px 20px rgba(0,0,0,.08);
+    box-shadow:0 8px 20px var(--shadow);
 
     transition:.3s;
+
 }
 
 .month-btn:hover{
 
     transform:translateY(-4px);
 
-    background:
-    linear-gradient(135deg,#A8E6CF,#C7CEEA);
+    background:linear-gradient(
+        135deg,
+        var(--secondary-accent),
+        var(--tertiary-accent)
+    );
 
     color:white;
+
 }
+
+/* Week Days */
+
 .day-name{
 
     text-align:center;
@@ -133,13 +152,16 @@
 
     font-weight:700;
 
-    color:#6B7280;
+    color:var(--text-light);
 
     padding-bottom:14px;
 
     letter-spacing:.5px;
 
 }
+
+/* Grid */
+
 .calendar-grid{
 
     display:grid;
@@ -153,13 +175,14 @@
     z-index:2;
 
 }
+
 .day{
 
     height:95px;
 
     border-radius:24px;
 
-    background:white;
+    background:var(--card);
 
     display:flex;
 
@@ -169,11 +192,9 @@
 
     font-size:32px;
 
-    color:#2F4858;
+    color:var(--heading);
 
-    box-shadow:
-
-        0 10px 25px rgba(0,0,0,.05);
+    box-shadow:0 10px 25px var(--shadow);
 
     transition:.3s;
 
@@ -181,99 +202,141 @@
 
 }
 
+/* Days with memories */
+
 .has-entry{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    background: linear-gradient(145deg, #fff7f8, #fff1ea);
-    border: 2px dashed #ffc8d5;
-    border-radius: 22px;
+    position:relative;
 
-    text-decoration: none;
-    overflow: hidden;
+    display:flex;
 
-    transition: all .3s ease;
-    box-shadow: 0 10px 20px rgba(255, 183, 197, 0.18);
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        145deg,
+        var(--memory-day-bg1),
+        var(--memory-day-bg2)
+    );
+
+    border:2px dashed var(--memory-day-border);
+
+    border-radius:22px;
+
+    text-decoration:none;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px var(--memory-day-shadow);
+
 }
-
 
 .has-entry::before{
-    content: "";
-    position: absolute;
-    inset: 0;
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
     background:
         radial-gradient(circle at top left,
-        rgba(255,255,255,.8), transparent 45%);
-    pointer-events: none;
-}
+        rgba(255,255,255,.8),
+        transparent 45%);
 
+    pointer-events:none;
+
+}
 
 .has-entry::after{
-    content: "✦";
-    position: absolute;
-    top: 8px;
-    left: 10px;
-    font-size: 11px;
-    color: #ffb4c6;
-    opacity: .8;
-}
 
+    content:"✦";
+
+    position:absolute;
+
+    top:8px;
+
+    left:10px;
+
+    font-size:11px;
+
+    color:var(--memory-star);
+
+    opacity:.8;
+
+}
 
 .has-entry:hover{
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 16px 28px rgba(255,183,197,.28);
-    border-color: #ffb3c8;
+
+    transform:translateY(-4px) scale(1.04);
+
+    box-shadow:0 16px 28px var(--memory-day-hover-shadow);
+
+    border-color:var(--memory-day-hover-border);
+
 }
+
 .memory-icon{
-    width: 44px;
-    height: 44px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width:44px;
 
-    background: #ffffff;
-    border-radius: 50%;
+    height:44px;
 
-    font-size: 25px;
+    display:flex;
 
-    box-shadow: 0 5px 12px rgba(255,185,200,.22);
+    align-items:center;
 
-    transition: .3s;
+    justify-content:center;
+
+    background:var(--card);
+
+    border-radius:50%;
+
+    font-size:25px;
+
+    box-shadow:0 5px 12px var(--memory-icon-shadow);
+
+    transition:.3s;
+
 }
 
 .has-entry:hover .memory-icon{
-    transform: scale(1.08) rotate(-8deg);
+
+    transform:scale(1.08) rotate(-8deg);
+
 }
 
+/* Today */
 
 .today{
 
-    background:
-
-    linear-gradient(
-    135deg,
-    #98E4D6,
-    #CFC7F8
+    background:linear-gradient(
+        135deg,
+        var(--secondary-accent),
+        var(--tertiary-accent)
     ) !important;
 
     color:white;
 
     font-weight:700;
-     box-shadow:
-        0 0 20px rgba(150,220,255,.35),
-        0 10px 25px rgba(170,180,255,.25);
+
+    box-shadow:
+        0 0 20px var(--today-glow1),
+        0 10px 25px var(--today-glow2);
 
 }
+
 .today .memory-icon{
 
     background:white;
 
-    color:#2F4858;
+    color:var(--heading);
 
 }
+
 .empty{
 
     visibility:hidden;

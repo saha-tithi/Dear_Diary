@@ -1,4 +1,4 @@
-
+/* ---------------- Entry By Date ---------------- */
 
 .day-memory-header{
 
@@ -8,103 +8,165 @@
 
 }
 
-
-
 .day-memory-header h1{
+
     font-family:'Playfair Display',serif;
+
     font-size:58px;
-    color:#2F4858;
+
+    color:var(--heading);
+
     margin-bottom:10px;
+
 }
+
 .day-memory-header p{
-    color:#7d8794;
+
+    color:var(--text-light);
+
     font-size:20px;
+
     margin-bottom:18px;
+
 }
+
 .back-link{
-    color:#7ba5b4;
+
+    color:var(--back-link);
+
     text-decoration:none;
+
     font-weight:600;
+
     transition:.3s;
+
 }
 
 .back-link:hover{
-    color:#2F4858;
-}
 
+    color:var(--heading);
+
+}
 
 .day-memory-header::after{
+
     content:"";
+
     display:block;
+
     width:120px;
+
     height:3px;
+
     margin:28px auto 0;
+
     border-radius:20px;
+
     background:linear-gradient(
+
         90deg,
-        #9de7db,
-        #cfc5ff,
-        #ffd7e6
+
+        var(--secondary-accent),
+
+        var(--tertiary-accent),
+
+        var(--soft-accent)
+
     );
+
 }
 
+/* ---------- Memory Cards ---------- */
+
 .memory-card{
-    background:#ffffff;
+
+    background:var(--card);
+
     border-radius:30px;
+
     padding:32px;
+
     margin-bottom:30px;
 
-    border:1px solid rgba(180,210,220,.35);
+    border:1px solid var(--memory-card-border);
 
-    box-shadow:
-        0 14px 35px rgba(0,0,0,.06);
+    box-shadow:0 14px 35px var(--shadow);
 
     transition:.35s;
+
 }
 
 .memory-card:hover{
+
     transform:translateY(-6px);
-    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    box-shadow:0 20px 45px var(--memory-card-hover-shadow);
+
 }
+
 .memory-mood{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:8px;
 
-    background:#FFF5E7;
-    color:#7D5A2A;
+    background:var(--badge-bg);
+
+    color:var(--memory-mood-text);
 
     padding:9px 18px;
 
     border-radius:999px;
 
     font-weight:600;
+
 }
 
 .memory-title{
+
     font-family:'Playfair Display', serif;
+
     font-size:38px;
-    color:#2F4858;
+
+    color:var(--heading);
 
     margin:18px 0 16px;
-}
-.memory-preview{
-    line-height:1.9;
-    color:#626F7D;
-    font-size:18px;
-    margin-bottom:28px;
+
 }
 
+.memory-preview{
+
+    line-height:1.9;
+
+    color:var(--text-main);
+
+    font-size:18px;
+
+    margin-bottom:28px;
+
+}
+
+/* ---------- Read Button ---------- */
+
 .memory-btn{
+
     display:inline-flex;
+
     align-items:center;
+
     gap:8px;
 
     text-decoration:none;
 
-    background:linear-gradient(135deg,#9DE7DB,#C8C6FF);
+    background:linear-gradient(
+        135deg,
+        var(--memory-btn-bg1),
+        var(--memory-btn-bg2)
+    );
 
-    color:#2F4858;
+    color:var(--memory-btn-text);
 
     padding:12px 24px;
 
@@ -113,11 +175,13 @@
     font-weight:600;
 
     transition:.3s;
+
 }
 
 .memory-btn:hover{
+
     transform:translateY(-3px);
-    box-shadow:0 10px 24px rgba(157,231,219,.35);
+
+    box-shadow:0 10px 24px var(--memory-btn-shadow);
+
 }
-
-

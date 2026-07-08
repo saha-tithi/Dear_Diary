@@ -16,6 +16,7 @@ import calendar
 from datetime import datetime
 from django.db.models import Count
 from django.utils import timezone
+from .models import Profile
 
 
  
@@ -391,3 +392,15 @@ def statistics(request):
     }
 
     return render( request,"statistics.html",context)
+
+@login_required
+def change_theme(request, theme):
+
+    profile, created = Profile.objects.get_or_create(
+        user=request.user
+    )
+
+    profile.theme = theme
+    profile.save()
+
+    return redirect(request.META.get("HTTP_REFERER", "/"))

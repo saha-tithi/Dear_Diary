@@ -1,0 +1,337 @@
+:root{
+
+    /* Background */
+
+    --background: #F5F7FA;
+
+    --background-image: none;
+
+    /* Cards */
+
+    --card: #FFFFFF;
+
+    --card-border: #ECE5DD;
+
+    /* Text */
+
+    --heading: #2F4858;
+
+    --text-main: #555555;
+
+    --text-light: #8B8B8B;
+
+    /* Buttons */
+
+    --button: #5ABFA5;
+
+    --button-hover: #4AA78E;
+
+    --button-text: #FFFFFF;
+
+    /* Accent */
+
+    --accent: #F39C6B;
+
+    --secondary-accent: #98E4D6;
+
+    /* Borders */
+
+    --border: #EAEAEA;
+
+    /* Shadows */
+
+    --shadow: rgba(0,0,0,.08);
+
+    /* Statistics */
+
+    --graph: #F39C6B;
+
+
+    /* Favorite Button */
+    --favorite-bg:#EDD4D4;
+    --favorite-hover:#CC4C4C;
+    /*searchbar*/
+    --search-bg:#FFFCF8;
+    --search-border:#E8E0D8;
+    --search-button:#6C63FF;
+    /* Home - Filter Links */
+
+    --filter-bg:#F5F5F5;
+    --filter-text:#444444;
+
+    --filter-active-bg:#98E4D6;
+    --filter-active-text:#000000;
+
+    --entry-count-text:#888888;
+
+
+
+
+    /* ---------- Form Page ---------- */
+
+   --page-icon-bg1:#F6FCFB;
+   --page-icon-bg2:#FFF7EC;
+   --page-icon-shadow:rgba(0,0,0,.08);
+
+   --subtitle:#7A7A7A;
+
+   --weather-bg:#F5FBFA;
+   --weather-text:#55706D;
+   --weather-border:#E3F3EF;
+   /* ---------- Journal Container ---------- */
+   --journal-page-bg:#FFFDF9;
+   --journal-page-border:#F0E6DA;
+
+   --journal-page-shadow1:rgba(0,0,0,.06);
+   --journal-page-shadow2:rgba(0,0,0,.03);
+   /* ---------- Journal Blocks ---------- */
+
+   --journal-block-bg:#FFFEFC;
+
+   --journal-block-border:#F3E8DA;
+
+   --journal-block-shadow:rgba(0,0,0,.035);
+
+   --journal-block-hover-shadow:rgba(0,0,0,.05); 
+   /* ---------- Title Input ---------- */
+
+    --title-text:#2F4858;
+
+    --title-border:#E7DCCF;
+
+    --title-placeholder:#1f1305;
+
+    --title-focus:#98E4D6;    
+    /* ---------- Save Button ---------- */
+
+    --save-btn-bg1:#98E4D6;
+    --save-btn-bg2:#83D8C8;
+
+    --save-btn-text:#2F4858;
+
+    --save-btn-shadow:rgba(152,228,214,.35);
+
+    --save-btn-hover-shadow:rgba(152,228,214,.45);
+    /* ---------- Textarea ---------- */
+    --textarea-bg:#FFFDF8;
+
+    --textarea-border:#F0E6DA;
+
+    --textarea-text:#4F4F4F;
+
+    --textarea-paper:url("../images/line_paper.png");
+
+    --textarea-focus:#98E4D6;
+
+    --textarea-focus-shadow:rgba(152,228,214,.15);
+    /* ---------- Mood Picker ---------- */
+
+    --mood-bg:#FFFFFF;
+
+    --mood-border:#ECE8E1;
+
+    --mood-hover-border:#98E4D6;
+
+    --mood-hover-shadow:rgba(152,228,214,.18);
+
+    --mood-selected-bg:#FFF4D6;
+
+    --mood-selected-border:#E6D3A3;
+
+    --mood-selected-shadow:rgba(230,211,163,.35);
+    /* ---------- Song ---------- */
+
+    --song-bg:#FFFDFA;
+
+    --song-border:#ECE6DC;
+
+    --song-text:#4F4F4F;
+
+    --song-help:#8A8A8A;
+
+    --song-focus:#98E4D6;
+
+    --song-focus-shadow:rgba(152,228,214,.18);
+    /* ---------- Photo Upload ---------- */
+
+    --photo-bg:#FFFDFB;
+
+    --photo-bg1:#DFF8F3;
+
+    --photo-bg2:#FDE4EF;
+
+    --photo-border:#F3E6D8;
+
+    --photo-shadow:rgba(0,0,0,.06);
+
+    --photo-hover-border:#87DACB;
+
+    --photo-hover-shadow:rgba(0,0,0,.12);
+
+    --plus-circle-bg:#EAF7F6;
+
+    --photo-status:#7C8B92;
+
+    --upload-btn-bg:#EAF7F6;
+
+    --upload-btn-hover:#D9F3EF;
+    /* ---------- Entry Detail ---------- */
+
+    --music-card-bg:linear-gradient(135deg,
+#F7FBFF,
+#EEF8FF
+);
+
+    --music-card-border:#D9ECFF;
+    --photo-shadow:rgba(0,0,0,.08);   
+    /* ---------- Entry By Date ---------- */
+
+    --back-link:#7BA5B4;
+
+    --memory-card-border:rgba(180,210,220,.35);
+
+    --memory-card-hover-shadow:rgba(0,0,0,.08);
+
+    --memory-mood-text:#7D5A2A;
+
+    --memory-btn-bg1:#9DE7DB;
+
+    --memory-btn-bg2:#C8C6FF;
+
+    --memory-btn-text:#2F4858;
+
+    --memory-btn-shadow:rgba(157,231,219,.35);
+    /* ---------- Delete Page ---------- */
+
+    --delete-icon-bg:#FFF7F4;
+    --delete-icon-shadow:rgba(0,0,0,.05);
+
+    --delete-preview-bg:#FAF7F2;
+    --delete-preview-border:#ECE6DC;
+
+    --cancel-btn-bg:#98E4D6;
+    --cancel-btn-hover:#84D7C7;
+    --cancel-btn-text:#2F4F4F;
+
+    --delete-btn-bg:#F2B6B6;
+    --delete-btn-hover:#E99F9F;
+    --delete-btn-text:#6B2222;
+    /* ---------- Calendar ---------- */
+
+    --calendar-bg:rgba(255,255,255,.82);
+
+    --calendar-bg1:rgba(255,230,240,.45);
+
+    --calendar-bg2:rgba(190,240,255,.35);
+
+    --calendar-glow1:rgba(173,240,230,.35);
+
+    --calendar-glow2:rgba(255,220,235,.35);
+
+    --memory-day-bg1:#FFF7F8;
+
+    --memory-day-bg2:#FFF1EA;
+
+    --memory-day-border:#FFC8D5;
+
+    --memory-day-hover-border:#FFB3C8;
+
+    --memory-day-shadow:rgba(255,183,197,.18);
+
+    --memory-day-hover-shadow:rgba(255,183,197,.28);
+
+    --memory-star:#FFB4C6;
+
+    --memory-icon-shadow:rgba(255,185,200,.22);
+
+    --today-glow1:rgba(150,220,255,.35);
+
+    --today-glow2:rgba(170,180,255,.25);
+    /* ---------- Base ---------- */
+
+    --background:#F8F6F2;
+
+    --primary-btn:#6C63FF;
+
+    --primary-btn-text:white;
+
+    --floating-text:#1F3A3A;
+
+    --floating-shadow:rgba(152,228,214,.35);
+
+    --secondary-accent-dark:#7FD8C8;
+    /* ---------- Sidebar ---------- */
+
+    --sidebar-bg:linear-gradient(
+180deg,
+#FFFDFB 0%,
+#FFF8F5 55%,
+#FFF5F8 100%
+);
+
+    --sidebar-border:#F2E8DE;
+
+    --sidebar-decoration:"🌸";
+    /* ---------- Sidebar Links ---------- */
+
+    --sidebar-link:#555;
+
+    --sidebar-hover-bg:#F8FEFD;
+
+    --sidebar-active-1:#BDEEE7;
+
+    --sidebar-active-2:#EAFDFC;
+
+    --sidebar-active-shadow:rgba(152,228,214,.18);
+    --sidebar-divider:#E8DDD2;
+    /* ---------- Logout ---------- */
+
+    --logout-bg:#F7D9C4;
+
+    --logout-text:#7A3E2E;
+
+    --logout-hover:#F2C3A8;
+
+    --logout-hover-text:#5F2D22;
+
+    --logout-shadow:rgba(242,195,168,.35);
+    /* ---------- Header ---------- */
+
+    --header-bg:linear-gradient(
+180deg,
+#FFFFFF,
+#FFFCF9
+);
+
+    --header-border:#F2E8DE;
+
+    --menu-bg:linear-gradient(
+135deg,
+#F8F3FF,
+#F2FCFB
+);
+
+    --menu-shadow:rgba(152,228,214,.22);
+
+    --logo-glow:#F5F1FF;
+
+    --logo-shadow:rgba(207,199,248,.18);
+
+    --user-bg:linear-gradient(
+135deg,
+#F8F5FF,
+#F4FCFB
+);
+
+    --user-border:#EEE7FF;
+
+
+
+
+
+
+
+
+}
+
+

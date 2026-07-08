@@ -6,7 +6,7 @@
 
     margin:70px auto;
 
-    background:white;
+    background:var(--card);
 
     padding:40px;
 
@@ -14,40 +14,47 @@
 
     text-align:center;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 10px 25px var(--shadow);
 
 }
+
 .delete-card h2{
+
     font-family:'Playfair Display', serif;
+
     font-size:58px;
-    color:#2F4858;
+
+    color:var(--heading);
+
 }
 
 .delete-icon{
 
     width:110px;
+
     height:110px;
 
     border-radius:50%;
 
-    background:#FFF7F4;
+    background:var(--delete-icon-bg);
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     font-size:52px;
 
     margin:0 auto 30px;
 
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.05);
+    box-shadow:0 10px 30px var(--delete-icon-shadow);
 
 }
 
 .delete-text{
 
-    color:#666;
+    color:var(--text-main);
 
     margin:20px 0 30px;
 
@@ -57,9 +64,9 @@
 
 .delete-preview{
 
-    background:#faf7f2;
+    background:var(--delete-preview-bg);
 
-    border:1px solid #ece6dc;
+    border:1px solid var(--delete-preview-border);
 
     border-radius:14px;
 
@@ -81,13 +88,15 @@
 
 }
 
+/* Cancel */
+
 .cancel-btn{
 
     text-decoration:none;
 
-    background:#98e4d6;
+    background:var(--cancel-btn-bg);
 
-    color:#2f4f4f;
+    color:var(--cancel-btn-text);
 
     padding:13px 24px;
 
@@ -95,19 +104,23 @@
 
     font-weight:bold;
 
+    transition:.3s;
+
 }
 
 .cancel-btn:hover{
 
-    background:#84d7c7;
+    background:var(--cancel-btn-hover);
 
 }
 
+/* Delete */
+
 .delete-btn{
 
-    background:#f2b6b6;
+    background:var(--delete-btn-bg);
 
-    color:#6b2222;
+    color:var(--delete-btn-text);
 
     padding:13px 24px;
 
@@ -119,11 +132,12 @@
 
     cursor:pointer;
 
+    transition:.3s;
+
 }
 
 .delete-btn:hover{
 
-    background:#e99f9f;
+    background:var(--delete-btn-hover);
 
 }
-

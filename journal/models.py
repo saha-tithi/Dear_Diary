@@ -1,6 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+
+
+
+
+
 MOOD_EMOJIS = {
     "happy": "😊",
     "calm": "😌",
@@ -45,6 +51,23 @@ class journalEntry(models.Model):
             return self.title
     class Meta:
         ordering = ['-created_at']
+
+class Profile(models.Model):
+
+    THEME_CHOICES = [
+        ("default", "🌸 Blossom"),
+        ("galaxy", "🌙 Moonlit Galaxy"),
+        ("forest", "🌿 Forest Whisper"),
+        ("autumn", "📚 Autumn Library"),
+        ("ocean", "🌊 Ocean Breeze"),
+    ]
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+
+    theme = models.CharField(max_length=20, choices=THEME_CHOICES, default="default")
+
+    def __str__(self):
+        return f"{self.user.username}'s Profile"
 
    
     
