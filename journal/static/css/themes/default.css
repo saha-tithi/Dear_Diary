@@ -14,6 +14,7 @@
 
     /* Text */
 
+    
     --heading: #2F4858;
 
     --text-main: #555555;
@@ -324,8 +325,9 @@
 );
 
     --user-border:#EEE7FF;
+    --graph: #F39C6B;
 
-
+    --graph-fill: rgba(243,156,107,.15);
 
 
 

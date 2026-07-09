@@ -118,6 +118,10 @@
 const labels = JSON.parse(document.getElementById("chart-labels").textContent);
 const data = JSON.parse(document.getElementById("chart-data").textContent);
 const emojis = JSON.parse(document.getElementById("chart-emojis").textContent);
+const theme = getComputedStyle(document.body);
+
+const graphColor = theme.getPropertyValue("--graph").trim();
+const graphFill = theme.getPropertyValue("--graph-fill").trim();
 
 const ctx = document.getElementById("moodChart");
 
@@ -163,7 +167,7 @@ new Chart(ctx, {
 
             data: data,
 
-            borderColor: "#F8A97D",
+            borderColor: graphColor,
 
             borderWidth: 5,
 
@@ -171,7 +175,7 @@ new Chart(ctx, {
 
             fill: true,
 
-            backgroundColor: "rgba(248,169,125,0.12)",
+            backgroundColor: graphFill,
 
             pointRadius: 0,
 

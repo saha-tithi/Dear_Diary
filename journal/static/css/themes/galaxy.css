@@ -1,0 +1,2206 @@
+/* ======================================================
+                    🌙 MOONLIT GALAXY
+====================================================== */
+
+body.theme-galaxy{
+
+    /* ---------- Background ---------- */
+
+    --background:
+        radial-gradient(circle at 15% 20%, rgba(125,110,255,.22), transparent 30%),
+        radial-gradient(circle at 80% 15%, rgba(110,197,255,.18), transparent 28%),
+        linear-gradient(
+            180deg,
+            #090B18 0%,
+            #11152D 45%,
+            #1A1E46 100%
+        );
+
+    /* ---------- Cards ---------- */
+
+    --card:#171C36;
+    --card-border:#323A74;
+
+    /* ---------- Text ---------- */
+
+    --heading:#F6F2FF;
+    --text-main:#D7DCF7;
+    --text-light:#AAB1D9;
+
+    /* ---------- Accent ---------- */
+
+    --secondary-accent:#8E7CFF;
+    --secondary-accent-dark:#6B57FF;
+    --accent:#A89CFF;
+
+    /* ---------- Buttons ---------- */
+
+    --button:#6D59FF;
+    --button-hover:#8E7CFF;
+
+    --primary-btn:#7E6DFF;
+    --primary-btn-text:#fff;
+
+    /* ---------- Favorite ---------- */
+
+    --favorite-bg:#3B3179;
+    --favorite-hover:#9A8CFF;
+
+    /* ---------- Borders ---------- */
+
+    --border:#394277;
+
+    /* ---------- Shadows ---------- */
+
+    --shadow:rgba(0,0,0,.45);
+
+    /* ---------- Textarea ---------- */
+
+    --textarea-bg:#201F45;
+    --textarea-border:#4A4E8A;
+    --textarea-text:#F4F0FF;
+
+    --textarea-paper:url("../../images/themes/galaxy_paper.png");
+
+    --textarea-focus:#A996FF;
+    --textarea-focus-shadow:rgba(140,120,255,.35);
+
+    /* ---------- Save Button ---------- */
+
+    --save-btn-bg1:#7F6BFF;
+    --save-btn-bg2:#A28BFF;
+    --save-btn-text:#FFFFFF;
+
+    --save-btn-shadow:rgba(127,107,255,.40);
+    --save-btn-hover-shadow:rgba(127,107,255,.55);
+    
+
+    --graph:#8E7CFF;
+    --graph-fill:rgba(142,124,255,.15);
+
+
+
+}
+/*==================================================
+                GALAXY - SIDEBAR
+==================================================*/
+
+body.theme-galaxy .sidebar{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(14,18,45,.97) 0%,
+            rgba(22,27,63,.98) 50%,
+            rgba(18,22,55,.98) 100%
+        );
+
+    border-right:1px solid rgba(140,120,255,.20);
+
+    box-shadow:
+        18px 0 60px rgba(0,0,0,.55);
+
+    backdrop-filter:blur(20px);
+
+}
+
+body.theme-galaxy .sidebar::before{
+
+    width:4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #8E7CFF,
+            #62D8FF,
+            #D7A8FF
+        );
+
+    box-shadow:
+        0 0 18px rgba(142,124,255,.45);
+
+}
+
+body.theme-galaxy .sidebar::after{
+
+    content:"☾";
+
+    font-size:95px;
+
+    color:rgba(255,255,255,.07);
+
+    right:18px;
+
+    bottom:18px;
+
+    transform:rotate(-18deg);
+
+}
+
+body.theme-galaxy .sidebar h2{
+
+    color:#F5F3FF;
+
+    text-shadow:
+        0 0 14px rgba(150,130,255,.35);
+
+}
+
+body.theme-galaxy .sidebar hr{
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(142,124,255,.45),
+            transparent
+        );
+
+}
+
+body.theme-galaxy .sidebar a{
+
+    color:#CBD3FF;
+
+    border:1px solid transparent;
+
+}
+
+body.theme-galaxy .sidebar a:hover{
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(142,124,255,.16),
+            rgba(98,216,255,.08)
+        );
+
+    color:#FFFFFF;
+
+    border-color:rgba(142,124,255,.18);
+
+    transform:translateX(10px);
+
+    box-shadow:
+        0 0 20px rgba(142,124,255,.12);
+
+}
+
+body.theme-galaxy .sidebar a.active{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(142,124,255,.35),
+            rgba(98,216,255,.18)
+        );
+
+    color:#FFFFFF;
+
+    border:1px solid rgba(142,124,255,.28);
+
+    box-shadow:
+        0 0 28px rgba(142,124,255,.25);
+
+}
+
+body.theme-galaxy .logout-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,120,170,.22),
+            rgba(255,90,120,.18)
+        );
+
+    color:#FFD9E6;
+
+    border:1px solid rgba(255,140,170,.20);
+
+}
+
+body.theme-galaxy .logout-btn:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,120,170,.35),
+            rgba(255,90,120,.28)
+        );
+
+    color:white;
+
+    box-shadow:
+        0 0 25px rgba(255,120,170,.22);
+
+}
+/*==================================================
+                GALAXY - HEADER
+==================================================*/
+
+body.theme-galaxy .top-header{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(34,41,88,.96),
+            rgba(44,52,108,.96)
+        );
+
+    border:1px solid rgba(165,145,255,.32);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 0 22px rgba(142,124,255,.18),
+        0 18px 45px rgba(0,0,0,.50);
+
+    backdrop-filter:blur(20px);
+
+}
+
+body.theme-galaxy .top-header::before{
+
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8E7CFF,
+            #62D8FF,
+            #D8A6FF
+        );
+
+}
+
+/* ---------- Logo ---------- */
+
+body.theme-galaxy .logo-section h1{
+
+    color:#F7F5FF;
+
+    text-shadow:
+        0 0 12px rgba(142,124,255,.30);
+
+}
+
+body.theme-galaxy .logo-section::before{
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(142,124,255,.35),
+            transparent 70%
+        );
+
+    filter:blur(40px);
+
+}
+
+/* ---------- Menu Button ---------- */
+
+body.theme-galaxy .menu-icon{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(142,124,255,.22),
+            rgba(98,216,255,.12)
+        );
+
+    color:white;
+
+    border:1px solid rgba(142,124,255,.22);
+
+}
+
+body.theme-galaxy .menu-icon:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(142,124,255,.38),
+            rgba(98,216,255,.20)
+        );
+
+    box-shadow:
+        0 0 25px rgba(142,124,255,.30);
+
+}
+
+/* ---------- User ---------- */
+
+body.theme-galaxy .user-info{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(55,63,125,.92),
+            rgba(42,48,102,.92)
+        );
+
+    border:1px solid rgba(170,150,255,.28);
+
+    color:#FFFFFF;
+
+    box-shadow:
+        0 0 18px rgba(142,124,255,.18);
+
+}
+
+/* ======================================================
+                    JOURNAL PAGE
+====================================================== */
+
+body.theme-galaxy .journal-page{
+
+    max-width:920px;
+
+    margin:30px auto;
+
+    padding:55px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,36,75,.92),
+            rgba(20,25,55,.95)
+        );
+
+    border:1px solid rgba(140,120,255,.35);
+
+    border-radius:34px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 0 25px rgba(120,100,255,.18),
+        0 25px 60px rgba(0,0,0,.45);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+body.theme-galaxy .journal-page::before{
+
+    background:linear-gradient(
+        90deg,
+        #8E7CFF,
+        #6EC5FF,
+        #D9A6FF
+    );
+
+}
+
+
+/* ======================================================
+                    BLOCKS
+====================================================== */
+
+body.theme-galaxy .journal-block{
+
+    background:rgba(28,34,73,.88);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+body.theme-galaxy .journal-block:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(126,109,255,.18);
+
+}
+
+
+/* ======================================================
+                    TITLE
+====================================================== */
+
+body.theme-galaxy #id_title{
+
+    color:#FFFFFF;
+
+    border-bottom:2px solid rgba(142,124,255,.45);
+
+}
+
+body.theme-galaxy #id_title::placeholder{
+
+    color:#8A91C9;
+
+}
+
+body.theme-galaxy #id_title:focus{
+
+    border-bottom:2px solid #8E7CFF;
+
+}
+
+
+/* ======================================================
+                    TEXTAREA
+====================================================== */
+
+body.theme-galaxy textarea{
+
+    background:
+        rgba(20,24,58,.80)
+        url("../../images/themes/galaxy_paper.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    color:#F6F4FF;
+
+    border:1px solid rgba(142,124,255,.30);
+
+    line-height:34px;
+
+}
+
+body.theme-galaxy textarea::placeholder{
+
+    color:#D8D1FF;
+
+}
+
+body.theme-galaxy textarea:focus{
+
+    border-color:#8E7CFF;
+
+    box-shadow:
+        0 0 18px rgba(142,124,255,.40);
+
+}
+
+
+/* ======================================================
+                    SONG
+====================================================== */
+
+body.theme-galaxy #memory_song{
+
+    background:#202653;
+
+    color:white;
+
+    border:2px solid #394277;
+
+}
+
+body.theme-galaxy #memory_song::placeholder{
+
+    color:#AAB1D9;
+
+}
+
+body.theme-galaxy #memory_song:focus{
+
+    border-color:#8E7CFF;
+
+}
+
+
+/* ======================================================
+                    PHOTO
+====================================================== */
+
+body.theme-galaxy .photo-frame{
+
+    background:
+
+        radial-gradient(circle at top left,
+        rgba(140,120,255,.18),
+        transparent 40%),
+
+        radial-gradient(circle at bottom right,
+        rgba(110,197,255,.12),
+        transparent 45%),
+
+        #1A2048;
+
+    border:2px solid rgba(142,124,255,.30);
+
+}
+
+body.theme-galaxy .photo-frame:hover{
+
+    border-color:#8E7CFF;
+
+    box-shadow:
+        0 0 35px rgba(142,124,255,.30);
+
+}
+
+
+/* ======================================================
+                    SAVE BUTTON
+====================================================== */
+
+body.theme-galaxy .save-btn{
+
+    background:linear-gradient(
+        135deg,
+        #7E6DFF,
+        #5ABFFF
+    );
+
+    color:white;
+
+    box-shadow:
+        0 0 35px rgba(126,109,255,.45);
+
+}
+
+body.theme-galaxy .save-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 45px rgba(126,109,255,.65);
+
+}
+/* ===============================
+   PAGE ICON
+================================ */
+
+body.theme-galaxy .page-icon{
+
+    background:linear-gradient(
+        135deg,
+        #6C63FF,
+        #A77CFF
+    );
+
+    color:white;
+
+    box-shadow:
+        0 0 18px rgba(126,109,255,.45),
+        0 0 40px rgba(108,99,255,.25);
+
+    animation:floatIcon 4s ease-in-out infinite;
+
+}
+
+@keyframes floatIcon{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+}
+body.theme-galaxy .page-header h2{
+
+    color:white;
+
+    text-shadow:
+        0 0 15px rgba(150,130,255,.25);
+
+}
+
+body.theme-galaxy .page-subtitle{
+
+    color:#BAC3F4;
+
+}
+body.theme-galaxy .weather-pill{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#DDE3FF;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 0 20px rgba(110,197,255,.08);
+
+}
+body.theme-galaxy .mood-picker label{
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,255,255,.12);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+}
+
+body.theme-galaxy .mood-picker label:hover{
+
+    transform:translateY(-6px) scale(1.08);
+
+    box-shadow:
+        0 0 18px rgba(140,120,255,.35);
+
+}
+
+body.theme-galaxy .mood-picker input:checked + label{
+
+    background:linear-gradient(
+        135deg,
+        #7F6BFF,
+        #5ABFFF
+    );
+
+    border-color:white;
+
+    box-shadow:
+        0 0 30px rgba(127,107,255,.6);
+
+    transform:scale(1.15);
+
+}
+body.theme-galaxy .journal-block label{
+
+    color:#FFFFFF;
+
+    text-shadow:
+        0 0 8px rgba(170,150,255,.2);
+
+}
+body.theme-galaxy textarea{
+
+    background:
+
+        rgba(18,20,48,.80)
+
+        url("../../images/themes/galaxy_paper.png");
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    color:#F8F7FF;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    line-height:34px;
+
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,.25);
+
+}
+
+body.theme-galaxy textarea::placeholder{
+
+    color:#A8B3E8;
+
+}
+
+body.theme-galaxy textarea:focus{
+
+    border-color:#8E7CFF;
+
+    box-shadow:
+
+        0 0 20px rgba(126,109,255,.35),
+
+        inset 0 0 20px rgba(0,0,0,.18);
+
+}
+body.theme-galaxy .photo-frame{
+
+    background:
+
+    rgba(28,34,73,.90);
+
+    border:2px solid rgba(255,255,255,.08);
+
+}
+
+body.theme-galaxy .plus-circle{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #7F6BFF,
+
+        #59BFFF
+
+    );
+
+    color:white;
+
+    box-shadow:
+
+        0 0 18px rgba(127,107,255,.45);
+
+}
+
+body.theme-galaxy .upload-btn{
+
+    background:#2C356C;
+
+    color:white;
+
+}
+
+body.theme-galaxy .upload-btn:hover{
+
+    background:#4954A8;
+
+}
+body.theme-galaxy .save-btn{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #7F6BFF,
+
+        #5ABFFF,
+
+        #A77CFF
+
+    );
+
+    background-size:250%;
+
+    color:white;
+
+    animation:galaxyButton 6s linear infinite;
+
+    box-shadow:
+
+        0 0 35px rgba(127,107,255,.45);
+
+}
+
+body.theme-galaxy .save-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 0 50px rgba(127,107,255,.75);
+
+}
+
+@keyframes galaxyButton{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:250%;
+
+    }
+
+}
+/* =====================================
+        Tiny Decorative Stars
+===================================== */
+
+body.theme-galaxy .journal-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(173,216,255,.7) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(210,180,255,.7) 1px, transparent 1.5px);
+
+    background-size:
+        180px 180px,
+        240px 240px,
+        320px 320px;
+
+    background-position:
+        20px 30px,
+        120px 180px,
+        260px 90px;
+
+    opacity:.18;
+
+}
+
+body.theme-galaxy .journal-page{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+        Galaxy Magic Particles
+========================================== */
+
+body.theme-galaxy::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    background-image:
+
+        radial-gradient(circle, rgba(255,255,255,.55) 1px, transparent 2px),
+
+        radial-gradient(circle, rgba(170,140,255,.45) 1px, transparent 2px),
+
+        radial-gradient(circle, rgba(120,210,255,.35) 1px, transparent 2px);
+
+    background-size:
+
+        180px 180px,
+
+        260px 260px,
+
+        340px 340px;
+
+    background-position:
+
+        30px 50px,
+
+        120px 220px,
+
+        280px 120px;
+
+    opacity:.35;
+
+    animation:galaxyParticles 10s ease-in-out infinite;
+
+}
+
+/* ==========================================
+        Galaxy Sparkles
+========================================== */
+
+
+body.theme-galaxy::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    background-image:
+
+        radial-gradient(circle, rgba(255,255,255,.85) 1px, transparent 2px),
+
+        radial-gradient(circle, rgba(170,190,255,.7) 1px, transparent 2px),
+
+        radial-gradient(circle, rgba(255,210,255,.55) 1px, transparent 2px);
+
+    background-size:
+        180px 180px,
+        260px 260px,
+        340px 340px;
+
+    background-position:
+        20px 40px,
+        120px 180px,
+        60px 120px;
+
+    animation:galaxySparkle 6s ease-in-out infinite;
+
+    opacity:.55;
+
+}
+
+@keyframes galaxySparkle{
+
+    0%,100%{
+
+        opacity:.25;
+
+        filter:brightness(1);
+
+    }
+
+    50%{
+
+        opacity:.6;
+
+        filter:brightness(1.35);
+
+    }
+
+}
+
+
+/*HOME*/
+/* ==========================================
+        HOME - ENTRY CARD
+========================================== */
+
+/* ==========================================
+        GALAXY ENTRY CARD
+========================================== */
+
+body.theme-galaxy .entry-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(33,39,82,.96),
+            rgba(24,29,66,.96)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.45),
+        0 0 18px rgba(120,100,255,.08);
+
+    transition:.35s;
+
+}
+
+
+/* top glow */
+
+body.theme-galaxy .entry-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        #8E7CFF,
+
+        #6EC5FF,
+
+        transparent
+
+    );
+
+    opacity:.75;
+
+}
+
+
+/* hover */
+
+body.theme-galaxy .entry-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(142,124,255,.35);
+
+    box-shadow:
+
+        0 25px 55px rgba(0,0,0,.50),
+
+        0 0 35px rgba(126,109,255,.18);
+
+}
+
+
+/* left strip */
+
+body.theme-galaxy .entry-card::before{
+
+    background:linear-gradient(
+
+        to bottom,
+
+        #8E7CFF,
+
+        #5ABFFF,
+
+        #D9A6FF
+
+    );
+
+}
+body.theme-galaxy .entry-card:hover::after{
+
+    animation:galaxyGlow 2s infinite;
+
+}
+
+@keyframes galaxyGlow{
+
+0%{
+
+    opacity:.4;
+
+}
+
+50%{
+
+    opacity:1;
+
+}
+
+100%{
+
+    opacity:.4;
+
+}
+
+}
+body.theme-galaxy .title-link{
+
+    color:white;
+
+}
+
+body.theme-galaxy .title-link:hover{
+
+    color:#A996FF;
+
+}
+
+body.theme-galaxy .title-link::after{
+
+    background:#7E6DFF;
+
+}
+body.theme-galaxy .entry-card p{
+
+    color:#D9DFFF;
+
+}
+
+body.theme-galaxy .entry-date{
+
+    color:#9EA7D8;
+
+}
+body.theme-galaxy .mood-badge{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+}
+body.theme-galaxy .favorite-btn{
+
+    background:#2C356E;
+
+    color:#E7E3FF;
+
+    box-shadow:
+        0 0 14px rgba(127,107,255,.18);
+
+}
+
+body.theme-galaxy .favorite-btn:hover{
+
+    background:#7E6DFF;
+
+    color:white;
+
+    box-shadow:
+        0 0 24px rgba(127,107,255,.45);
+
+}
+body.theme-galaxy .search-form input{
+
+    background:rgba(25,30,65,.90);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.10);
+
+}
+
+body.theme-galaxy .search-form input::placeholder{
+
+    color:#9EA7D8;
+
+}
+
+body.theme-galaxy .search-form input:focus{
+
+    border-color:#8E7CFF;
+
+    box-shadow:
+        0 0 16px rgba(126,109,255,.30);
+
+}
+
+body.theme-galaxy .search-form button{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #7E6DFF,
+
+        #5ABFFF
+
+    );
+
+    color:white;
+
+}
+body.theme-galaxy .filter-links a{
+
+    background:rgba(255,255,255,.06);
+
+    color:#DCE1FF;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.theme-galaxy .filter-links a:hover{
+
+    background:#2F3977;
+
+}
+
+body.theme-galaxy .active-filter{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #7E6DFF,
+
+        #5ABFFF
+
+    ) !important;
+
+    color:white !important;
+
+}
+body.theme-galaxy .entry-count{
+
+    color:#A9B4E8;
+
+}
+body.theme-galaxy .btn-small{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(142,124,255,.35);
+
+    color:#F6F2FF;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 0 18px rgba(126,109,255,.12);
+
+}
+
+body.theme-galaxy .btn-small:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#8E7CFF;
+
+    box-shadow:
+        0 0 28px rgba(126,109,255,.35);
+
+}
+
+body.theme-galaxy .danger{
+
+    background:rgba(255,80,80,.08);
+
+    border:1px solid rgba(255,120,120,.35);
+
+    color:#FFB4B4;
+
+}
+
+body.theme-galaxy .danger:hover{
+
+    border-color:#FF7272;
+
+    box-shadow:
+        0 0 25px rgba(255,90,90,.28);
+
+}
+
+
+/* ==========================================
+        GALAXY CALENDAR
+========================================== */
+
+body.theme-galaxy .calendar-container{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(25,30,70,.92),
+            rgba(18,22,55,.96)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.45),
+        0 0 30px rgba(126,109,255,.12);
+
+    backdrop-filter:blur(18px);
+
+}
+body.theme-galaxy .calendar-container::before{
+
+    background:
+        radial-gradient(circle,
+        rgba(126,109,255,.18),
+        transparent 70%);
+
+}
+
+body.theme-galaxy .calendar-container::after{
+
+    background:
+        radial-gradient(circle,
+        rgba(90,191,255,.15),
+        transparent 70%);
+
+}
+body.theme-galaxy .calendar-title{
+
+    color:white;
+
+    text-shadow:
+        0 0 15px rgba(126,109,255,.20);
+
+}
+body.theme-galaxy .month-btn{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+}
+
+body.theme-galaxy .month-btn:hover{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #7E6DFF,
+
+        #5ABFFF
+
+    );
+
+}
+body.theme-galaxy .month-btn{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+}
+
+body.theme-galaxy .month-btn:hover{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #7E6DFF,
+
+        #5ABFFF
+
+    );
+
+}
+body.theme-galaxy .day{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(34,39,78,.92),
+
+            rgba(24,29,65,.95)
+
+        );
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:#E8EAFF;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.35);
+
+}
+
+body.theme-galaxy .day:hover{
+
+    transform:translateY(-4px);
+
+}
+body.theme-galaxy .has-entry{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(45,48,95,.96),
+
+            rgba(28,33,75,.96)
+
+        );
+
+    border:1px solid rgba(142,124,255,.35);
+
+    box-shadow:
+
+        0 12px 28px rgba(0,0,0,.35),
+
+        0 0 18px rgba(126,109,255,.15);
+
+}
+
+body.theme-galaxy .has-entry:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+
+        0 0 30px rgba(126,109,255,.35);
+
+}
+
+/* Moon icon instead of book */
+
+body.theme-galaxy .memory-icon{
+    width:46px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #7E6DFF,
+        #59C3FF
+    );
+
+    box-shadow:
+        0 0 18px rgba(126,109,255,.45);
+
+    position:relative;
+
+    font-size:0;   /* hides 📖 emoji */
+}
+
+/* Crescent Moon */
+
+body.theme-galaxy .memory-icon::before{
+    content:"🌙";
+    font-size:24px;
+    filter:
+        drop-shadow(0 0 6px rgba(255,240,170,.7));
+}
+body.theme-galaxy .today{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #A996FF,
+
+            #5ABFFF
+
+        ) !important;
+
+    color:white;
+
+    box-shadow:
+
+        0 0 30px rgba(126,109,255,.45),
+
+        0 0 60px rgba(90,191,255,.25);
+
+}
+
+/* =====================================================
+                GALAXY DELETE PAGE
+===================================================== */
+
+body.theme-galaxy .delete-card{
+
+    background:linear-gradient(
+        180deg,
+        rgba(24,30,68,.96),
+        rgba(18,23,52,.96)
+    );
+
+    border:1px solid rgba(142,124,255,.25);
+
+    border-radius:32px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 0 35px rgba(120,110,255,.18),
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+body.theme-galaxy .delete-card h2{
+
+    color:#F6F2FF;
+
+    text-shadow:
+        0 0 15px rgba(160,140,255,.25);
+
+}
+
+body.theme-galaxy .delete-icon{
+
+    background:
+        radial-gradient(circle at 30% 30%,
+        #A895FF,
+        #6F5BFF);
+
+    color:white;
+
+    box-shadow:
+        0 0 35px rgba(127,107,255,.45);
+
+}
+
+body.theme-galaxy .delete-text{
+
+    color:#C8D0F5;
+
+}
+
+body.theme-galaxy .delete-preview{
+
+    background:rgba(35,42,84,.75);
+
+    border:1px solid rgba(142,124,255,.18);
+
+    color:#E7EBFF;
+
+    box-shadow:
+        inset 0 0 15px rgba(255,255,255,.02);
+
+}
+
+/* Cancel */
+body.theme-galaxy .cancel-btn{
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.14),
+        rgba(205,215,255,.08)
+    );
+
+    color:#F4F6FF;
+
+    border:1px solid rgba(255,255,255,.22);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.28),
+        inset 0 1px 1px rgba(255,255,255,.18);
+
+    transition:.35s;
+
+}
+
+body.theme-galaxy .cancel-btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        rgba(170,150,255,.32),
+        rgba(110,197,255,.22)
+    );
+
+    border-color:#A996FF;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(150,130,255,.35);
+
+}
+
+/* Delete */
+
+body.theme-galaxy .delete-btn{
+
+    background:linear-gradient(
+        135deg,
+        #B94BFF,
+        #7A5DFF
+    );
+
+    color:white;
+
+    box-shadow:
+        0 0 25px rgba(170,120,255,.35);
+
+}
+
+body.theme-galaxy .delete-btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        #D36BFF,
+        #9477FF
+    );
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 35px rgba(170,120,255,.6);
+
+}
+
+/* ==========================================================
+   ENTRY BY DATE - GALAXY
+========================================================== */
+
+body.theme-galaxy .day-memory-header h1{
+
+    color:#F6F3FF;
+    text-shadow:
+        0 0 18px rgba(170,150,255,.25);
+
+}
+
+body.theme-galaxy .day-memory-header p{
+
+    color:#AEB6E8;
+
+}
+
+body.theme-galaxy .back-link{
+
+    color:#88C9FF;
+
+}
+
+body.theme-galaxy .back-link:hover{
+
+    color:#D7C8FF;
+
+}
+
+body.theme-galaxy .day-memory-header::after{
+
+    background:linear-gradient(
+        90deg,
+        #8E7CFF,
+        #6EC5FF,
+        #DCA8FF
+    );
+
+    box-shadow:
+        0 0 12px rgba(142,124,255,.45);
+
+}
+
+/* ---------- Memory Cards ---------- */
+
+body.theme-galaxy .memory-card{
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(31,36,78,.96),
+            rgba(21,26,58,.96)
+        );
+
+    border:1px solid rgba(142,124,255,.22);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.42);
+
+    transition:.35s;
+
+}
+
+body.theme-galaxy .memory-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:5px;
+    height:100%;
+
+    background:linear-gradient(
+        180deg,
+        #8E7CFF,
+        #6EC5FF,
+        #DCA8FF
+    );
+
+}
+
+body.theme-galaxy .memory-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#8E7CFF;
+
+    box-shadow:
+        0 0 30px rgba(142,124,255,.22),
+        0 22px 55px rgba(0,0,0,.5);
+
+}
+
+/* ---------- Mood ---------- */
+
+body.theme-galaxy .memory-mood{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    color:#E8EBFF;
+
+    backdrop-filter:blur(8px);
+
+}
+
+/* ---------- Title ---------- */
+
+body.theme-galaxy .memory-title{
+
+    color:#FFFFFF;
+
+}
+
+/* ---------- Preview ---------- */
+
+body.theme-galaxy .memory-preview{
+
+    color:#C9D2F5;
+
+}
+
+/* ---------- Read Button ---------- */
+
+body.theme-galaxy .memory-btn{
+
+    background:linear-gradient(
+        135deg,
+        #7E6DFF,
+        #5ABFFF
+    );
+
+    color:white;
+
+    box-shadow:
+        0 10px 28px rgba(126,109,255,.35);
+
+}
+
+body.theme-galaxy .memory-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(126,109,255,.45);
+
+}
+/* ==========================================================
+   ENTRY DETAIL - GALAXY THEME
+========================================================== */
+
+body.theme-galaxy .title-row h2{
+
+    color:#FFFFFF;
+
+    text-shadow:
+        0 0 18px rgba(170,150,255,.25);
+
+}
+
+body.theme-galaxy .mood-display{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#EEF2FF;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.28);
+
+}
+
+body.theme-galaxy .detail-date{
+
+    color:#9EA8D8;
+
+}
+
+/* ---------- Reflection Cards ---------- */
+
+body.theme-galaxy .journal-section{
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,35,76,.96),
+            rgba(20,25,56,.96)
+        );
+
+    border:1px solid rgba(142,124,255,.20);
+
+    border-radius:26px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.42);
+
+    overflow:hidden;
+
+}
+
+body.theme-galaxy .journal-section::before{
+
+    width:5px;
+
+    background:linear-gradient(
+        180deg,
+        #8E7CFF,
+        #6EC5FF,
+        #D9A6FF
+    );
+
+}
+
+body.theme-galaxy .journal-section:hover{
+
+    border-color:#8E7CFF;
+
+    box-shadow:
+        0 0 28px rgba(142,124,255,.18),
+        0 20px 48px rgba(0,0,0,.48);
+
+}
+
+body.theme-galaxy .journal-section h3{
+
+    color:#FFFFFF;
+
+}
+
+body.theme-galaxy .section-content{
+
+    color:#CCD5F5;
+
+}
+
+/* ---------- Spotify ---------- */
+
+body.theme-galaxy .music-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.35);
+
+}
+
+/* ---------- Memory Photo ---------- */
+
+body.theme-galaxy .detail-memory-photo{
+
+    border:3px solid rgba(142,124,255,.28);
+
+    box-shadow:
+        0 0 30px rgba(142,124,255,.18),
+        0 15px 35px rgba(0,0,0,.45);
+
+}
+
+/* ---------- Animation ---------- */
+
+body.theme-galaxy .journal-section{
+
+    animation:galaxyFade .45s ease;
+
+}
+
+@keyframes galaxyFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+body.theme-galaxy .title-row h2{
+
+    color:#FFFFFF;
+
+    text-shadow:
+        0 0 18px rgba(160,140,255,.22);
+
+}
+body.theme-galaxy .mood-display{
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.30);
+
+}
+
+body.theme-galaxy .journal-section h3{
+
+    color:white;
+
+    text-shadow:
+        0 0 10px rgba(150,130,255,.18);
+
+}
+body.theme-galaxy .section-content{
+
+    color:#D8DEF8;
+
+    line-height:2.15;
+
+}
+body.theme-galaxy .journal-section::before{
+
+    width:5px;
+
+    background:linear-gradient(
+        180deg,
+        #7F6BFF,
+        #68C4FF,
+        #E3A8FF
+    );
+
+    box-shadow:
+        0 0 12px rgba(126,109,255,.55);
+
+}
+
+body.theme-galaxy .stats-header h1{
+    color:#FFFFFF;
+    text-shadow:
+        0 0 18px rgba(150,130,255,.35);
+}
+
+/* ==========================================================
+   GALAXY — STATISTICS PAGE
+========================================================== */
+
+/* ---------- Header ---------- */
+
+body.theme-galaxy .stats-header h1{
+
+    color:#FFFFFF;
+
+    text-shadow:
+        0 0 18px rgba(145,130,255,.35);
+
+}
+
+body.theme-galaxy .stats-header p{
+
+    color:#AEB8E6;
+
+}
+
+/* ==========================================================
+   MAIN CARDS
+========================================================== */
+
+body.theme-galaxy .stats-card{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(34,40,82,.92),
+            rgba(22,26,58,.96)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45);
+
+}
+
+body.theme-galaxy .stats-card:hover{
+
+    box-shadow:
+        0 0 35px rgba(125,110,255,.18),
+        0 25px 50px rgba(0,0,0,.45);
+
+}
+
+body.theme-galaxy .stats-card h2{
+
+    color:white;
+
+}
+
+/* ==========================================================
+   MOOD CARD
+========================================================== */
+
+body.theme-galaxy .mood-card{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(40,46,90,.95),
+            rgba(24,28,60,.98)
+        );
+
+}
+
+body.theme-galaxy .mood-header h2{
+
+    color:white;
+
+}
+
+body.theme-galaxy .mood-header p{
+
+    color:#AEB8E6;
+
+}
+
+/* ==========================================================
+   CHART CONTAINER
+========================================================== */
+
+body.theme-galaxy .chart-container{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(26,31,65,.95),
+            rgba(18,22,52,.98)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        inset 0 0 35px rgba(135,120,255,.08),
+        0 12px 35px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================================
+   MINI CARDS
+========================================================== */
+
+body.theme-galaxy .mini-card{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(38,44,84,.92),
+            rgba(28,33,70,.96)
+        );
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.28);
+
+}
+
+body.theme-galaxy .mini-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 28px rgba(126,109,255,.22),
+        0 18px 35px rgba(0,0,0,.35);
+
+}
+
+body.theme-galaxy .mini-card h3{
+
+    color:white;
+
+    text-shadow:
+        0 0 12px rgba(145,130,255,.28);
+
+}
+
+body.theme-galaxy .mini-card p{
+
+    color:#B7C0EB;
+
+}
+
+/* ==========================================================
+   ICONS
+========================================================== */
+
+body.theme-galaxy .stat-icon{
+
+    background:
+        linear-gradient(
+            135deg,
+            #7E6DFF,
+            #5ABFFF
+        );
+
+    color:white;
+
+    box-shadow:
+        0 0 28px rgba(126,109,255,.45);
+
+}
+
+/* ==========================================================
+   REFLECTION CARD
+========================================================== */
+
+body.theme-galaxy .reflection-card{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(36,42,82,.95),
+            rgba(22,26,58,.98)
+        );
+
+    border:1px solid rgba(150,140,255,.15);
+
+}
+
+body.theme-galaxy .reflection-card h2{
+
+    color:white;
+
+}
+
+body.theme-galaxy .reflection-card p{
+
+    color:#D8DEF8;
+
+}
+
+body.theme-galaxy .reflection-card::before{
+
+    opacity:.2;
+
+    color:#BCAFFF;
+
+}
