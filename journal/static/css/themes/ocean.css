@@ -1,0 +1,1070 @@
+/*==========================================
+            OCEAN BREEZE
+             BACKGROUND
+==========================================*/
+
+body.theme-ocean{
+
+    background:
+        radial-gradient(circle at 20% 15%, rgba(190,245,255,.35), transparent 25%),
+        radial-gradient(circle at 85% 80%, rgba(140,235,255,.30), transparent 30%),
+        linear-gradient(
+            180deg,
+            #ECFCFF 0%,
+            #F5FFFF 35%,
+            #F8FFFD 100%
+        );
+    --button:#57D8EB;
+
+    --button-hover:#32C7DF;
+
+    --button-text:#0F5568;
+
+    --search-button:#5DD9EC;
+
+
+}
+/*==========================================
+         OCEAN ENTRY CARD
+==========================================*/
+
+body.theme-ocean .entry-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:26px 30px;
+
+    border-radius:30px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(232,252,255,.70)
+        );
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(120,225,240,.28);
+
+    box-shadow:
+
+        0 18px 40px rgba(70,200,225,.14),
+
+        inset 0 2px 0 rgba(255,255,255,.8);
+
+    transition:.45s ease;
+
+}
+
+
+/*==========================================
+      BIG FLOATING WATER BUBBLES
+==========================================*/
+
+body.theme-ocean .entry-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+
+    height:130px;
+
+    top:-35px;
+
+    right:-30px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle at 35% 30%,
+            rgba(255,255,255,.95),
+            rgba(190,250,255,.45) 45%,
+            rgba(120,220,240,.12) 70%,
+            transparent 100%);
+
+    animation:oceanBubble1 9s ease-in-out infinite;
+
+    pointer-events:none;
+
+}
+
+
+/*==========================================
+       SECOND WATER BUBBLE
+==========================================*/
+
+body.theme-ocean .entry-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    bottom:-18px;
+
+    left:-18px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle at 35% 30%,
+            rgba(255,255,255,.9),
+            rgba(185,248,255,.42) 45%,
+            rgba(120,220,240,.08) 75%,
+            transparent);
+
+    animation:oceanBubble2 8s ease-in-out infinite;
+
+}
+
+
+/*==========================================
+      CARD FLOAT ANIMATION
+==========================================*/
+
+body.theme-ocean .entry-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+        0 30px 55px rgba(60,205,230,.22),
+
+        0 8px 18px rgba(0,0,0,.05);
+
+}
+
+
+/*==========================================
+        BUBBLE ANIMATIONS
+==========================================*/
+
+@keyframes oceanBubble1{
+
+    0%,100%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px) scale(1.08);
+
+    }
+
+}
+
+@keyframes oceanBubble2{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+
+/*==========================================
+          Floating Ocean Bubbles
+==========================================*/
+
+body.theme-ocean::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    background-image:
+
+        radial-gradient(circle, rgba(255,255,255,.55) 2px, transparent 3px),
+        radial-gradient(circle, rgba(170,235,245,.45) 3px, transparent 4px),
+        radial-gradient(circle, rgba(255,255,255,.35) 4px, transparent 5px),
+        radial-gradient(circle, rgba(180,245,255,.25) 6px, transparent 7px);
+
+    background-size:
+
+        260px 260px,
+        320px 320px,
+        420px 420px,
+        520px 520px;
+
+    animation:oceanBubbleMove 35s linear infinite;
+
+    opacity:.75;
+
+}
+
+
+/*==========================================
+        Bubble Animation
+==========================================*/
+
+@keyframes oceanBubbleMove{
+
+    from{
+
+        background-position:
+
+            0 100%,
+            100px 120%,
+            200px 110%,
+            50px 130%;
+
+    }
+
+    to{
+
+        background-position:
+
+            0 -100%,
+            100px -120%,
+            200px -110%,
+            50px -130%;
+
+    }
+
+}
+
+
+.theme-ocean .top-header,
+.theme-ocean .container,
+.theme-ocean .floating-btn{
+
+    position:relative;
+    z-index:2;
+
+}
+
+/*==========================================
+             ENTRY CARD
+==========================================*/
+
+
+
+
+
+/* Ocean Accent Strip */
+
+body.theme-ocean::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    background-image:
+
+        radial-gradient(circle, rgba(255,255,255,.85) 8px, transparent 10px),
+        radial-gradient(circle, rgba(170,240,255,.65) 14px, transparent 17px),
+        radial-gradient(circle, rgba(210,250,255,.55) 18px, transparent 22px),
+        radial-gradient(circle, rgba(130,220,245,.45) 25px, transparent 30px);
+
+    background-size:
+
+        420px 420px,
+        520px 520px,
+        650px 650px,
+        800px 800px;
+
+    animation:oceanBubbleMove 45s linear infinite;
+
+    opacity:.8;
+
+}
+/* Water Reflection */
+
+
+
+body.theme-ocean .entry-card:hover::after{
+
+    left:100%;
+
+}
+
+
+/*==========================================
+           OCEAN TYPOGRAPHY
+==========================================*/
+
+body.theme-ocean .entry-card h3{
+
+    color:#0E596F;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    letter-spacing:.5px;
+
+    transition:.35s;
+
+}
+
+body.theme-ocean .title-link{
+
+    color:#0E596F;
+
+}
+
+body.theme-ocean .title-link:hover{
+
+    color:#1BAFD2;
+
+}
+
+body.theme-ocean .title-link::after{
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #58D9EA,
+        #9AF5E7
+    );
+
+}
+
+/*==========================================
+               ENTRY TEXT
+==========================================*/
+
+body.theme-ocean .entry-card p{
+
+    color:#4D7782;
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+body.theme-ocean .entry-date{
+
+    color:#7CAAB4;
+
+    font-style:italic;
+
+}
+
+
+/*==========================================
+            OCEAN MOOD BADGE
+==========================================*/
+
+body.theme-ocean .mood-badge{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:11px 22px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(210,250,255,.55)
+        );
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(120,225,240,.35);
+
+    color:#0F677C;
+
+    font-weight:600;
+
+    box-shadow:
+
+        inset 0 2px 4px rgba(255,255,255,.9),
+
+        inset 0 -8px 14px rgba(130,220,245,.12),
+
+        0 12px 26px rgba(90,210,235,.18);
+
+    transition:.35s;
+
+}
+
+/* glossy reflection */
+
+body.theme-ocean .mood-badge::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-20px;
+
+    left:-30px;
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    filter:blur(12px);
+
+}
+
+/* tiny bubble */
+
+body.theme-ocean .mood-badge::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:12px;
+
+    top:8px;
+
+    width:9px;
+
+    height:9px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    box-shadow:
+
+        0 0 8px rgba(255,255,255,.8);
+
+    animation:oceanMoodBubble 4s ease-in-out infinite;
+
+}
+
+@keyframes oceanMoodBubble{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+        opacity:1;
+
+    }
+
+}
+
+body.theme-ocean .mood-badge:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        inset 0 2px 6px rgba(255,255,255,.9),
+
+        0 18px 30px rgba(90,210,235,.26);
+
+}
+
+/*==========================================
+        FAVORITE BUTTON
+==========================================*/
+
+body.theme-ocean .favorite-btn{
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle at 30% 25%,
+            rgba(255,255,255,.95),
+            rgba(170,245,255,.75) 45%,
+            rgba(90,210,235,.95) 100%);
+
+    border:2px solid rgba(255,255,255,.65);
+
+    color:#0B6B82;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+
+        inset 0 2px 6px rgba(255,255,255,.9),
+
+        inset 0 -6px 10px rgba(70,190,220,.25),
+
+        0 10px 22px rgba(90,210,235,.25);
+
+    transition:.35s;
+
+}
+
+body.theme-ocean .favorite-btn:hover{
+
+    transform:translateY(-4px) scale(1.15);
+
+    background:
+
+        radial-gradient(circle at 30% 25%,
+
+            rgba(255,255,255,1),
+
+            rgba(190,255,255,.9) 40%,
+
+            #5DD8EE 100%);
+
+    box-shadow:
+
+        inset 0 2px 8px rgba(255,255,255,1),
+
+        0 0 18px rgba(90,220,245,.55),
+
+        0 14px 28px rgba(90,210,235,.30);
+
+}
+
+/*==========================================
+            SEARCH BAR
+==========================================*/
+
+body.theme-ocean .search-form{
+
+    display:flex;
+    gap:14px;
+    align-items:center;
+    margin-bottom:28px;
+
+}
+
+body.theme-ocean .search-form input[type="text"],
+body.theme-ocean .search-form input[type="date"]{
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(120,225,240,.30);
+
+    border-radius:18px;
+
+    color:#16596A;
+
+    padding:15px 18px;
+
+    transition:.35s;
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.9),
+
+        0 8px 18px rgba(80,210,230,.08);
+
+}
+
+body.theme-ocean .search-form input::placeholder{
+
+    color:#7FAEB8;
+
+}
+
+body.theme-ocean .search-form input:focus{
+
+    outline:none;
+
+    border-color:#5FDDEC;
+
+    box-shadow:
+
+        0 0 0 5px rgba(95,221,236,.15),
+
+        0 10px 25px rgba(95,221,236,.12);
+
+}
+
+
+
+/*==========================================
+          OCEAN SEARCH BUTTON
+==========================================*/
+
+body.theme-ocean .search-form button{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:none;
+
+    border-radius:20px;
+
+    padding:15px 26px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#0D5B6D;
+
+    cursor:pointer;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #7BE7F5,
+            #B4FFF2
+        );
+
+    box-shadow:
+
+        inset 0 2px 6px rgba(255,255,255,.9),
+
+        inset 0 -8px 12px rgba(80,205,225,.18),
+
+        0 12px 26px rgba(90,210,235,.28);
+
+    transition:.35s;
+
+}
+
+/* glossy highlight */
+
+body.theme-ocean .search-form button::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-40px;
+
+    top:-30px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.55);
+
+    filter:blur(10px);
+
+}
+
+/* moving shine */
+
+body.theme-ocean .search-form button::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-40%;
+
+    left:-120%;
+
+    width:50%;
+
+    height:180%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.55),
+
+            transparent
+
+        );
+
+    transform:rotate(20deg);
+
+    transition:.6s;
+
+}
+
+body.theme-ocean .search-form button:hover::after{
+
+    left:160%;
+
+}
+
+body.theme-ocean .search-form button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        inset 0 2px 8px rgba(255,255,255,1),
+
+        0 18px 34px rgba(90,210,235,.38),
+
+        0 0 24px rgba(120,240,255,.25);
+
+}
+
+body.theme-ocean .search-form button:active{
+
+    transform:translateY(-1px) scale(.97);
+
+}
+
+
+
+/*==========================================
+          FILTER BUTTONS
+==========================================*/
+
+body.theme-ocean .filter-links{
+
+    display:flex;
+    gap:14px;
+    margin:30px 0;
+
+}
+
+body.theme-ocean .filter-links a{
+
+    background:rgba(255,255,255,.60);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(120,225,240,.25);
+
+    border-radius:999px;
+
+    color:#23697B;
+
+    padding:10px 18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 8px 18px rgba(80,210,230,.08);
+
+}
+
+body.theme-ocean .filter-links a:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(235,255,255,.95);
+
+}
+
+body.theme-ocean .active-filter{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #68DFED,
+            #A3F8EB
+        ) !important;
+
+    color:#0F596A !important;
+
+    box-shadow:
+
+        0 12px 28px rgba(90,220,235,.25);
+
+}
+
+
+
+/*==========================================
+            ENTRY COUNT
+==========================================*/
+
+body.theme-ocean .entry-count{
+
+    color:#78A9B3;
+
+    font-weight:600;
+
+}
+/*==========================================
+         EDIT & DELETE BUTTONS
+==========================================*/
+
+body.theme-ocean .actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:26px;
+
+}
+
+
+/*---------------- EDIT ----------------*/
+
+body.theme-ocean .btn-small:not(.danger){
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.90),
+            rgba(205,250,255,.72)
+        );
+
+    color:#0F6478;
+
+    border:1px solid rgba(110,220,240,.35);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:
+
+        inset 0 2px 6px rgba(255,255,255,.9),
+
+        0 12px 22px rgba(90,210,235,.15);
+
+    transition:.35s;
+
+}
+
+body.theme-ocean .btn-small:not(.danger)::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-25px;
+
+    left:-30px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    filter:blur(8px);
+
+}
+
+body.theme-ocean .btn-small:not(.danger):hover{
+
+    transform:translateY(-4px);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #7BE8F5,
+            #A8FFF0
+        );
+
+    box-shadow:
+
+        0 18px 32px rgba(90,210,235,.30);
+
+}
+
+
+/*---------------- DELETE ----------------*/
+
+body.theme-ocean .danger{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #FFEAEA,
+            #FFD3D3
+        );
+
+    color:#A33A3A;
+
+    border:1px solid rgba(255,180,180,.45);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:
+
+        inset 0 2px 5px rgba(255,255,255,.9),
+
+        0 12px 22px rgba(255,180,180,.20);
+
+    transition:.35s;
+
+}
+
+body.theme-ocean .danger::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-20px;
+
+    left:-25px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    filter:blur(8px);
+
+}
+
+body.theme-ocean .danger:hover{
+
+    transform:translateY(-4px);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #FFBABA,
+            #FF9F9F
+        );
+
+    box-shadow:
+
+        0 18px 32px rgba(255,140,140,.28);
+
+}
+/*==========================================
+      MOVING WATER REFLECTION
+==========================================*/
+
+body.theme-ocean .entry-card{
+
+    overflow:hidden;
+
+}
+
+body.theme-ocean .entry-card h3{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+body.theme-ocean .entry-card h3::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-60px;
+
+    left:-160px;
+
+    width:90px;
+
+    height:220px;
+
+    transform:rotate(22deg);
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(255,255,255,.35),
+
+            transparent
+
+        );
+
+    animation:oceanShine 7s linear infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes oceanShine{
+
+    from{
+
+        left:-180px;
+
+    }
+
+    to{
+
+        left:900px;
+
+    }
+
+}

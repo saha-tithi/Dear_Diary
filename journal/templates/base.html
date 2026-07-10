@@ -10,6 +10,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="{% static 'css/themes/default.css' %}"> 
+
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet"href="{% static 'css/themes/' %}{{ current_theme }}.css">
 {% block extra_css %}
@@ -113,7 +114,24 @@ themeBtn.onclick = function(e){
 }
 
 </script>
+<script>
+window.addEventListener("beforeunload", () => {
+    sessionStorage.setItem("scrollPosition", window.scrollY);
+});
 
+window.addEventListener("load", () => {
+    const scrollPosition = sessionStorage.getItem("scrollPosition");
+
+    if (scrollPosition !== null) {
+        window.scrollTo({
+            top: parseInt(scrollPosition),
+            behavior: "instant"
+        });
+
+        sessionStorage.removeItem("scrollPosition");
+    }
+});
+</script>
 </body>
 <script>
     function toggleMenu(){
