@@ -21,6 +21,10 @@ body.theme-ocean{
     --button-text:#0F5568;
 
     --search-button:#5DD9EC;
+    --graph:#27C4DD;
+
+    --graph-fill:rgba(39,196,221,.22);
+
 
 
 }
@@ -1066,5 +1070,2242 @@ body.theme-ocean .entry-card h3::after{
         left:900px;
 
     }
+
+}
+/*=================================================
+            OCEAN THEME
+          CREATE MEMORY PAGE
+==================================================*/
+/*==========================================
+        OCEAN JOURNAL PAGE
+==========================================*/
+
+body.theme-ocean .journal-page{
+
+    position:relative;
+
+    overflow:hidden;
+
+    max-width:920px;
+
+    margin:35px auto;
+
+    padding:55px;
+
+    border-radius:34px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(233,251,255,.72)
+        );
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(125,225,240,.25);
+
+    box-shadow:
+
+        0 22px 55px rgba(70,200,225,.14),
+
+        inset 0 2px 0 rgba(255,255,255,.9);
+
+}
+
+
+/* Moving glow */
+
+body.theme-ocean .journal-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+
+    height:230px;
+
+    top:-80px;
+
+    right:-70px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+
+            rgba(255,255,255,.95),
+
+            rgba(175,245,255,.40),
+
+            transparent 75%);
+
+    animation:oceanPageBubble 9s ease-in-out infinite;
+
+}
+
+
+/* Bottom glow */
+
+body.theme-ocean .journal-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    bottom:-70px;
+
+    left:-60px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+
+            rgba(255,255,255,.85),
+
+            rgba(165,240,250,.25),
+
+            transparent);
+
+    animation:oceanPageBubble2 8s ease-in-out infinite;
+
+}
+
+@keyframes oceanPageBubble{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+@keyframes oceanPageBubble2{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(14px);
+
+    }
+
+}
+
+/*=================================================
+        OCEAN THEME
+        PAGE HEADER
+==================================================*/
+
+body.theme-ocean .page-header{
+
+    position:relative;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+body.theme-ocean .page-icon{
+
+    width:105px;
+
+    height:105px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #DDFBFF,
+            #BFEFFF,
+            #E8FFF7
+        );
+
+    border:1px solid rgba(120,220,240,.35);
+
+    box-shadow:
+        0 20px 45px rgba(95,210,230,.20),
+        inset 0 1px 0 rgba(255,255,255,.75);
+
+    animation:oceanFloatIcon 5s ease-in-out infinite;
+
+}
+
+/* little floating bubbles */
+
+body.theme-ocean .page-icon::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+    top:10px;
+    left:15px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.7);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.8);
+
+}
+
+body.theme-ocean .page-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+    height:12px;
+
+    bottom:14px;
+    right:16px;
+
+    border-radius:50%;
+
+    background:rgba(170,240,255,.7);
+
+    box-shadow:
+        0 0 12px rgba(170,240,255,.7);
+
+}
+
+@keyframes oceanFloatIcon{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+/* Title */
+
+body.theme-ocean .page-header h2{
+
+    color:#156A82;
+
+    text-shadow:
+
+        0 4px 20px rgba(110,225,240,.35);
+
+}
+
+/* Subtitle */
+
+body.theme-ocean .page-subtitle{
+
+    color:#5D94A0;
+
+    font-style:italic;
+
+}
+
+/* Weather */
+
+body.theme-ocean .weather-pill{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.65),
+
+            rgba(220,250,255,.55)
+
+        );
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(120,220,240,.25);
+
+    color:#2A7286;
+
+    box-shadow:
+
+        0 10px 22px rgba(100,220,235,.12);
+
+}
+/*=================================================
+            OCEAN THEME
+            JOURNAL BLOCKS
+==================================================*/
+
+body.theme-ocean .journal-block{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.72),
+            rgba(228,250,255,.60)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(120,220,240,.22);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 18px 40px rgba(90,200,225,.12),
+        inset 0 1px 0 rgba(255,255,255,.7);
+
+    transition:.4s;
+
+}
+
+/* floating water glow */
+
+body.theme-ocean .journal-block::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    top:-100px;
+    right:-90px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.35),
+            rgba(170,240,250,.16),
+            transparent 75%
+        );
+
+    animation:oceanCardFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes oceanCardFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+body.theme-ocean .journal-block:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 28px 60px rgba(80,205,225,.18);
+
+}
+
+/* labels */
+
+body.theme-ocean .journal-block label{
+
+    color:#14677E;
+
+    letter-spacing:.3px;
+
+}
+/*=================================================
+            OCEAN THEME
+            JOURNAL BLOCKS
+==================================================*/
+
+body.theme-ocean .journal-block{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.72),
+            rgba(228,250,255,.60)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(120,220,240,.22);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 18px 40px rgba(90,200,225,.12),
+        inset 0 1px 0 rgba(255,255,255,.7);
+
+    transition:.4s;
+
+}
+
+/* floating water glow */
+
+body.theme-ocean .journal-block::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    top:-100px;
+    right:-90px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.35),
+            rgba(170,240,250,.16),
+            transparent 75%
+        );
+
+    animation:oceanCardFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes oceanCardFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+body.theme-ocean .journal-block:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 28px 60px rgba(80,205,225,.18);
+
+}
+
+/* labels */
+
+body.theme-ocean .journal-block label{
+
+    color:#14677E;
+
+    letter-spacing:.3px;
+
+}
+/*=================================================
+            OCEAN THEME
+               TEXTAREA
+==================================================*/
+
+body.theme-ocean textarea{
+
+    width:100%;
+
+    min-height:240px;
+
+    box-sizing:border-box;
+
+    padding:32px;
+
+    border-radius:26px;
+
+    border:2px solid rgba(110,220,240,.28);
+
+    background-color:#FFFDF8;
+
+    background-image:url("../../images/themes/ocean_paper.png");
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:cover;
+
+    color:#255D6D;
+
+    font-size:17px;
+
+    line-height:34px;
+
+    resize:vertical;
+
+    transition:.35s;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.75),
+        0 12px 30px rgba(90,205,225,.08);
+
+}
+
+/* Placeholder */
+
+body.theme-ocean textarea::placeholder{
+
+    color:#79A9B6;
+
+    font-style:italic;
+
+}
+
+/* Focus */
+
+body.theme-ocean textarea:focus{
+
+    outline:none;
+
+    border-color:#61DCEC;
+
+    box-shadow:
+
+        0 0 0 6px rgba(110,220,240,.14),
+
+        0 20px 45px rgba(95,210,230,.14);
+
+}
+
+/* Selection */
+
+body.theme-ocean textarea::selection{
+
+    background:rgba(120,225,240,.30);
+
+}
+/*=================================================
+            OCEAN THEME
+             MOOD PICKER
+==================================================*/
+
+body.theme-ocean .mood-picker{
+
+    gap:20px;
+
+}
+
+body.theme-ocean .mood-picker label{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(220,250,255,.72)
+        );
+
+    backdrop-filter:blur(16px);
+
+    border:2px solid rgba(110,220,240,.22);
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.9),
+
+        0 10px 25px rgba(90,205,225,.12);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Bubble shine */
+
+body.theme-ocean .mood-picker label::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    top:10px;
+
+    left:12px;
+
+    background:rgba(255,255,255,.65);
+
+    filter:blur(2px);
+
+}
+
+/* Hover */
+
+body.theme-ocean .mood-picker label:hover{
+
+    transform:
+
+        translateY(-8px)
+
+        scale(1.08);
+
+    border-color:#69DCEC;
+
+    box-shadow:
+
+        0 20px 35px rgba(100,220,235,.22);
+
+}
+
+/* Selected */
+
+body.theme-ocean .mood-picker input:checked + label{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #74DDF0,
+
+            #A9F6EB
+
+        );
+
+    border-color:#5ED7EA;
+
+    transform:scale(1.15);
+
+    box-shadow:
+
+        0 0 30px rgba(110,220,240,.35),
+
+        0 20px 35px rgba(90,205,225,.25);
+
+}
+
+/* Emoji */
+
+body.theme-ocean .mood-picker label{
+
+    font-size:34px;
+
+}
+/*=================================================
+            OCEAN THEME
+              SONG BOX
+==================================================*/
+
+body.theme-ocean #memory_song{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    border:2px solid rgba(110,220,240,.22);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(220,250,255,.65)
+        );
+
+    backdrop-filter:blur(14px);
+
+    color:#1D6477;
+
+    font-size:16px;
+
+    transition:.35s;
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.85),
+
+        0 10px 22px rgba(90,205,225,.08);
+
+}
+
+/* Placeholder */
+
+body.theme-ocean #memory_song::placeholder{
+
+    color:#82AEB8;
+
+    font-style:italic;
+
+}
+
+/* Focus */
+
+body.theme-ocean #memory_song:focus{
+
+    outline:none;
+
+    border-color:#63DBED;
+
+    box-shadow:
+
+        0 0 0 5px rgba(110,220,240,.14),
+
+        0 16px 30px rgba(90,205,225,.14);
+
+}
+
+/* Helper text */
+
+body.theme-ocean .song-help{
+
+    color:#6D9CA8;
+
+    font-style:italic;
+
+}
+/*=================================================
+            OCEAN THEME
+              SONG BOX
+==================================================*/
+
+body.theme-ocean #memory_song{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    border:2px solid rgba(110,220,240,.22);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(220,250,255,.65)
+        );
+
+    backdrop-filter:blur(14px);
+
+    color:#1D6477;
+
+    font-size:16px;
+
+    transition:.35s;
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.85),
+
+        0 10px 22px rgba(90,205,225,.08);
+
+}
+
+/* Placeholder */
+
+body.theme-ocean #memory_song::placeholder{
+
+    color:#82AEB8;
+
+    font-style:italic;
+
+}
+
+/* Focus */
+
+body.theme-ocean #memory_song:focus{
+
+    outline:none;
+
+    border-color:#63DBED;
+
+    box-shadow:
+
+        0 0 0 5px rgba(110,220,240,.14),
+
+        0 16px 30px rgba(90,205,225,.14);
+
+}
+
+/* Helper text */
+
+body.theme-ocean .song-help{
+
+    color:#6D9CA8;
+
+    font-style:italic;
+
+}
+/*=================================================
+            OCEAN THEME
+            PHOTO UPLOAD
+==================================================*/
+
+body.theme-ocean .photo-frame{
+
+    width:260px;
+
+    height:320px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(220,250,255,.70)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:2px solid rgba(110,220,240,.25);
+
+    border-radius:28px;
+
+    box-shadow:
+
+        inset 0 2px 0 rgba(255,255,255,.9),
+
+        0 20px 45px rgba(90,205,225,.16);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+/* Big ocean glow */
+
+body.theme-ocean .photo-frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-70px;
+
+    right:-60px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.45),
+
+            rgba(170,240,250,.18),
+
+            transparent 70%
+
+        );
+
+}
+
+/* Small bubble */
+
+body.theme-ocean .photo-frame::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    left:24px;
+
+    top:24px;
+
+    background:rgba(255,255,255,.55);
+
+    box-shadow:
+
+        0 0 18px rgba(255,255,255,.8);
+
+}
+
+/* Hover */
+
+body.theme-ocean .photo-frame:hover{
+
+    transform:
+
+        translateY(-8px)
+
+        rotate(-1deg);
+
+    border-color:#6ADCEC;
+
+    box-shadow:
+
+        0 28px 55px rgba(90,205,225,.25);
+
+}
+
+/* Upload icon */
+
+body.theme-ocean .plus-circle{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #DDFBFF,
+
+            #BDF5FF
+
+        );
+
+    color:#16718A;
+
+    box-shadow:
+
+        0 12px 24px rgba(110,220,240,.18);
+
+}
+
+/* Upload button */
+
+body.theme-ocean .upload-btn{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #DFFBFF,
+
+            #C6FFF2
+
+        );
+
+    color:#17697E;
+
+    border:1px solid rgba(110,220,240,.25);
+
+    box-shadow:
+
+        0 10px 24px rgba(90,205,225,.12);
+
+}
+
+body.theme-ocean .upload-btn:hover{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #78E1EF,
+
+            #A9F8EA
+
+        );
+
+    transform:translateY(-3px);
+
+}
+
+body.theme-ocean .photo-status{
+
+    color:#6B99A5;
+
+}
+/*=================================================
+            OCEAN THEME
+              SAVE BUTTON
+==================================================*/
+
+body.theme-ocean .save-btn{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #63DCEC 0%,
+
+            #8FEFE5 45%,
+
+            #6FD0FF 100%
+
+        );
+
+    color:#124D60;
+
+    border:none;
+
+    border-radius:999px;
+
+    box-shadow:
+
+        0 18px 35px rgba(95,215,235,.28),
+
+        inset 0 1px 0 rgba(255,255,255,.55);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Moving shine */
+
+body.theme-ocean .save-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120px;
+
+    width:60px;
+
+    height:100%;
+
+    transform:skewX(-25deg);
+
+    background:rgba(255,255,255,.45);
+
+    transition:.6s;
+
+}
+
+/* Hover */
+
+body.theme-ocean .save-btn:hover{
+
+    transform:
+
+        translateY(-5px)
+
+        scale(1.02);
+
+    box-shadow:
+
+        0 28px 50px rgba(95,215,235,.35);
+
+}
+
+/* Shine animation */
+
+body.theme-ocean .save-btn:hover::before{
+
+    left:120%;
+
+}
+
+/* Click */
+
+body.theme-ocean .save-btn:active{
+
+    transform:translateY(-2px);
+
+}
+
+/*=================================================
+            OCEAN THEME
+             DETAIL HEADER
+==================================================*/
+
+body.theme-ocean .detail-header{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+body.theme-ocean .title-row h2{
+
+    color:#16657B;
+
+    text-shadow:
+
+        0 6px 24px rgba(100,220,240,.22);
+
+}
+
+body.theme-ocean .detail-date{
+
+    color:#6F9EAA;
+
+    font-style:italic;
+
+}
+
+/* Mood Bubble */
+
+body.theme-ocean .mood-display{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            rgba(255,255,255,.82),
+
+            rgba(220,250,255,.70)
+
+        );
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    color:#17687E;
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.8),
+
+        0 10px 24px rgba(90,205,225,.12);
+
+}
+/*=================================================
+            OCEAN THEME
+           REFLECTION CARDS
+==================================================*/
+
+body.theme-ocean .journal-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(230,250,255,.68)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    border-radius:30px;
+
+    box-shadow:
+
+        0 18px 40px rgba(90,205,225,.12),
+
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+    transition:.4s;
+
+}
+
+/* Ocean glow */
+
+body.theme-ocean .journal-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:7px;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            to bottom,
+
+            #67DBED,
+
+            #97F6EA,
+
+            #6FCFFF
+
+        );
+
+}
+
+/* Floating reflection */
+
+body.theme-ocean .journal-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-70px;
+
+    right:-60px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.38),
+
+            rgba(170,240,250,.18),
+
+            transparent 75%
+
+        );
+
+    animation:oceanReflectionCard 8s ease-in-out infinite;
+
+}
+
+@keyframes oceanReflectionCard{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+body.theme-ocean .journal-section:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+        0 28px 60px rgba(90,205,225,.20);
+
+}
+
+/* Titles */
+
+body.theme-ocean .journal-section h3{
+
+    color:#16667D;
+
+    letter-spacing:.3px;
+
+}
+
+/* Text */
+
+body.theme-ocean .section-content{
+
+    color:#4F7682;
+
+    line-height:2.1;
+
+}
+/*=================================================
+            OCEAN THEME
+              MUSIC CARD
+==================================================*/
+
+body.theme-ocean .music-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(223,250,255,.70)
+        );
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    border-radius:26px;
+
+    box-shadow:
+
+        0 18px 40px rgba(90,205,225,.12),
+
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+}
+
+/* Water glow */
+
+body.theme-ocean .music-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    top:-45px;
+
+    right:-45px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.35),
+
+            rgba(170,240,250,.18),
+
+            transparent
+
+        );
+
+}
+
+body.theme-ocean .music-card iframe{
+
+    border-radius:18px;
+
+}
+/*=================================================
+            OCEAN THEME
+             MEMORY PHOTO
+==================================================*/
+
+body.theme-ocean .detail-memory-photo{
+
+    border-radius:26px;
+
+    border:4px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+        0 22px 45px rgba(90,205,225,.20),
+
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    transition:.4s;
+
+}
+
+body.theme-ocean .detail-memory-photo:hover{
+
+    transform:
+
+        translateY(-8px)
+
+        rotate(-1deg)
+
+        scale(1.02);
+
+    box-shadow:
+
+        0 32px 65px rgba(90,205,225,.28);
+
+}
+
+/* Photo container */
+
+body.theme-ocean .detail-photo-container{
+
+    position:relative;
+
+}
+
+/* Soft ocean glow behind photo */
+
+body.theme-ocean .detail-photo-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(170,240,250,.22),
+
+            transparent 70%
+
+        );
+
+    filter:blur(20px);
+
+    z-index:-1;
+
+}
+/* Header */
+
+body.theme-ocean .detail-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* Keep title + mood badge in one row */
+
+body.theme-ocean .title-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    width:100%;
+
+}
+
+/* Date below */
+
+body.theme-ocean .detail-date{
+
+    margin-top:12px;
+
+    margin-left:0;
+
+    text-align:left;
+
+    color:#6F9EAA;
+
+}
+/*=================================================
+            OCEAN THEME
+              CALENDAR
+        CONTAINER + HEADER
+==================================================*/
+
+body.theme-ocean .calendar-container{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.80),
+            rgba(228,250,255,.68)
+        );
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(120,220,240,.22);
+
+    border-radius:38px;
+
+    box-shadow:
+        0 25px 60px rgba(80,205,225,.15),
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+}
+
+/* Large water reflection */
+
+body.theme-ocean .calendar-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.45),
+
+            rgba(170,240,250,.22),
+
+            transparent 75%
+
+        );
+
+    animation:oceanCalendarGlow 10s ease-in-out infinite;
+
+}
+
+/* Bottom reflection */
+
+body.theme-ocean .calendar-container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    bottom:-90px;
+
+    left:-90px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.30),
+
+            rgba(170,240,250,.15),
+
+            transparent 75%
+
+        );
+
+    animation:oceanCalendarGlow2 8s ease-in-out infinite;
+
+}
+
+@keyframes oceanCalendarGlow{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+@keyframes oceanCalendarGlow2{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(15px);
+
+    }
+
+}
+
+/* Month */
+
+body.theme-ocean .calendar-title{
+
+    color:#17687D;
+
+    text-shadow:
+
+        0 5px 18px rgba(110,220,240,.25);
+
+}
+
+/* Previous / Next */
+
+body.theme-ocean .month-btn{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            rgba(255,255,255,.88),
+
+            rgba(225,250,255,.72)
+
+        );
+
+    border:1px solid rgba(110,220,240,.25);
+
+    color:#16677D;
+
+    box-shadow:
+
+        0 12px 25px rgba(90,205,225,.12);
+
+}
+
+body.theme-ocean .month-btn:hover{
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #70DCEC,
+
+            #A4F6E9
+
+        );
+
+    color:white;
+
+    transform:translateY(-6px);
+
+}
+
+/* Week names */
+
+body.theme-ocean .day-name{
+
+    color:#6E9CA8;
+
+}
+/*=================================================
+            OCEAN THEME
+                TODAY
+==================================================*/
+/*=================================================
+            OCEAN THEME
+                TODAY
+==================================================*/
+
+body.theme-ocean .today{
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #24B9DA,
+            #6BE6F2
+        ) !important;
+
+    color:white !important;
+
+    border:2px solid rgba(255,255,255,.65);
+
+    box-shadow:
+        0 0 0 6px rgba(90,220,240,.15),
+        0 18px 40px rgba(36,185,218,.35);
+
+    transform:scale(1.05);
+
+}
+
+/* Pearl shine */
+
+body.theme-ocean .today::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    top:12px;
+
+    left:14px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.55);
+
+    filter:blur(2px);
+
+}
+
+/* Coral icon stays white background */
+
+body.theme-ocean .today .memory-icon{
+
+    background:white;
+
+    color:#24B9DA;
+
+}
+
+/*=================================================
+            OCEAN THEME
+          STATISTICS HEADER
+==================================================*/
+
+body.theme-ocean .stats-header{
+
+    position:relative;
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+    animation:fadeStats .6s ease;
+
+}
+
+body.theme-ocean .stats-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    top:-90px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(170,240,250,.28),
+            rgba(255,255,255,.08),
+            transparent 72%
+        );
+
+    pointer-events:none;
+
+}
+
+body.theme-ocean .stats-header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:58px;
+
+    margin-bottom:14px;
+
+    color:#17687D;
+
+    letter-spacing:.5px;
+
+}
+
+body.theme-ocean .stats-header p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#6F98A4;
+
+    font-size:19px;
+
+    font-style:italic;
+
+    letter-spacing:.4px;
+
+}
+/*=================================================
+            OCEAN THEME
+            STATS CARDS
+==================================================*/
+
+body.theme-ocean .stats-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(232,250,255,.72)
+        );
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 18px 42px rgba(80,205,225,.14),
+        inset 0 1px 0 rgba(255,255,255,.85);
+
+    transition:.35s ease;
+
+}
+
+/* Water reflection */
+
+body.theme-ocean .stats-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-60px;
+
+    right:-60px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.45),
+            rgba(170,240,250,.18),
+            transparent 75%
+        );
+
+    animation:oceanStatsFloat 8s ease-in-out infinite;
+
+}
+
+/* Small bubble */
+
+body.theme-ocean .stats-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    left:26px;
+
+    top:24px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    box-shadow:
+        0 0 12px rgba(180,245,255,.45);
+
+}
+
+@keyframes oceanStatsFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-14px);
+
+    }
+
+}
+
+body.theme-ocean .stats-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 26px 50px rgba(80,205,225,.22);
+
+}
+
+/* Card headings */
+
+body.theme-ocean .stats-card h2{
+
+    color:#17687D;
+
+    font-size:32px;
+
+}
+/*=================================================
+            OCEAN THEME
+            SUMMARY CARDS
+==================================================*/
+
+body.theme-ocean .mini-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.92),
+            rgba(238,252,255,.82)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 15px 32px rgba(80,205,225,.12),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    transition:.35s ease;
+
+}
+
+/* Soft water reflection */
+
+body.theme-ocean .mini-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    top:-35px;
+
+    right:-35px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.42),
+            rgba(170,240,250,.18),
+            transparent 72%
+        );
+
+}
+
+/* Hover */
+
+body.theme-ocean .mini-card:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+        0 24px 45px rgba(80,205,225,.20);
+
+}
+
+/*=================================================
+                ICON
+==================================================*/
+
+
+/*=================================================
+                ICON
+==================================================*/
+
+body.theme-ocean .stat-icon{
+
+    width:86px;
+
+    height:86px;
+
+    font-size:42px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #E8FDFF,
+            #D8FBF5
+        );
+
+    border:1px solid rgba(110,220,240,.25);
+
+    color:#1A97BB;
+
+    box-shadow:
+        0 12px 25px rgba(80,205,225,.14);
+
+    transition:.35s;
+
+}
+
+body.theme-ocean .mini-card:hover .stat-icon{
+
+    transform:
+        scale(1.12)
+        rotate(-8deg);
+
+}
+/*=================================================
+            NUMBER
+==================================================*/
+
+body.theme-ocean .mini-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #149FC6,
+            #55DCEC,
+            #96F3E7
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* Label */
+
+body.theme-ocean .mini-card p{
+
+    color:#6D99A5;
+
+    font-size:16px;
+
+    margin-top:12px;
+
+}
+/*=================================================
+            OCEAN THEME
+             CHART PANEL
+==================================================*/
+
+body.theme-ocean .chart-container{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.92),
+            rgba(233,251,255,.78)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 18px 40px rgba(80,205,225,.14),
+        inset 0 1px 0 rgba(255,255,255,.85);
+
+}
+
+/* Large water reflection */
+
+body.theme-ocean .chart-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    top:-90px;
+
+    right:-90px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.42),
+            rgba(170,240,250,.16),
+            transparent 72%
+        );
+
+    animation:oceanChartFloat 9s ease-in-out infinite;
+
+}
+
+/* Small bubble */
+
+body.theme-ocean .chart-container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    left:24px;
+
+    bottom:22px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    box-shadow:
+        0 0 14px rgba(180,245,255,.40);
+
+}
+
+@keyframes oceanChartFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+/* Canvas */
+
+body.theme-ocean #moodChart{
+
+    position:relative;
+
+    z-index:2;
 
 }
