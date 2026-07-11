@@ -28,6 +28,282 @@ body.theme-ocean{
 
 
 }
+/* Header */
+
+body.theme-ocean .top-header{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(225,249,255,.65)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(120,220,240,.25);
+
+    box-shadow:
+        0 18px 45px rgba(90,205,225,.16),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+}
+
+body.theme-ocean .top-header::before{
+
+    background:linear-gradient(
+        90deg,
+        #76E4F7,
+        #8AE7FF,
+        #B9F5FF
+    );
+
+}
+
+
+/* Menu */
+
+body.theme-ocean .menu-icon{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.92),
+            rgba(218,247,255,.82)
+        );
+
+    color:#16667D;
+
+    box-shadow:
+        0 10px 25px rgba(90,205,225,.18);
+
+}
+
+body.theme-ocean .menu-icon:hover{
+
+    box-shadow:
+        0 18px 35px rgba(90,205,225,.28);
+
+}
+
+
+/* Logo */
+
+body.theme-ocean .logo-section::before{
+
+    background:#7EE8FA;
+
+    opacity:.25;
+
+}
+
+body.theme-ocean .logo-section h1{
+
+    color:#16667D;
+
+    text-shadow:
+        0 0 18px rgba(126,232,250,.28);
+
+}
+
+
+/* User pill */
+
+body.theme-ocean .user-info{
+
+    background:
+        rgba(255,255,255,.72);
+
+    border:1px solid rgba(110,220,240,.25);
+
+    backdrop-filter:blur(12px);
+
+}
+
+
+/* Sidebar */
+
+body.theme-ocean .sidebar{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(250,255,255,.96),
+            rgba(225,248,253,.96)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border-right:1px solid rgba(120,220,240,.18);
+
+    box-shadow:
+        12px 0 45px rgba(90,205,225,.16);
+
+}
+
+body.theme-ocean .sidebar::before{
+
+    background:linear-gradient(
+
+        to bottom,
+
+        #76E4F7,
+
+        #9BEFFF,
+
+        #D4FAFF
+
+    );
+
+}
+
+body.theme-ocean .sidebar::after{
+
+    content:"🫧";
+
+    font-size:90px;
+
+    opacity:.18;
+
+}
+
+body.theme-ocean .sidebar h2{
+
+    color:#16667D;
+
+}
+
+body.theme-ocean .sidebar a{
+
+    color:#44717D;
+
+}
+
+body.theme-ocean .sidebar a:hover{
+
+    background:
+        rgba(170,239,248,.35);
+
+}
+
+body.theme-ocean .sidebar a.active{
+
+    background:
+        linear-gradient(
+            135deg,
+            #7DE8F7,
+            #B5F5FF
+        );
+
+    box-shadow:
+        0 12px 26px rgba(90,205,225,.18);
+
+}
+
+
+/* Logout */
+
+body.theme-ocean .logout-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFE7DF,
+            #FFD6C8
+        );
+
+    color:#A25D47;
+
+}
+
+body.theme-ocean .logout-btn:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFD4C7,
+            #FFC5B2
+        );
+
+}
+
+
+/* Floating Button */
+
+body.theme-ocean .floating-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #66DDF2,
+            #43C5E4
+        );
+
+    color:white;
+
+    box-shadow:
+        0 18px 38px rgba(67,197,228,.35);
+    position:fixed;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%);
+
+    transition:
+        background .35s,
+        box-shadow .35s,
+        transform .35s;
+    
+
+}
+
+body.theme-ocean .floating-btn:hover{
+
+    transform:
+        translateX(-50%)
+        translateY(-6px)
+        scale(1.08);
+
+}
+
+
+/* Buttons */
+
+body.theme-ocean .btn-small:not(.danger){
+
+    background:
+        linear-gradient(
+            135deg,
+            #DDFBFF,
+            #C7F6FF
+        );
+
+    color:#16667D;
+
+}
+
+body.theme-ocean .btn-small:not(.danger):hover{
+
+    box-shadow:
+        0 12px 24px rgba(90,205,225,.18);
+
+}
+
+body.theme-ocean .btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #72E3F7,
+            #46C6E5
+        );
+
+    color:white;
+
+}
+
 /*==========================================
          OCEAN ENTRY CARD
 ==========================================*/
@@ -2783,10 +3059,76 @@ body.theme-ocean .day-name{
     color:#6E9CA8;
 
 }
-/*=================================================
-            OCEAN THEME
-                TODAY
-==================================================*/
+/*=========================================
+        OCEAN THEME - MEMORY ICON
+=========================================*/
+
+body.theme-ocean .memory-icon{
+
+    font-size:0;
+
+    background:
+        radial-gradient(circle at 30% 30%,
+        rgba(255,255,255,.95),
+        rgba(228,251,255,.92));
+
+    border:1px solid rgba(180,235,245,.55);
+
+    box-shadow:
+        0 10px 22px rgba(85,200,225,.18),
+        inset 0 2px 4px rgba(255,255,255,.9);
+
+    position:relative;
+
+    animation:oceanCoralFloat 4s ease-in-out infinite;
+
+}
+
+/* Replace the 📖 with coral */
+
+body.theme-ocean .memory-icon::before{
+
+    content:"🪸";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+}
+
+/* Hover */
+
+body.theme-ocean .has-entry:hover .memory-icon{
+
+    transform:scale(1.12) rotate(-8deg);
+
+}
+
+/* Floating animation */
+
+@keyframes oceanCoralFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-3px);
+
+    }
+
+}
 /*=================================================
             OCEAN THEME
                 TODAY
@@ -3123,10 +3465,6 @@ body.theme-ocean .mini-card:hover{
 
 }
 
-/*=================================================
-                ICON
-==================================================*/
-
 
 /*=================================================
                 ICON
@@ -3307,5 +3645,212 @@ body.theme-ocean #moodChart{
     position:relative;
 
     z-index:2;
+
+}
+/*=================================================
+            OCEAN THEME
+             DELETE PAGE
+==================================================*/
+
+body.theme-ocean .delete-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(223,250,255,.72)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    box-shadow:
+        0 20px 45px rgba(90,205,225,.14),
+        inset 0 1px 0 rgba(255,255,255,.85);
+
+}
+
+/* Water glow */
+
+body.theme-ocean .delete-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    top:-60px;
+
+    right:-60px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(170,245,255,.45),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+/* Title */
+
+body.theme-ocean .delete-card h2{
+
+    color:#16667D;
+
+}
+
+/* Delete icon */
+
+body.theme-ocean .delete-icon{
+
+    background:
+        linear-gradient(
+            145deg,
+            #E9FCFF,
+            #CFF7FF
+        );
+
+    color:#2597B3;
+
+    box-shadow:
+        0 15px 35px rgba(90,205,225,.18);
+
+}
+
+/* Text */
+
+body.theme-ocean .delete-text{
+
+    color:#4F7682;
+
+}
+
+/* Preview */
+
+body.theme-ocean .delete-preview{
+
+    background:
+        rgba(255,255,255,.55);
+
+    border:1px solid rgba(110,220,240,.22);
+
+    color:#16667D;
+
+}
+
+/* Cancel */
+
+/* Keep It */
+
+body.theme-ocean .cancel-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.82),
+            rgba(222,249,255,.68)
+        );
+
+    backdrop-filter:blur(16px);
+
+    color:#1B6C82;
+
+    border:1px solid rgba(110,220,240,.28);
+
+    box-shadow:
+        0 12px 28px rgba(90,205,225,.12),
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+}
+
+/* little water shine */
+
+body.theme-ocean .cancel-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 25%,
+            rgba(255,255,255,.45) 50%,
+            transparent 75%
+        );
+
+    transform:translateX(-130%);
+
+    transition:.7s;
+
+}
+
+body.theme-ocean .cancel-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 18px 36px rgba(90,205,225,.18);
+
+}
+
+body.theme-ocean .cancel-btn:hover::after{
+
+    transform:translateX(130%);
+
+}
+
+/* Delete */
+
+body.theme-ocean .delete-btn{
+
+    background:
+        linear-gradient(
+            145deg,
+            #58BCD6,
+            #2E9EBE
+        );
+
+    color:white;
+
+    box-shadow:
+        0 12px 28px rgba(70,180,210,.25);
+
+}
+
+body.theme-ocean .delete-btn:hover{
+
+    background:
+        linear-gradient(
+            145deg,
+            #42AAC8,
+            #2289A8
+        );
+
+    transform:translateY(-2px);
 
 }
