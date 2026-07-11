@@ -1,7 +1,3 @@
-/*==========================================
-            OCEAN BREEZE
-             BACKGROUND
-==========================================*/
 
 body.theme-ocean{
 
@@ -28,7 +24,7 @@ body.theme-ocean{
 
 
 }
-/* Header */
+
 
 body.theme-ocean .top-header{
 
@@ -304,9 +300,7 @@ body.theme-ocean .btn{
 
 }
 
-/*==========================================
-         OCEAN ENTRY CARD
-==========================================*/
+
 
 body.theme-ocean .entry-card{
 
@@ -341,9 +335,7 @@ body.theme-ocean .entry-card{
 }
 
 
-/*==========================================
-      BIG FLOATING WATER BUBBLES
-==========================================*/
+
 
 body.theme-ocean .entry-card::before{
 
@@ -376,9 +368,7 @@ body.theme-ocean .entry-card::before{
 }
 
 
-/*==========================================
-       SECOND WATER BUBBLE
-==========================================*/
+
 
 body.theme-ocean .entry-card::after{
 
@@ -409,9 +399,7 @@ body.theme-ocean .entry-card::after{
 }
 
 
-/*==========================================
-      CARD FLOAT ANIMATION
-==========================================*/
+
 
 body.theme-ocean .entry-card:hover{
 
@@ -426,9 +414,7 @@ body.theme-ocean .entry-card:hover{
 }
 
 
-/*==========================================
-        BUBBLE ANIMATIONS
-==========================================*/
+
 
 @keyframes oceanBubble1{
 
@@ -463,9 +449,6 @@ body.theme-ocean .entry-card:hover{
 }
 
 
-/*==========================================
-          Floating Ocean Bubbles
-==========================================*/
 
 body.theme-ocean::before{
 
@@ -500,9 +483,6 @@ body.theme-ocean::before{
 }
 
 
-/*==========================================
-        Bubble Animation
-==========================================*/
 
 @keyframes oceanBubbleMove{
 
@@ -539,10 +519,6 @@ body.theme-ocean::before{
     z-index:2;
 
 }
-
-/*==========================================
-             ENTRY CARD
-==========================================*/
 
 
 
@@ -592,10 +568,6 @@ body.theme-ocean .entry-card:hover::after{
 }
 
 
-/*==========================================
-           OCEAN TYPOGRAPHY
-==========================================*/
-
 body.theme-ocean .entry-card h3{
 
     color:#0E596F;
@@ -636,9 +608,7 @@ body.theme-ocean .title-link::after{
 
 }
 
-/*==========================================
-               ENTRY TEXT
-==========================================*/
+
 
 body.theme-ocean .entry-card p{
 
@@ -659,9 +629,7 @@ body.theme-ocean .entry-date{
 }
 
 
-/*==========================================
-            OCEAN MOOD BADGE
-==========================================*/
+
 
 body.theme-ocean .mood-badge{
 
@@ -790,9 +758,6 @@ body.theme-ocean .mood-badge:hover{
 
 }
 
-/*==========================================
-        FAVORITE BUTTON
-==========================================*/
 
 body.theme-ocean .favorite-btn{
 
@@ -853,9 +818,6 @@ body.theme-ocean .favorite-btn:hover{
 
 }
 
-/*==========================================
-            SEARCH BAR
-==========================================*/
 
 body.theme-ocean .search-form{
 
@@ -913,9 +875,6 @@ body.theme-ocean .search-form input:focus{
 
 
 
-/*==========================================
-          OCEAN SEARCH BUTTON
-==========================================*/
 
 body.theme-ocean .search-form button{
 
@@ -1045,9 +1004,6 @@ body.theme-ocean .search-form button:active{
 
 
 
-/*==========================================
-          FILTER BUTTONS
-==========================================*/
 
 body.theme-ocean .filter-links{
 
@@ -1109,9 +1065,6 @@ body.theme-ocean .active-filter{
 
 
 
-/*==========================================
-            ENTRY COUNT
-==========================================*/
 
 body.theme-ocean .entry-count{
 
@@ -1120,9 +1073,6 @@ body.theme-ocean .entry-count{
     font-weight:600;
 
 }
-/*==========================================
-         EDIT & DELETE BUTTONS
-==========================================*/
 
 body.theme-ocean .actions{
 
@@ -1281,9 +1231,6 @@ body.theme-ocean .danger:hover{
         0 18px 32px rgba(255,140,140,.28);
 
 }
-/*==========================================
-      MOVING WATER REFLECTION
-==========================================*/
 
 body.theme-ocean .entry-card{
 
@@ -1348,13 +1295,6 @@ body.theme-ocean .entry-card h3::after{
     }
 
 }
-/*=================================================
-            OCEAN THEME
-          CREATE MEMORY PAGE
-==================================================*/
-/*==========================================
-        OCEAN JOURNAL PAGE
-==========================================*/
 
 body.theme-ocean .journal-page{
 
@@ -1488,10 +1428,6 @@ body.theme-ocean .journal-page::after{
 
 }
 
-/*=================================================
-        OCEAN THEME
-        PAGE HEADER
-==================================================*/
 
 body.theme-ocean .page-header{
 
@@ -1638,10 +1574,7 @@ body.theme-ocean .weather-pill{
         0 10px 22px rgba(100,220,235,.12);
 
 }
-/*=================================================
-            OCEAN THEME
-            JOURNAL BLOCKS
-==================================================*/
+
 
 body.theme-ocean .journal-block{
 
@@ -1732,10 +1665,6 @@ body.theme-ocean .journal-block label{
     letter-spacing:.3px;
 
 }
-/*=================================================
-            OCEAN THEME
-            JOURNAL BLOCKS
-==================================================*/
 
 body.theme-ocean .journal-block{
 
@@ -1826,10 +1755,6 @@ body.theme-ocean .journal-block label{
     letter-spacing:.3px;
 
 }
-/*=================================================
-            OCEAN THEME
-               TEXTAREA
-==================================================*/
 
 body.theme-ocean textarea{
 
@@ -1904,10 +1829,6 @@ body.theme-ocean textarea::selection{
     background:rgba(120,225,240,.30);
 
 }
-/*=================================================
-            OCEAN THEME
-             MOOD PICKER
-==================================================*/
 
 body.theme-ocean .mood-picker{
 

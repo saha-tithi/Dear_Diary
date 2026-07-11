@@ -1,10 +1,7 @@
-/* ======================================================
-                    🌙 MOONLIT GALAXY
-====================================================== */
 
 body.theme-galaxy{
 
-    /* ---------- Background ---------- */
+    
 
     --background:
         radial-gradient(circle at 15% 20%, rgba(125,110,255,.22), transparent 30%),
@@ -16,24 +13,22 @@ body.theme-galaxy{
             #1A1E46 100%
         );
 
-    /* ---------- Cards ---------- */
+   
 
     --card:#171C36;
     --card-border:#323A74;
 
-    /* ---------- Text ---------- */
-
+   
     --heading:#F6F2FF;
     --text-main:#D7DCF7;
     --text-light:#AAB1D9;
 
-    /* ---------- Accent ---------- */
-
+    
     --secondary-accent:#8E7CFF;
     --secondary-accent-dark:#6B57FF;
     --accent:#A89CFF;
 
-    /* ---------- Buttons ---------- */
+    
 
     --button:#6D59FF;
     --button-hover:#8E7CFF;
@@ -41,21 +36,19 @@ body.theme-galaxy{
     --primary-btn:#7E6DFF;
     --primary-btn-text:#fff;
 
-    /* ---------- Favorite ---------- */
+   
 
     --favorite-bg:#3B3179;
     --favorite-hover:#9A8CFF;
 
-    /* ---------- Borders ---------- */
+    
 
     --border:#394277;
 
-    /* ---------- Shadows ---------- */
-
+    
     --shadow:rgba(0,0,0,.45);
 
-    /* ---------- Textarea ---------- */
-
+   
     --textarea-bg:#201F45;
     --textarea-border:#4A4E8A;
     --textarea-text:#F4F0FF;
@@ -65,7 +58,7 @@ body.theme-galaxy{
     --textarea-focus:#A996FF;
     --textarea-focus-shadow:rgba(140,120,255,.35);
 
-    /* ---------- Save Button ---------- */
+    
 
     --save-btn-bg1:#7F6BFF;
     --save-btn-bg2:#A28BFF;
@@ -81,9 +74,6 @@ body.theme-galaxy{
 
 
 }
-/*==================================================
-                GALAXY - SIDEBAR
-==================================================*/
 
 body.theme-galaxy .sidebar{
 
@@ -234,9 +224,6 @@ body.theme-galaxy .logout-btn:hover{
         0 0 25px rgba(255,120,170,.22);
 
 }
-/*==================================================
-                GALAXY - HEADER
-==================================================*/
 
 body.theme-galaxy .top-header{
 
@@ -273,7 +260,6 @@ body.theme-galaxy .top-header::before{
 
 }
 
-/* ---------- Logo ---------- */
 
 body.theme-galaxy .logo-section h1{
 
@@ -297,7 +283,6 @@ body.theme-galaxy .logo-section::before{
 
 }
 
-/* ---------- Menu Button ---------- */
 
 body.theme-galaxy .menu-icon{
 
@@ -328,7 +313,6 @@ body.theme-galaxy .menu-icon:hover{
 
 }
 
-/* ---------- User ---------- */
 
 body.theme-galaxy .user-info{
 
@@ -348,9 +332,6 @@ body.theme-galaxy .user-info{
 
 }
 
-/* ======================================================
-                    JOURNAL PAGE
-====================================================== */
 
 body.theme-galaxy .journal-page{
 
@@ -396,9 +377,7 @@ body.theme-galaxy .journal-page::before{
 }
 
 
-/* ======================================================
-                    BLOCKS
-====================================================== */
+
 
 body.theme-galaxy .journal-block{
 
@@ -420,9 +399,6 @@ body.theme-galaxy .journal-block:hover{
 }
 
 
-/* ======================================================
-                    TITLE
-====================================================== */
 
 body.theme-galaxy #id_title{
 
@@ -445,9 +421,6 @@ body.theme-galaxy #id_title:focus{
 }
 
 
-/* ======================================================
-                    TEXTAREA
-====================================================== */
 
 body.theme-galaxy textarea{
 
@@ -485,9 +458,6 @@ body.theme-galaxy textarea:focus{
 }
 
 
-/* ======================================================
-                    SONG
-====================================================== */
 
 body.theme-galaxy #memory_song{
 
@@ -512,9 +482,7 @@ body.theme-galaxy #memory_song:focus{
 }
 
 
-/* ======================================================
-                    PHOTO
-====================================================== */
+
 
 body.theme-galaxy .photo-frame{
 
@@ -544,9 +512,6 @@ body.theme-galaxy .photo-frame:hover{
 }
 
 
-/* ======================================================
-                    SAVE BUTTON
-====================================================== */
 
 body.theme-galaxy .save-btn{
 
@@ -571,9 +536,7 @@ body.theme-galaxy .save-btn:hover{
         0 0 45px rgba(126,109,255,.65);
 
 }
-/* ===============================
-   PAGE ICON
-================================ */
+
 
 body.theme-galaxy .page-icon{
 
@@ -817,9 +780,6 @@ body.theme-galaxy .save-btn:hover{
     }
 
 }
-/* =====================================
-        Tiny Decorative Stars
-===================================== */
 
 body.theme-galaxy .journal-page::after{
 
@@ -859,9 +819,6 @@ body.theme-galaxy .journal-page{
 
 }
 
-/* ==========================================
-        Galaxy Magic Particles
-========================================== */
 
 body.theme-galaxy::before{
 
@@ -905,9 +862,6 @@ body.theme-galaxy::before{
 
 }
 
-/* ==========================================
-        Galaxy Sparkles
-========================================== */
 
 
 body.theme-galaxy::before{
@@ -967,14 +921,6 @@ body.theme-galaxy::before{
 }
 
 
-/*HOME*/
-/* ==========================================
-        HOME - ENTRY CARD
-========================================== */
-
-/* ==========================================
-        GALAXY ENTRY CARD
-========================================== */
 
 body.theme-galaxy .entry-card{
 
@@ -1054,7 +1000,6 @@ body.theme-galaxy .entry-card:hover{
 }
 
 
-/* left strip */
 
 body.theme-galaxy .entry-card::before{
 
@@ -1280,9 +1225,7 @@ body.theme-galaxy .danger:hover{
 }
 
 
-/* ==========================================
-        GALAXY CALENDAR
-========================================== */
+
 
 body.theme-galaxy .calendar-container{
 
@@ -1497,9 +1440,6 @@ body.theme-galaxy .today{
 
 }
 
-/* =====================================================
-                GALAXY DELETE PAGE
-===================================================== */
 
 body.theme-galaxy .delete-card{
 
@@ -1637,9 +1577,7 @@ body.theme-galaxy .delete-btn:hover{
 
 }
 
-/* ==========================================================
-   ENTRY BY DATE - GALAXY
-========================================================== */
+
 
 body.theme-galaxy .day-memory-header h1{
 
@@ -1681,7 +1619,7 @@ body.theme-galaxy .day-memory-header::after{
 
 }
 
-/* ---------- Memory Cards ---------- */
+
 
 body.theme-galaxy .memory-card{
 
@@ -1762,7 +1700,6 @@ body.theme-galaxy .memory-title{
 
 }
 
-/* ---------- Preview ---------- */
 
 body.theme-galaxy .memory-preview{
 
@@ -1770,7 +1707,7 @@ body.theme-galaxy .memory-preview{
 
 }
 
-/* ---------- Read Button ---------- */
+
 
 body.theme-galaxy .memory-btn{
 
@@ -1795,9 +1732,6 @@ body.theme-galaxy .memory-btn:hover{
         0 0 30px rgba(126,109,255,.45);
 
 }
-/* ==========================================================
-   ENTRY DETAIL - GALAXY THEME
-========================================================== */
 
 body.theme-galaxy .title-row h2{
 
@@ -1998,11 +1932,7 @@ body.theme-galaxy .stats-header h1{
         0 0 18px rgba(150,130,255,.35);
 }
 
-/* ==========================================================
-   GALAXY — STATISTICS PAGE
-========================================================== */
 
-/* ---------- Header ---------- */
 
 body.theme-galaxy .stats-header h1{
 
@@ -2019,9 +1949,6 @@ body.theme-galaxy .stats-header p{
 
 }
 
-/* ==========================================================
-   MAIN CARDS
-========================================================== */
 
 body.theme-galaxy .stats-card{
 
@@ -2055,10 +1982,6 @@ body.theme-galaxy .stats-card h2{
 
 }
 
-/* ==========================================================
-   MOOD CARD
-========================================================== */
-
 body.theme-galaxy .mood-card{
 
     background:
@@ -2082,9 +2005,6 @@ body.theme-galaxy .mood-header p{
 
 }
 
-/* ==========================================================
-   CHART CONTAINER
-========================================================== */
 
 body.theme-galaxy .chart-container{
 
@@ -2103,9 +2023,6 @@ body.theme-galaxy .chart-container{
 
 }
 
-/* ==========================================================
-   MINI CARDS
-========================================================== */
 
 body.theme-galaxy .mini-card{
 
@@ -2148,9 +2065,6 @@ body.theme-galaxy .mini-card p{
 
 }
 
-/* ==========================================================
-   ICONS
-========================================================== */
 
 body.theme-galaxy .stat-icon{
 
@@ -2168,9 +2082,6 @@ body.theme-galaxy .stat-icon{
 
 }
 
-/* ==========================================================
-   REFLECTION CARD
-========================================================== */
 
 body.theme-galaxy .reflection-card{
 

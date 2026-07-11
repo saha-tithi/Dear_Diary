@@ -1,0 +1,1217 @@
+
+body.theme-autumn .entry-card{
+
+    position:relative;
+    overflow:hidden;
+
+    padding:28px 32px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FBF5EC,
+            #F4E7D5
+        );
+
+    border:1px solid #D9C1A5;
+
+    box-shadow:
+        0 14px 28px rgba(90,65,45,.10),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    transition:.35s ease;
+
+}
+
+/* Leather bookmark */
+
+body.theme-autumn .entry-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:10px;
+    height:100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #5C3D2E,
+            #8A5A3B,
+            #B98245
+        );
+
+}
+
+/* Old paper texture */
+
+body.theme-autumn .entry-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+        rgba(255,255,255,.25),
+        transparent 45%),
+
+        radial-gradient(circle at 80% 70%,
+        rgba(120,80,50,.05),
+        transparent 40%);
+
+    pointer-events:none;
+
+}
+
+body.theme-autumn .entry-card:hover{
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 24px 42px rgba(90,65,45,.18);
+
+}
+
+body.theme-autumn .entry-card h3{
+
+    color:#3F2B20;
+
+    font-family:'Playfair Display', serif;
+
+    letter-spacing:.4px;
+
+    font-weight:700;
+
+}
+
+body.theme-autumn .title-link{
+
+    color:#3F2B20;
+
+    transition:.3s;
+
+}
+
+body.theme-autumn .title-link:hover{
+
+    color:#8B5A3C;
+
+}
+
+body.theme-autumn .title-link::after{
+
+    background:#B98742;
+
+}
+
+/* Journal Content */
+
+body.theme-autumn .entry-card p{
+
+    color:#5C4638;
+
+    line-height:2;
+
+    font-weight:400;
+
+}
+
+/* Date */
+
+body.theme-autumn .entry-date{
+
+    color:#8C7463;
+
+    font-weight:500;
+
+}
+
+/* Mood Badge */
+
+body.theme-autumn .mood-badge{
+
+    color:#4A3428;
+
+}
+
+/* Entry Counter */
+
+body.theme-autumn .entry-count{
+
+    color:#735C4C;
+
+    font-weight:600;
+
+}
+
+/* Search */
+
+body.theme-autumn .search-form input{
+
+    color:#4A3428;
+
+}
+
+body.theme-autumn .search-form input::placeholder{
+
+    color:#A08A7A;
+
+}
+
+body.theme-autumn .mood-badge{
+
+    background:#F7E8D5;
+
+    border:1px solid #D8BE9E;
+
+    color:#654F42;
+
+    box-shadow:
+        0 6px 12px rgba(90,65,45,.08);
+
+}
+
+body.theme-autumn .favorite-btn{
+
+    background:
+        linear-gradient(
+            145deg,
+            #E8D2AE,
+            #D6B07A
+        );
+
+    color:#6A4630;
+
+    border:1px solid #C79B5C;
+
+    box-shadow:
+        0 8px 18px rgba(110,75,45,.15);
+
+}
+
+body.theme-autumn .favorite-btn:hover{
+
+    background:
+        linear-gradient(
+            145deg,
+            #D9B072,
+            #C18C45
+        );
+
+    color:white;
+
+    transform:
+        scale(1.12)
+        rotate(-8deg);
+
+    box-shadow:
+        0 14px 28px rgba(110,75,45,.25);
+
+}
+
+body.theme-autumn .search-form input[type="text"],
+body.theme-autumn .search-form input[type="date"]{
+
+    background:#FFF9F2;
+
+    border:1px solid #D7BE9E;
+
+    color:#5B4036;
+
+    box-shadow:
+        inset 0 2px 6px rgba(120,85,55,.05);
+
+}
+
+body.theme-autumn .search-form input::placeholder{
+
+    color:#A08876;
+
+}
+
+body.theme-autumn .search-form input:focus{
+
+    border-color:#B57B5C;
+
+    box-shadow:
+        0 0 0 4px rgba(181,123,92,.12);
+
+}
+
+/* Search Button */
+
+body.theme-autumn .search-form button{
+
+    background:
+        linear-gradient(
+            145deg,
+            #8A5A3C,
+            #6D4C41
+        );
+
+    color:#FFFDF8;
+
+    box-shadow:
+        0 8px 18px rgba(90,65,45,.18);
+
+}
+
+body.theme-autumn .search-form button:hover{
+
+    transform:translateY(-2px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #A47148,
+            #7B5E57
+        );
+
+}
+
+body.theme-autumn .filter-links a{
+
+    background:#F6E9DA;
+
+    color:#6B4E3D;
+
+    border:1px solid #E2C8A7;
+
+    transition:.3s;
+
+}
+
+body.theme-autumn .filter-links a:hover{
+
+    background:#EBD5BC;
+
+}
+
+body.theme-autumn .active-filter{
+
+    background:
+        linear-gradient(
+            145deg,
+            #B57B5C,
+            #D9A441
+        ) !important;
+
+    color:white !important;
+
+    border:none;
+
+}
+
+body.theme-autumn .entry-count{
+
+    color:#8D7463;
+
+    font-weight:500;
+
+}
+
+body.theme-autumn .btn-small:not(.danger){
+
+    background:linear-gradient(
+        145deg,
+        #D8B07A,
+        #BE8D57
+    );
+
+    color:#4A3428;
+
+    border:1px solid #B7834A;
+
+    box-shadow:
+        0 8px 18px rgba(110,75,45,.15);
+
+}
+
+body.theme-autumn .btn-small:not(.danger):hover{
+
+    background:linear-gradient(
+        145deg,
+        #C9985F,
+        #A9743E
+    );
+
+    color:#FFFDF8;
+
+}
+
+/* Delete */
+
+body.theme-autumn .danger{
+
+    background:linear-gradient(
+        145deg,
+        #8B4E3C,
+        #6D3B2C
+    );
+
+    color:#FFF7F2;
+
+    border:1px solid #5A3024;
+
+    box-shadow:
+        0 8px 18px rgba(90,48,36,.18);
+
+}
+
+body.theme-autumn .danger:hover{
+
+    background:linear-gradient(
+        145deg,
+        #A35A45,
+        #7A4333
+    );
+
+    color:white;
+
+}
+
+body.theme-autumn{
+
+    background:
+        radial-gradient(circle at top left,
+            rgba(255,248,230,.9),
+            transparent 35%),
+
+        radial-gradient(circle at bottom right,
+            rgba(220,175,110,.18),
+            transparent 45%),
+
+        linear-gradient(
+            180deg,
+            #FCF8F2 0%,
+            #F4EBDD 50%,
+            #EFE2D2 100%
+        );
+
+}
+
+body.theme-autumn .autumn-leaves{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+body.theme-autumn .autumn-leaves span{
+
+    position:absolute;
+
+    top:-120px;
+
+    font-size:50px;
+
+    opacity:.18;
+
+    animation:autumnFall linear infinite;
+
+}
+body.theme-autumn .autumn-leaves span:nth-child(1){
+
+    left:5%;
+    animation-duration:18s;
+    animation-delay:0s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(2){
+
+    left:15%;
+    font-size:35px;
+    animation-duration:24s;
+    animation-delay:3s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(3){
+
+    left:25%;
+    font-size:55px;
+    animation-duration:20s;
+    animation-delay:6s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(4){
+
+    left:40%;
+    font-size:42px;
+    animation-duration:28s;
+    animation-delay:1s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(5){
+
+    left:55%;
+    font-size:60px;
+    animation-duration:22s;
+    animation-delay:5s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(6){
+
+    left:70%;
+    font-size:36px;
+    animation-duration:26s;
+    animation-delay:8s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(7){
+
+    left:82%;
+    font-size:52px;
+    animation-duration:21s;
+    animation-delay:2s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(8){
+
+    left:90%;
+    font-size:44px;
+    animation-duration:27s;
+    animation-delay:7s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(9){
+
+    left:33%;
+    font-size:48px;
+    animation-duration:19s;
+    animation-delay:10s;
+}
+
+body.theme-autumn .autumn-leaves span:nth-child(10){
+
+    left:63%;
+    font-size:40px;
+    animation-duration:23s;
+    animation-delay:12s;
+}
+@keyframes autumnFall{
+
+    0%{
+
+        transform:
+            translateY(-150px)
+            translateX(0)
+            rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:
+            translateY(25vh)
+            translateX(40px)
+            rotate(120deg);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(55vh)
+            translateX(-30px)
+            rotate(240deg);
+
+    }
+
+    75%{
+
+        transform:
+            translateY(80vh)
+            translateX(60px)
+            rotate(320deg);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(120vh)
+            translateX(-40px)
+            rotate(540deg);
+
+    }
+
+}
+body.theme-autumn .top-header,
+body.theme-autumn .container,
+body.theme-autumn .floating-btn{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* Header */
+
+body.theme-autumn .top-header{
+
+    background:linear-gradient(
+        145deg,
+        #FFF8F0,
+        #F2E5D7
+    );
+
+    border:1px solid #D9C1A4;
+
+    box-shadow:
+        0 16px 35px rgba(78,56,40,.10);
+
+}
+
+body.theme-autumn .top-header::before{
+
+    background:linear-gradient(
+        90deg,
+        #8B5A3C,
+        #C98A45,
+        #E4B363
+    );
+
+}
+
+/* Logo */
+
+body.theme-autumn .logo-section h1{
+
+    color:#5A3E2B;
+
+}
+
+body.theme-autumn .logo-section::before{
+
+    background:rgba(214,165,96,.35);
+
+}
+
+/* Menu */
+
+body.theme-autumn .menu-icon{
+
+    background:#F3E5D3;
+
+    color:#6A4630;
+
+}
+
+body.theme-autumn .menu-icon:hover{
+
+    box-shadow:0 10px 22px rgba(140,90,55,.25);
+
+}
+
+/* User */
+
+body.theme-autumn .user-info{
+
+    background:#F7ECDD;
+
+    border-color:#D9C3AA;
+
+    color:#5E4634;
+
+}
+
+/* Sidebar */
+
+body.theme-autumn .sidebar{
+
+    background:linear-gradient(
+        180deg,
+        #FFF8F1,
+        #F4E6D8
+    );
+
+    border-right:1px solid #D7BEA5;
+
+}
+
+body.theme-autumn .sidebar::before{
+
+    background:linear-gradient(
+        to bottom,
+        #7A4B2A,
+        #B67840,
+        #D9A44F
+    );
+
+}
+
+body.theme-autumn .sidebar::after{
+
+    content:"🪶";
+
+    position:absolute;
+
+    right:18px;
+    bottom:18px;
+
+    font-size:110px;
+
+    opacity:.18;
+
+    transform:rotate(-18deg);
+
+    filter:
+        sepia(100%)
+        saturate(250%)
+        brightness(70%)
+        contrast(110%);
+    
+
+}
+
+body.theme-autumn .sidebar h2{
+
+    color:#5A3E2B;
+
+}
+
+body.theme-autumn .sidebar a{
+
+    color:#644B38;
+
+}
+
+body.theme-autumn .sidebar a:hover{
+
+    background:#F2DDC6;
+
+}
+
+body.theme-autumn .sidebar a.active{
+
+    background:linear-gradient(
+        90deg,
+        #D8B48A,
+        #F2D3A2
+    );
+
+    color:#4A3222;
+
+}
+
+/* Divider */
+
+body.theme-autumn .sidebar hr{
+
+    background:#D8C2AC;
+
+}
+
+/* Logout */
+
+body.theme-autumn .logout-btn{
+
+    background:#F7E1D5;
+
+    color:#8B3E2F;
+
+}
+
+body.theme-autumn .logout-btn:hover{
+
+    background:#EFC7B6;
+
+}
+
+/* Buttons */
+
+body.theme-autumn .btn{
+
+    background:#B87B46;
+
+    color:#fff;
+
+}
+
+body.theme-autumn button{
+
+    background:#B87B46;
+
+    color:white;
+
+}
+
+/* Floating Button */
+
+body.theme-autumn .floating-btn{
+
+    background:linear-gradient(
+        135deg,
+        #B97A45,
+        #D79B56
+    );
+
+    color:white;
+
+    box-shadow:
+        0 15px 35px rgba(184,123,70,.35);
+     position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:9999;
+
+}
+
+body.theme-autumn .journal-page{
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFDF8,
+            #F6EEDF
+        );
+
+    border:1px solid #D7BE9D;
+
+    box-shadow:
+        0 22px 45px rgba(88,58,34,.14);
+
+}
+
+body.theme-autumn .journal-page::before{
+
+    background:
+        linear-gradient(
+            90deg,
+            #8A5A3C,
+            #C58A45,
+            #E5B86A
+        );
+
+}
+
+/* Blocks */
+
+body.theme-autumn .journal-block{
+
+    background:#FFF9F1;
+
+    border:1px solid #E5D0B7;
+
+    box-shadow:
+        0 10px 22px rgba(88,58,34,.08);
+
+}
+
+body.theme-autumn .journal-block:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 16px 30px rgba(88,58,34,.12);
+
+}
+
+/* Header */
+
+body.theme-autumn .page-icon{
+
+    background:
+        linear-gradient(
+            135deg,
+            #E8C38E,
+            #C58A45
+        );
+
+    color:#5E3B25;
+
+}
+
+body.theme-autumn .page-header h2{
+
+    color:#5A3925;
+
+}
+
+body.theme-autumn .page-subtitle{
+
+    color:#8A6B55;
+
+}
+
+/* Weather */
+
+body.theme-autumn .weather-pill{
+
+    background:#FAF1E3;
+
+    color:#73503B;
+
+    border:1px solid #D9BA93;
+
+}
+
+/* Labels */
+
+body.theme-autumn .journal-block label{
+
+    color:#5A3925;
+
+}
+
+/* Title */
+
+body.theme-autumn #id_title{
+
+    color:#5A3925;
+
+    border-bottom:2px solid #C58A45;
+
+}
+
+body.theme-autumn #id_title::placeholder{
+
+    color:#A1846D;
+
+}
+
+body.theme-autumn #id_title:focus{
+
+    border-color:#8A5A3C;
+
+}
+
+
+
+/* Save */
+
+body.theme-autumn .save-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #C58A45,
+            #A86A39
+        );
+
+    color:white;
+
+    box-shadow:
+        0 14px 28px rgba(154,101,52,.28);
+
+}
+
+body.theme-autumn .save-btn:hover{
+
+    box-shadow:
+        0 20px 35px rgba(154,101,52,.36);
+
+}
+
+body.theme-autumn textarea{
+
+    width:100%;
+
+    min-height:240px;
+
+    box-sizing:border-box;
+
+    padding:32px;
+
+    border-radius:26px;
+
+    border:2px solid rgba(172,126,72,.28);
+
+    background-color:#F7F0E7;
+
+    background-image:url("../../images/themes/autumn_paper.png");
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:cover;
+
+    color:#5A3F2D;
+
+    font-size:17px;
+
+    line-height:34px;
+
+    resize:vertical;
+
+    transition:.35s;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.65),
+        0 12px 30px rgba(105,70,40,.10);
+
+}
+
+/* Placeholder */
+
+body.theme-autumn textarea::placeholder{
+
+    color:#9A7A5C;
+
+    font-style:italic;
+
+}
+
+/* Focus */
+
+body.theme-autumn textarea:focus{
+
+    outline:none;
+
+    border-color:#B87B3F;
+
+    box-shadow:
+        0 0 0 5px rgba(184,123,63,.18),
+        0 16px 35px rgba(95,60,35,.12);
+
+}
+
+
+body.theme-autumn .mood-picker{
+
+    gap:20px;
+
+}
+
+body.theme-autumn .mood-picker label{
+
+    background:#F7EBDD;
+
+    border:2px solid #D8B996;
+
+    box-shadow:
+        0 8px 18px rgba(90,60,35,.08);
+
+    transition:.35s;
+
+}
+
+body.theme-autumn .mood-picker label:hover{
+
+    transform:
+        translateY(-4px)
+        rotate(-5deg);
+
+    background:#F3DFC7;
+
+    border-color:#B87A42;
+
+    box-shadow:
+        0 14px 26px rgba(90,60,35,.18);
+
+}
+
+body.theme-autumn .mood-picker input:checked + label{
+
+    background:
+        linear-gradient(
+            135deg,
+            #D59A57,
+            #B97738
+        );
+
+    border-color:#8A562E;
+
+    color:white;
+
+    transform:
+        scale(1.12)
+        rotate(-6deg);
+
+    box-shadow:
+        0 18px 35px rgba(140,90,45,.30);
+
+}
+
+body.theme-autumn #memory_song{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin-top:14px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    border:2px solid #D3B08A;
+
+    background:#FBF5EE;
+
+    color:#5A3F2D;
+
+    font-size:16px;
+
+    transition:.35s;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.75),
+        0 8px 18px rgba(90,60,35,.06);
+
+}
+
+body.theme-autumn #memory_song::placeholder{
+
+    color:#9B7A5F;
+
+    font-style:italic;
+
+}
+
+body.theme-autumn #memory_song:focus{
+
+    outline:none;
+
+    border-color:#B7773C;
+
+    background:#FFF9F2;
+
+    box-shadow:
+        0 0 0 5px rgba(183,119,60,.16),
+        0 12px 26px rgba(90,60,35,.10);
+
+}
+
+/* Help text */
+
+body.theme-autumn .song-help{
+
+    color:#8C6A50;
+
+    font-style:italic;
+
+}
+/*=========================================
+        AUTUMN PHOTO FRAME
+==========================================*/
+
+body.theme-autumn .photo-frame{
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFF9F3,
+            #F2E3D1
+        );
+
+    border:3px solid #D0AF86;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 18px 35px rgba(95,65,40,.12);
+
+}
+
+body.theme-autumn .photo-frame:hover{
+
+    border-color:#B87B40;
+
+    transform:
+        translateY(-4px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 24px 45px rgba(95,65,40,.18);
+
+}
+
+/* Plus Circle */
+
+body.theme-autumn .plus-circle{
+
+    background:
+        linear-gradient(
+            135deg,
+            #D79D58,
+            #B7773C
+        );
+
+    color:white;
+
+    box-shadow:
+        0 10px 22px rgba(160,100,45,.25);
+
+}
+
+/* Upload Text */
+
+body.theme-autumn .photo-placeholder span{
+
+    color:#654735;
+
+}
+
+/* Selected Image */
+
+body.theme-autumn #preview-image{
+
+    border-radius:14px;
+
+}
+
+/* Status */
+
+body.theme-autumn .photo-status{
+
+    color:#8C6A50;
+
+}
+
+/* Upload Button */
+
+body.theme-autumn .upload-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #E7C08F,
+            #D39B5E
+        );
+
+    color:#4E3424;
+
+    box-shadow:
+        0 10px 20px rgba(95,65,40,.10);
+
+}
+
+body.theme-autumn .upload-btn:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            #D39B5E,
+            #B7773C
+        );
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}

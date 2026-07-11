@@ -17,6 +17,20 @@
 {% endblock %}
 </head>
 <body class="theme-{{current_theme}}">
+    {% if current_theme == "autumn" %}
+<div class="autumn-leaves">
+    <span>🍁</span>
+    <span>🍂</span>
+    <span>🍁</span>
+    <span>🍂</span>
+    <span>🍁</span>
+    <span>🍂</span>
+    <span>🍁</span>
+    <span>🍂</span>
+    <span>🍁</span>
+    <span>🍂</span>
+</div>
+{% endif %}
 <div id="sidebar" class="sidebar">
 
     <h2>📖 Dear Diary</h2>
@@ -85,7 +99,7 @@
         {% if user.is_authenticated %}
             <div class="user-info">
                  Welcome, {{ user.username }}
-                💜
+                
 
                 
             </div>
