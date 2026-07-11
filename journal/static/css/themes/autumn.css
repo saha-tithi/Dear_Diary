@@ -397,7 +397,8 @@ body.theme-autumn{
             #F4EBDD 50%,
             #EFE2D2 100%
         );
-
+        --graph:#7A4B2A;
+--graph-fill:rgba(122,75,42,.18);
 }
 
 body.theme-autumn .autumn-leaves{
@@ -1213,5 +1214,954 @@ body.theme-autumn .upload-btn:hover{
     color:white;
 
     transform:translateY(-3px);
+
+}
+/*=================================================
+            AUTUMN LIBRARY
+               CALENDAR
+==================================================*/
+
+body.theme-autumn .calendar-container{
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFBF6,
+            #F3E5D4
+        );
+
+    border:1px solid #DEC8AF;
+
+    box-shadow:
+        0 18px 45px rgba(88,60,38,.12);
+
+}
+
+body.theme-autumn .calendar-container::before{
+
+    width:220px;
+    height:220px;
+
+    background:
+        radial-gradient(circle,
+        rgba(214,157,82,.18),
+        transparent 70%);
+
+}
+
+body.theme-autumn .calendar-container::after{
+
+    width:180px;
+    height:180px;
+
+    background:
+        radial-gradient(circle,
+        rgba(109,76,65,.10),
+        transparent 70%);
+
+}
+
+/* Month */
+
+body.theme-autumn .calendar-title{
+
+    color:#5C3D2E;
+
+    text-shadow:
+        0 2px 10px rgba(170,120,70,.12);
+
+}
+
+/* Navigation */
+
+body.theme-autumn .month-btn{
+
+    background:#FFF7EF;
+
+    color:#6D4C41;
+
+    border:1px solid #D9B896;
+
+    box-shadow:
+        0 8px 20px rgba(92,61,46,.10);
+
+}
+
+body.theme-autumn .month-btn:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            #D7A35D,
+            #B7773C
+        );
+
+    color:white;
+
+}
+
+/* Week Names */
+
+body.theme-autumn .day-name{
+
+    color:#9B775F;
+
+}
+
+/* Normal Days */
+
+body.theme-autumn .day{
+
+    background:#FFF9F3;
+
+    color:#5B4031;
+
+    border:1px solid #E4D2BF;
+
+    box-shadow:
+        0 10px 22px rgba(92,61,46,.08);
+
+}
+
+body.theme-autumn .day:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* Memory Days */
+
+body.theme-autumn .has-entry{
+
+    background:
+        linear-gradient(
+            145deg,
+            #FAEAD8,
+            #F4D7B3
+        );
+
+    border:2px dashed #C68B4C;
+
+    box-shadow:
+        0 12px 25px rgba(170,110,55,.12);
+
+}
+
+body.theme-autumn .has-entry::before{
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,255,255,.65),
+        transparent 45%);
+
+}
+
+/*=================================================
+        AUTUMN LIBRARY
+         CALENDAR LEAF ICON
+==================================================*/
+
+body.theme-autumn .memory-icon{
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF9F2;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 6px 14px rgba(90,58,38,.12);
+
+    font-size:0;          /* Hide the original 📖 emoji */
+
+    position:relative;
+
+}
+
+/* Maple leaf */
+
+body.theme-autumn .memory-icon::before{
+
+    content:"🍁";
+
+    font-size:24px;
+
+    line-height:1;
+
+}
+
+/* Hover */
+
+body.theme-autumn .has-entry:hover .memory-icon{
+
+    transform:scale(1.1) rotate(-10deg);
+
+}
+
+body.theme-autumn .has-entry:hover{
+
+    border-color:#B56B33;
+
+    box-shadow:
+        0 18px 32px rgba(170,110,55,.18);
+
+}
+
+/* Memory Icon */
+
+body.theme-autumn .memory-icon{
+
+    background:#FFFDF9;
+
+    color:#7B533B;
+
+    box-shadow:
+        0 6px 14px rgba(92,61,46,.10);
+
+}
+
+body.theme-autumn .has-entry:hover .memory-icon{
+
+    transform:
+        rotate(-10deg)
+        scale(1.08);
+
+}
+
+/* Today */
+
+body.theme-autumn .today{
+
+    background:
+        linear-gradient(
+            135deg,
+            #C98545,
+            #A56432
+        ) !important;
+
+    box-shadow:
+        0 0 18px rgba(201,133,69,.30),
+        0 12px 28px rgba(165,100,50,.25);
+
+}
+
+body.theme-autumn .today .memory-icon{
+
+    background:#FFF8F1;
+
+    color:#8A552E;
+
+}
+/*=================================================
+        AUTUMN LIBRARY
+            DELETE PAGE
+==================================================*/
+
+body.theme-autumn .delete-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    max-width:600px;
+
+    margin:70px auto;
+
+    padding:48px;
+
+    border-radius:32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFBF6,
+            #F3E7D7
+        );
+
+    border:1px solid #DDC3A5;
+
+    box-shadow:
+        0 20px 45px rgba(76,54,34,.16),
+        inset 0 2px 0 rgba(255,255,255,.7);
+
+}
+
+body.theme-autumn .delete-card::before{
+
+    content:"🍂";
+
+    position:absolute;
+
+    top:18px;
+
+    right:24px;
+
+    font-size:80px;
+
+    opacity:.08;
+
+    transform:rotate(-18deg);
+
+}
+
+body.theme-autumn .delete-card::after{
+
+    content:"🪶";
+
+    position:absolute;
+
+    bottom:18px;
+
+    left:22px;
+
+    font-size:72px;
+
+    opacity:.06;
+
+    transform:rotate(15deg);
+
+}
+
+/* Delete Icon */
+
+body.theme-autumn .delete-icon{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #C58A45,
+            #9B623D
+        );
+
+    color:#FFF8F2;
+
+    box-shadow:
+        0 18px 35px rgba(155,98,61,.28);
+
+}
+
+/* Heading */
+
+body.theme-autumn .delete-card h2{
+
+    color:#563B2C;
+
+}
+
+/* Text */
+
+body.theme-autumn .delete-text{
+
+    color:#715848;
+
+}
+
+/* Preview Box */
+
+body.theme-autumn .delete-preview{
+
+    background:#FBF3E8;
+
+    border:1px solid #DFC5A6;
+
+    color:#654B3B;
+
+}
+
+/* Keep Button */
+
+body.theme-autumn .cancel-btn{
+
+    background:#E8D5BC;
+
+    color:#654634;
+
+    box-shadow:
+        0 10px 22px rgba(101,70,52,.12);
+
+}
+
+body.theme-autumn .cancel-btn:hover{
+
+    background:#DFC19D;
+
+    transform:translateY(-3px);
+
+}
+
+/* Delete Button */
+
+body.theme-autumn .delete-btn{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #A34F35,
+            #873B26
+        );
+
+    color:white;
+
+    box-shadow:
+        0 12px 28px rgba(135,59,38,.28);
+
+}
+
+body.theme-autumn .delete-btn:hover{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #8E432C,
+            #6F311F
+        );
+
+    transform:translateY(-3px);
+
+}
+/*=================================================
+        AUTUMN LIBRARY
+          ENTRY BY DATE
+==================================================*/
+
+body.theme-autumn .day-memory-header h1{
+
+    color:#5A3925;
+
+}
+
+body.theme-autumn .day-memory-header p{
+
+    color:#8A6B55;
+
+}
+
+body.theme-autumn .back-link{
+
+    color:#8B5E3C;
+
+}
+
+body.theme-autumn .back-link:hover{
+
+    color:#5A3925;
+
+}
+
+body.theme-autumn .day-memory-header::after{
+
+    background:
+        linear-gradient(
+            90deg,
+            #8A5A3C,
+            #C58A45,
+            #E4B56A
+        );
+
+}
+
+/*=========================================
+            MEMORY CARD
+==========================================*/
+
+body.theme-autumn .memory-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFBF6,
+            #F3E8D8
+        );
+
+    border:1px solid #DEC6A8;
+
+    box-shadow:
+        0 18px 40px rgba(88,60,38,.12);
+
+}
+
+body.theme-autumn .memory-card::before{
+
+    content:"🍂";
+
+    position:absolute;
+
+    top:16px;
+
+    right:20px;
+
+    font-size:70px;
+
+    opacity:.07;
+
+    transform:rotate(-15deg);
+
+}
+
+body.theme-autumn .memory-card:hover{
+
+    transform:
+        translateY(-8px)
+        rotate(.2deg);
+
+    box-shadow:
+        0 26px 50px rgba(88,60,38,.18);
+
+}
+
+/* Mood Badge */
+
+body.theme-autumn .memory-mood{
+
+    background:#F7E8D6;
+
+    color:#654634;
+
+    border:1px solid #D8B58E;
+
+}
+
+/* Title */
+
+body.theme-autumn .memory-title{
+
+    color:#5A3925;
+
+}
+
+/* Preview */
+
+body.theme-autumn .memory-preview{
+
+    color:#6E5646;
+
+}
+
+/* Read Button */
+
+body.theme-autumn .memory-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #C58A45,
+            #A86A39
+        );
+
+    color:white;
+
+    box-shadow:
+        0 12px 26px rgba(155,98,61,.22);
+
+}
+
+body.theme-autumn .memory-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 34px rgba(155,98,61,.30);
+
+
+}
+
+
+
+
+/*=================================================
+      AUTUMN LIBRARY
+      JOURNAL SECTIONS
+==================================================*/
+
+body.theme-autumn .journal-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        180deg,
+        #FFFDFB,
+        #FCF6EF
+    );
+
+    border:1px solid rgba(214,183,148,.45);
+
+    border-radius:28px;
+
+    padding:32px 36px;
+
+    box-shadow:
+        0 12px 28px rgba(88,62,42,.08);
+
+    transition:.35s;
+
+}
+
+/* Remove the old brown strip */
+body.theme-autumn .journal-section::before{
+
+    display:none;
+
+}
+
+/* Soft decorative maple leaf */
+body.theme-autumn .journal-section::after{
+
+    content:"🍁";
+
+    position:absolute;
+
+    right:22px;
+
+    top:18px;
+
+    font-size:64px;
+
+    opacity:.06;
+
+    transform:rotate(-15deg);
+
+    pointer-events:none;
+
+}
+
+body.theme-autumn .journal-section:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 20px 38px rgba(88,62,42,.14);
+
+}
+
+/* Heading */
+
+body.theme-autumn .journal-section h3{
+
+    color:#6A4632;
+
+    letter-spacing:.3px;
+
+}
+
+/* Text */
+
+body.theme-autumn .section-content{
+
+    color:#70584A;
+
+    line-height:2.05;
+
+}
+/*=================================================
+        AUTUMN LIBRARY
+            ENTRY DETAIL
+==================================================*/
+
+/* Title */
+
+body.theme-autumn .title-row h2{
+
+    color:#5C3C2D;
+
+    text-shadow:0 2px 6px rgba(255,255,255,.4);
+
+}
+
+/* Mood Badge */
+
+body.theme-autumn .mood-display{
+
+    background:#F6E7D5;
+
+    border:1px solid #D7B58F;
+
+    color:#6A4B38;
+
+    box-shadow:0 8px 18px rgba(90,60,35,.10);
+
+}
+
+/* Date */
+
+body.theme-autumn .detail-date{
+
+    color:#9C7D66;
+
+}
+
+/* Reflection Cards */
+
+body.theme-autumn .journal-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFDF8,
+            #F5EBDF
+        );
+
+    border:1px solid #DFC6AA;
+
+    border-radius:28px;
+
+    box-shadow:
+        0 16px 34px rgba(82,56,37,.10);
+
+    transition:.4s;
+
+}
+
+/* Left leather strip */
+
+body.theme-autumn .journal-section::before{
+
+    width:8px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #6A4532,
+            #A46B42,
+            #C9924E
+        );
+
+}
+
+/* Faded maple leaf watermark */
+
+body.theme-autumn .journal-section::after{
+
+    content:"🍁";
+
+    position:absolute;
+
+    right:22px;
+
+    bottom:18px;
+
+    font-size:72px;
+
+    opacity:.06;
+
+    transform:rotate(-18deg);
+
+    pointer-events:none;
+
+}
+
+/* Hover */
+
+body.theme-autumn .journal-section:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 26px 48px rgba(90,60,35,.18);
+
+}
+
+/* Section titles */
+
+body.theme-autumn .journal-section h3{
+
+    color:#654232;
+
+    letter-spacing:.4px;
+
+}
+
+/* Text */
+
+body.theme-autumn .section-content{
+
+    color:#6F584A;
+
+    line-height:2.1;
+
+}
+
+/* Music Card */
+
+body.theme-autumn .music-card{
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFF8F1,
+            #F4E6D8
+        );
+
+    border:1px solid #DEC2A0;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 14px 28px rgba(82,56,37,.10);
+
+}
+
+body.theme-autumn .music-card::after{
+
+    content:"♫";
+
+    position:absolute;
+
+    right:22px;
+
+    top:18px;
+
+    font-size:60px;
+
+    color:#8C5A39;
+
+    opacity:.05;
+
+}
+
+/* Photo */
+
+body.theme-autumn .detail-memory-photo{
+
+    border:8px solid #FFF8EF;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 18px 35px rgba(82,56,37,.16);
+
+}
+
+body.theme-autumn .stats-header h1{
+    color:#6A4733;
+}
+
+body.theme-autumn .stats-header p{
+    color:#8A6D56;
+}
+body.theme-autumn .stats-card{
+
+    background:linear-gradient(
+        145deg,
+        #FFFDF9,
+        #F6EBDD
+    );
+
+    border:1px solid #D9C2A7;
+
+    box-shadow:
+        0 15px 32px rgba(95,70,45,.12);
+
+}
+
+body.theme-autumn .stats-card:hover{
+
+    box-shadow:
+        0 22px 42px rgba(95,70,45,.18);
+
+}
+body.theme-autumn .mini-card{
+
+    background:#FFFCF8;
+
+    border:1px solid #E2CDB4;
+
+}
+
+body.theme-autumn .mini-card h3{
+
+    color:#6C4731;
+
+}
+
+body.theme-autumn .mini-card p{
+
+    color:#8B725F;
+
+}
+body.theme-autumn .stat-icon{
+
+    background:linear-gradient(
+        135deg,
+        #F3C97A,
+        #D89A4C
+    );
+
+    color:white;
+
+    box-shadow:
+        0 12px 22px rgba(210,145,60,.28);
+
+}
+body.theme-autumn .chart-container{
+
+    background:#FFFDF9;
+
+    border:1px solid #E3CCB1;
+
+}
+body.theme-autumn .reflection-card{
+
+    background:linear-gradient(
+        145deg,
+        #FFFDF9,
+        #F6ECDD
+    );
+
+    border:1px solid #DFC8AC;
+
+}
+
+body.theme-autumn .reflection-card::before{
+
+    content:"🍁";
+
+    opacity:.08;
+
+    font-size:70px;
+
+}
+
+body.theme-autumn .reflection-card h2{
+
+    color:#6B4730;
+
+}
+
+body.theme-autumn .reflection-card p{
+
+    color:#71584A;
+
+}
+body.theme-autumn .stats-card h2,
+body.theme-autumn .mood-header h2{
+
+    color:#6A4733;
+
+}
+
+body.theme-autumn .card-title p{
+
+    color:#907561;
 
 }
