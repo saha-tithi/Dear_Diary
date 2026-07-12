@@ -17,8 +17,10 @@ from datetime import datetime
 from django.db.models import Count
 from django.utils import timezone
 from .models import Profile
-
-
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+import io
  
 @login_required
 def entry_list(request):
@@ -404,3 +406,31 @@ def change_theme(request, theme):
     profile.save()
 
     return redirect(request.META.get("HTTP_REFERER", "/"))
+
+
+
+def export_pdf(request, entry_id):
+
+    entry = get_object_or_404(journalEntry,id=entry_id,user=request.user)
+
+    spotify_embed_url = None
+
+    if entry.memory_song:
+        spotify_embed_url = entry.memory_song.replace("open.spotify.com/","open.spotify.com/embed/")
+
+    template = get_template("entry_pdf.html")
+
+    html = template.render({"entry": entry,"spotify_embed_url": spotify_embed_url,})
+
+    result = io.BytesIO()
+
+    pisa_status = pisa.CreatePDF(html,dest=result)
+
+    if pisa_status.err:
+        return HttpResponse("Error generating PDF")
+
+    response = HttpResponse(result.getvalue(),content_type="application/pdf")
+
+    response["Content-Disposition"] = (f'attachment; filename="{entry.title}.pdf"')
+
+    return response

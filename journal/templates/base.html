@@ -53,23 +53,23 @@
 
 <div id="theme-menu" style="display:none; margin-left:20px;">
 
-    <a href="{% url 'change_theme' 'default' %}">
+    <a href="{% url 'change_theme' 'default' %}" class="{% if current_theme == 'default' %}theme-selected{% endif %}">
         🌸 Blossom
     </a>
 
-    <a href="{% url 'change_theme' 'galaxy' %}">
+    <a href="{% url 'change_theme' 'galaxy' %}"class="{% if current_theme == 'galaxy' %}theme-selected{% endif %}">
         🌙 Moonlit Galaxy
     </a>
 
-    <a href="{% url 'change_theme' 'forest' %}">
+    <a href="{% url 'change_theme' 'forest' %}"class="{% if current_theme == 'forest' %}theme-selected{% endif %}">
         🌿 Forest Whisper
     </a>
 
-    <a href="{% url 'change_theme' 'autumn' %}">
+    <a href="{% url 'change_theme' 'autumn' %}" class="{% if current_theme == 'autumn' %}theme-selected{% endif %}">
         📚 Autumn Library
     </a>
 
-    <a href="{% url 'change_theme' 'ocean' %}">
+    <a href="{% url 'change_theme' 'ocean' %}"class="{% if current_theme == 'ocean' %}theme-selected{% endif %}">
         🌊 Ocean Breeze
     </a>
 

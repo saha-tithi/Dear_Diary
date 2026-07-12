@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<style>
+
+@page{
+    size:A4;
+    margin:30px;
+}
+
+body{
+
+    font-family:DejaVu Sans,sans-serif;
+
+    background:#F6F7F2;
+
+    color:#444;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.header{
+
+    background:#EEF6EE;
+
+    border:2px solid #8EB89A;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    font-size:18px;
+
+    color:#65806A;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+.title{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#2F4858;
+
+    margin:0;
+
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    color:#6B7A6E;
+
+    font-size:15px;
+
+}
+
+.meta{
+
+    margin-top:18px;
+
+}
+
+/* ======================================================
+   BADGES
+====================================================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    margin:4px;
+
+    border:1px solid #A8C9AE;
+
+    background:#F9FFF8;
+
+    color:#35523C;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+}
+
+/* ======================================================
+   DIVIDER
+====================================================== */
+
+.divider{
+
+    height:3px;
+
+    background:#8EB89A;
+
+    margin:22px 0;
+
+}
+
+/* ======================================================
+   SECTION
+====================================================== */
+
+.section{
+
+    margin-bottom:25px;
+
+    border:1px solid #D8E4D8;
+
+    background:#FFFFFF;
+
+}
+
+.section-header{
+
+    background:#EAF4EA;
+
+    padding:12px 18px;
+
+    border-bottom:1px solid #D4E3D4;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#2F4858;
+
+}
+
+.section-content{
+
+    padding:18px;
+
+    white-space:pre-wrap;
+
+    word-wrap:break-word;
+
+}
+
+/* ======================================================
+   PHOTO
+====================================================== */
+
+.photo-frame{
+
+    text-align:center;
+
+    padding:18px;
+
+}
+
+.photo-frame img{
+
+    width:360px;
+
+    border:6px solid #F7F7F7;
+
+    border:1px solid #B8CDBB;
+
+}
+
+/* ======================================================
+   SONG
+====================================================== */
+
+.song-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.song-icon{
+
+    width:80px;
+
+    background:#6C9774;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    padding:20px;
+
+}
+
+.song-details{
+
+    background:#F7FBF7;
+
+    padding:18px;
+
+}
+
+.song-title{
+
+    font-size:11px;
+
+    color:#809181;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+}
+
+.song-name{
+
+    margin-top:8px;
+
+    font-size:22px;
+
+    color:#2F4858;
+
+    font-weight:bold;
+
+}
+
+.song-caption{
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.footer{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:13px;
+
+}
+
+.footer-line{
+
+    height:1px;
+
+    background:#D8D8D8;
+
+    margin-bottom:15px;
+
+}
+
+/* ======================================================
+   NICE TEXT
+====================================================== */
+
+p{
+
+    margin:0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <div class="logo">
+        📖 Dear Diary
+    </div>
+
+    <h1 class="title">
+        {{ entry.title }}
+    </h1>
+
+    <div class="subtitle">
+        A page from your memories
+    </div>
+
+    <div class="meta">
+
+        <span class="badge">
+            {{ entry.mood_emoji }} {{ entry.mood|title }}
+        </span>
+
+        <span class="badge">
+            📅 {{ entry.created_at|date:"F d, Y" }}
+        </span>
+
+    </div>
+
+</div>
+
+<div class="divider"></div>
+<!-- ======================================================
+     TODAY'S REFLECTION
+====================================================== -->
+
+<div class="section">
+
+    <div class="section-header">
+        📖 Today's Reflection
+    </div>
+
+    <div class="section-content">
+        {{ entry.content }}
+    </div>
+
+</div>
+
+{% if entry.gratitude %}
+
+<div class="section">
+
+    <div class="section-header">
+        🌸 Gratitude
+    </div>
+
+    <div class="section-content">
+        {{ entry.gratitude }}
+    </div>
+
+</div>
+
+{% endif %}
+
+
+{% if entry.tomorrow_goal %}
+
+<div class="section">
+
+    <div class="section-header">
+        🎯 Tomorrow's Goal
+    </div>
+
+    <div class="section-content">
+        {{ entry.tomorrow_goal }}
+    </div>
+
+</div>
+
+{% endif %}
+
+
+{% if entry.notes %}
+
+<div class="section">
+
+    <div class="section-header">
+        📝 Notes
+    </div>
+
+    <div class="section-content">
+        {{ entry.notes }}
+    </div>
+
+</div>
+
+{% endif %}
+
+
+{% if entry.image %}
+
+<div class="section">
+
+    <div class="section-header">
+        📷 Memory Photo
+    </div>
+
+    <div class="photo-frame">
+
+        <img src="{{ entry.image.path }}">
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+{% if entry.memory_song %}
+
+<div class="section">
+
+    <div class="section-header">
+        🎵 Memory Song
+    </div>
+
+    <table class="song-table">
+
+        <tr>
+
+            <td class="song-icon">
+                ♪
+            </td>
+
+            <td class="song-details">
+
+                <div class="song-title">
+                    MEMORY SONG
+                </div>
+
+                <div class="song-name">
+                    {{ entry.memory_song }}
+                </div>
+
+                <div class="song-caption">
+                    The soundtrack of this beautiful memory.
+                </div>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+{% endif %}
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<div class="footer">
+
+    <div class="footer-line"></div>
+
+    <table width="100%" cellpadding="6">
+
+        <tr>
+
+            <td align="left">
+
+                <font color="#7C8F7F">
+                    🌿 Dear Diary
+                </font>
+
+            </td>
+
+            <td align="center">
+
+                <font color="#999999">
+                    Every page holds a memory worth keeping.
+                </font>
+
+            </td>
+
+            <td align="right">
+
+                <font color="#7C8F7F">
+                    ❤️ Made with Love
+                </font>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+
+</html>
