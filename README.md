@@ -1,117 +1,188 @@
 # 📖 Dear Diary
 
-> A beautiful, feature-rich digital journal built with Django that helps users preserve memories, track moods, organize entries, personalize their journaling experience with multiple themes, and export memories as printable PDFs.
+<p align="center">
+  <h3 align="center">A Beautiful Digital Journal Built with Django</h3>
+
+  <p align="center">
+    Dear Diary is a feature-rich digital journaling application that allows users to capture memories, track moods, organize entries, personalize their experience with beautiful themes, and preserve special moments using music, weather, photos, and PDF exports.
+  </p>
+</p>
 
 ---
 
-## ✨ Features
+# 📸 Application Preview
+
+<p align="center">
+  <img src="./screenshots/home.png" width="48%" alt="Home Page">
+  <img src="./screenshots/page.png" width="48%" alt="Journal Page">
+</p>
+
+<p align="center">
+  <img src="./screenshots/calendar.png" width="48%" alt="Calendar View">
+  <img src="./screenshots/statistics.png" width="48%" alt="Statistics Dashboard">
+</p>
+
+---
+
+# ✨ Features
 
 ### 🔐 Authentication
+- User Registration
+- Secure Login
+- Personalized journal for every user
+
 ### 📝 Journal Management
+- Create journal entries
+- Edit existing entries
+- Delete entries
+- View detailed journal pages
+
 ### 😊 Mood Tracking
-### ❤️ Favorites
+- Record your mood with every journal
+- Reflect on your emotional journey
+
+### ❤️ Favorite Memories
+- Mark important journal entries as favorites
+- Quickly revisit special memories
+
 ### 📅 Interactive Calendar
+- Browse journal entries by date
+- Easily navigate your memories
+
 ### 🎵 Memory Songs
+- Attach Spotify songs to journal entries
+
 ### 🌤 Weather Integration
+- Save weather information with every journal
+- Powered by OpenWeather API
+
 ### 📷 Memory Photos
+- Upload images to preserve memorable moments
+
 ### 📊 Statistics Dashboard
+- Track journaling activity
+- Visualize your writing habits
+
 ### 🎨 Multiple Themes
-Choose between five handcrafted themes:
+
+Personalize your diary with five handcrafted themes:
 
 - 🌸 Blossom
 - 🌙 Moonlit Galaxy
 - 🌿 Forest Whisper
 - 🍂 Autumn Library
 - 🌊 Ocean Breeze
+
 ### 📄 PDF Export
-
-## 🛠 Tech Stack
-
-### Backend
-- Python
-- Django
-
-### Database
-- PostgreSQL
-
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-### APIs
-- OpenWeather API
-- Spotify Embed API
-
-### PDF Generation
-- xhtml2pdf
+- Export journal entries as beautifully formatted PDF files
 
 ---
 
-## 📂 Project Structure
+# 🛠 Tech Stack
 
-```
+| Category | Technologies |
+|-----------|--------------|
+| Backend | Python, Django |
+| Frontend | HTML5, CSS3, JavaScript |
+| Database | PostgreSQL |
+| APIs | OpenWeather API, Spotify Embed API |
+| PDF Generation | xhtml2pdf |
+
+---
+
+# 📂 Project Structure
+
+```text
 Dear_Diary/
 │
+├── Dear_Diary/
 ├── journal/
-├── templates/
-├── static/
-│   ├── css/
-│   ├── images/
-│   └── javascript/
+├── screenshots/
 ├── media/
 ├── manage.py
-├── requirements.txt
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
-git clone https://github.com/saha-tithi/YOUR_REPOSITORY_NAME.git
+git clone https://github.com/saha-tithi/Dear_Diary.git
 ```
 
-Move inside the project
+### Navigate into the project
 
 ```bash
 cd Dear_Diary
 ```
 
-Create virtual environment
+### Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate virtual environment
+### Activate the virtual environment
 
-### Windows
+**Windows**
 
 ```bash
 venv\Scripts\activate
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Apply migrations
+### Apply migrations
 
 ```bash
 python manage.py migrate
 ```
 
-Run the server
+### Run the development server
 
 ```bash
 python manage.py runserver
 ```
 
+Open your browser and visit:
 
+```
+http://127.0.0.1:8000/
+```
 
+---
+
+# 🚀 Future Enhancements
+
+- 🤖 AI-powered Mood Analysis
+- 🔍 Smart Journal Search
+- 🎤 Voice Notes
+- ☁️ Cloud Backup
+- 📱 Progressive Web App (PWA)
+- 🔔 Daily Journal Reminders
+- ✨ Rich Text Editor
+
+---
+
+# 👩‍💻 Author
+
+**Tithi Saha**
+
+- 💻 GitHub: https://github.com/saha-tithi
+- 💼 LinkedIn: https://www.linkedin.com/in/tithi-saha
+
+---
+
+## ⭐ Show Your Support
+
+If you enjoyed this project or found it useful, consider giving it a ⭐ on GitHub.
+
+It motivates me to keep building and sharing more open-source projects.
