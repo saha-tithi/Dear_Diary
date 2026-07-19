@@ -12,15 +12,22 @@
 
 # 📸 Application Preview
 
-<p align="center">
-  <img src="./screenshots/home.png" width="48%" alt="Home Page">
-  <img src="./screenshots/page.png" width="48%" alt="Journal Page">
-</p>
 
 <p align="center">
-  <img src="./screenshots/calendar.png" width="48%" alt="Calendar View">
-  <img src="./screenshots/statistics.png" width="48%" alt="Statistics Dashboard">
+  <img src="./screenshots/signup.png" width="45%" alt="Calendar View">
+  <img src="./screenshots/login.png" width="45%" alt="Statistics Dashboard">
 </p>
+<p align="center">
+  <img src="./screenshots/home.png" width="45%" alt="Home Page">
+  <img src="./screenshots/page.png" width="45%" alt="Journal Page">
+</p>
+<br>
+
+<p align="center">
+  <img src="./screenshots/calendar.png" width="45%" alt="Calendar View">
+  <img src="./screenshots/statistics.png" width="45%" alt="Statistics Dashboard">
+</p>
+
 
 ---
 
